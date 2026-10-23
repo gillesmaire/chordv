@@ -1,0 +1,180 @@
+chordv (2.4)  stable; urgency=high
+ 
+  * First support of MMA files
+
+chordv (1.61) stable; urgency=high
+
+  * yet bug correction in JJazzLab export 
+  
+chordv (1.60) stable; urgency=high
+
+  * English translation
+  * add a file with tempo in the export dir
+  * allow to don't display location message of jjazzlab file
+
+chordv (1.55) stable; urgency=high
+
+  * Correction of export of chord like D:2 or D:3, ie several chords by mesure
+
+chordv (1.54) stable; urgency=medium
+
+  * debian/usr directory suppressed in git
+  * bug corrected in tempo and times in JazzLab Export
+
+chordv (1.53) stable; urgency=high
+
+  * Chord was published on markdown export
+
+chordv (1.52) stable; urgency=high
+
+  * Typo corrected (in Jjazlab export) A# was repaced by Eb and not Bb
+
+chordv (1.51) stable; urgency=medium
+
+  * Bug in JazzLab Format
+
+chordv (1.5) stable; urgency=medium
+
+  * color improvment
+  * some minor bugs
+  * generation of all songs in markdown format for Hugo site for example
+  * generation of all songs in JJazzLab format 
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 07 Jan  2026 14:06:02 +0100
+
+chordv (1.2) stable; urgency=medium
+
+  * On the neck a mouse double click unset the string 
+  * On the neck a mouse middle button click the string empty 
+  * memory leak corrected
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 16 Nov 2020 14:06:02 +0100
+
+chordv (1.1) UNRELEASED; urgency=medium
+
+  * improvment and bug correction in neck designer
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 16 Nov 2020 02:25:56 +0100
+
+chordv (1.0) UNRELEASED; urgency=medium
+
+  * On windows installer add vcruntime140.dll msvcp140.dll cvruntime140.dll
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 16 Nov 2020 02:25:56 +0100
+
+chordv (0.9) UNRELEASED; urgency=medium
+
+  * After podofo compilation on Windows chordV is avalaible on Windows
+  * allows to suppress chords in Selection
+  * allows to  transform space chord space to [chord] 
+  * Bugs corrected
+
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 14 Feb 2020 13:44:34 +0100
+
+chordv (0.8.6) UNRELEASED; urgency=medium
+
+  * Save as demo file works.
+  * Bugs in ChordManagement Dialog
+  * Double click on Chord in Editors  open on Chord definition 
+  * Chord booklet doesn't start with %
+  * Many other bugs
+
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 14 Jan 2019 20:44:34 +0100
+
+chordv (0.8.2) UNRELEASED; urgency=medium
+
+  * compiled on Debian and not on ubuntu to keep libpodofo 0.94
+  * save current as config
+  * little bugs
+
+chordv (0.8.1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * Bug of jack synchro fixed
+
+ -- gilles <gilles@gillesmaire.com>  Thu, 07 Jun 2018 17:33:32 +0200
+
+chordv (0.8) UNRELEASED; urgency=medium
+
+  * add a button change option as default
+  
+  * correct bug of default button
+ 
+  * correct bug in Example generation with \U000 value crashed the
+    application
+
+chordv (0.7) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+
+  * Status bar
+
+  * Memorization mode well initialized
+
+  * Follow ardour or other QJack sotware if head position in changed during playing 
+  
+  * No beat click nor tempo displaying it mode tempo is jack
+ 
+  * Jack in new time line ok to be tested and need to deplace head in ardour and follow on chordV
+
+  * Clean code for dialogprocessmemory 
+
+  * Now clock has no delay 
+
+  * Full Screen is true full Screen 
+
+  * Screen are open on a one screen even several screen are virtual
+
+  * Minor modification in english docs
+
+  * suppression of version.h automatically generated
+
+  * Documentation and translation bugs corrected
+ 
+  * Selected song on Editor keep selected in Mempry mode list
+
+  * Don't allow to modifify title of song in memory management
+
+  * Tempo was integer and become double : 120.2 is ok  now
+
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 04 Jun 2018 18:51:20 +0200
+
+chordv (0.6) UNRELEASED; urgency=medium
+
+  * Transport jack for lyrics monitoring
+  * some improvements
+
+ -- gilles <gilles@gillesmaire.com>  Sat, 02 Jun 2018 18:22:58 +0200
+
+chordv (0.5) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * bug correction 
+
+ -- gilles <gilles@gillesmaire.com>  Sat, 02 Jun 2018 03:31:22 +0200
+
+chordv (0.4ubuntu1) UNRELEASED; urgency=medium
+
+  [ Gilles Maire ]
+  * bug corrections ( see git log ) 
+
+  [ Gilles Maire ]
+  * Memory mode 
+
+
+  [ gilles ]
+  * Documentation for Memory mode
+  * Test Memory mode 
+  * save bug corrected 
+
+ -- gilles <gilles@gillesmaire.com>  Sat, 02 Jun 2018 03:29:02 +0200
+
+chordv (0.1) unstable; urgency=medium
+
+  * Initial Release.
+
+ -- Gilles Maire <gilles@gillesmaire.com>  Sun, 25 Jun 2017 19:12:52 +0200
+

@@ -1,0 +1,695 @@
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<h2 id="a-little-big-story"><span class="header-section-number">1.1</span> A little big story</h2>
+<p>It is not common to start the documentation of using a software by a little story.</p>
+<p>But ChordV is for people who love the song and in all the songs there is a story.</p>
+<p>I will tell you why I created ChordV.</p>
+<p>I realized that my friends guitarists and singers had nostalgia notebooks that featured on the same page lyrics and chords. This is the classic mode that suits all fans.</p>
+<p>On the other hand, if I have known many songs that I would have liked to gather in this type of booklets, it turns out that a little over ten years ago I am produced on small Parisian scenes with my own songs. I have little to little asked to sing here and there in France and everywhere my little ones catchphrases. I met quite quickly musicians who asked me no longer singing books, but chord boxes.</p>
+<p>Thirdly, it turns out that when I sing in front of friends, they I care about the lyrics so I can sing with me. These friends are neither amateur guitarists or professional guitarists and they do not read colorful guitar pattern texts.</p>
+<p>Finally to finish, I record my discs with Ardor under Linux machine. I record, I listen to the result, I re-record and sometimes several times.</p>
+<p>During the recording days I try several interpretations and at the end two or three times I do not know if I sang a verse or if it was in the previous song that I had sung. So I hesitate and that means on the recordings. So I needed a memory aid mode.</p>
+<p>Once I developed the memory aid I recorded, but once I resumed the recording I had to do a lot of manipulations with the mouse.</p>
+<p>That&#8217;s how I thought of linking Ardor to ChordV so that the lyrics would come back in the beginning when I ask the recorder to go back to the beginning.</p>
+<p>I miss one last point to be complete, I like Open Source, it&#8217;s my job, I like to develop. My songs are all open sources in Creative Common, they are delivered in demonstration of Chord V.</p>
+<p>Finally, I could not develop software that does not run on Linux and that is not open source.</p>
+<p>I developed ChordV in C ++ with the Qt5 library. It is portable MacOsx, Windows or tablet Android or Apple, but I do not have time to make the installer for these environments.</p>
+<p>It&#8217;s getting late, I have concerts to honor, they bring me a lot of happiness. I also have an activity of computer scientist and teacher to continue. I have a family that sees me too often back writing programs or songs.</p>
+<p>It&#8217;s getting late, I have to let you discover Chord V.</p>
+<h2 id="chord-v-presentation"><span class="header-section-number">1.2</span> Chord V presentation</h2>
+<ul>
+<li>ChordV allows you to produce different types of PDF files for list of songs</li>
+<li>ChordV provides:
+<ul>
+<li>a text editor with syntactic colorization and insertion of Tags in cho format</li>
+<li>an chords manager and a guitar chord basis To add or insert chords</li>
+<li>four processors to generate a book containing the Lyrics without the chords, a book with Chords and lyrics, a book with chord grids and a lyric monitoring solution.</li>
+</ul></li>
+<li>For each of the modes, the options management makes it possible to Appropriate settings
+<ul>
+<li><strong>Text:</strong> in this mode, the lyrics alone appear, without No chord representation</li>
+<li><strong>Lyrics:</strong> In this mode, text and chords are displayed.</li>
+<li><strong>Chords:</strong> in this mode, chords are not displayed. It is Useful for accompanying musicians.</li>
+<li><strong>Memory:</strong> in this mode, only the beginning of the text are displayed</li>
+</ul></li>
+<li>ChordV uses a very efficient and simple tag language Chord Pro:</li>
+</ul>
+<pre><code>{title:Let it be}
+
+{subtitle: Lyrics ansd music :  Paul McCartney, John Lennon}
+{Subtitle: Apple Label}
+{columns:1 }
+When I  [C] find myself in  [G]  times of trouble
+Am Mother  [G] Mary  [F]  comes to me
+[C] Speaking words of  [G] wisdom, let it  [F | C/E] be.       [Dm7][C]
+And  [C] in my hour of  [G]  darkness
+She is  [Am] standing  [G] right in   [F]  front of me
+[C] Speaking words of  [G] wisdom, let it  [F | C/E] be.       [Dm7][C]</code></pre>
+<p>Chord V can use the chord pro file as is, but by losing the benefit of the rhythmic tracking of the lyrics of the memorization mode.</p>
+<p>In ChordV we will tend to indicate whether the chord apply to a measurement or a rhythm as well:</p>
+<pre><code>{title:Let it be}
+
+{subtitle: Lyrics ansd music :  Paul McCartney, John Lennon}
+{Subtitle: Apple Label}
+{columns:1 }
+When I  [C:2] find myself in  [G:2]  times of trouble
+Am Mother  [G:2] Mary  [F:2]  comes to me</code></pre>
+<p>The notation [C: 2] indicates that the chord of Do is played on half a measure. See chapter <a href="#TimeSignature">Time Signature and Tempo</a> for the details of the times on the chords.</p>
+<h1 id="the-edit-window"><span class="header-section-number">2</span> The edit window</h1>
+<h2 id="presentation"><span class="header-section-number">2.1</span> Presentation</h2>
+<h3 id="the-edit-window-1"><span class="header-section-number">2.1.1</span> The Edit Window</h3>
+<figure>
+<img src="./img/editor.png" alt="The editing window" /><figcaption>The editing window</figcaption>
+</figure>
+<ol type="1">
+<li>The edit menu allows you to access the replace functions and zoom the font. Next to the menu items keyboard shortcuts.</li>
+<li>The icons are used to insert the Hedging Notes, the and all the information that is highlighted in purple in the figure.</li>
+<li>The text box allows you to enter the songs in chord pro</li>
+<li>The log section displays error messages labeled in red and success messages labeled green.</li>
+<li>When you select a chord, by pressing the Mouse up or down you go up or down the duration of a chord. Thus we pass from [Do#x2] to [Do#] and then to [Do:2] by turning the wheel to yourself.</li>
+<li>A table of content browser to go directly on choosen title</li>
+</ol>
+<h3 id="the-list-of-songs"><span class="header-section-number">2.1.2</span> The list of songs</h3>
+<figure>
+<img src="./img/toc.png" alt="List of songs" /><figcaption>List of songs</figcaption>
+</figure>
+<p>The list of songs is automatically built, in other words when you enter a tag &#8216;{title: Accroche}&#8217; this list is automatically generated.</p>
+<p>By clicking on one of the song titles, you will be directed to the title of the song in the text.</p>
+<p>Two things are noteworthy:</p>
+<ul>
+<li>if you enter the memory help mode via the F8 key you find this list but we will return to its use (attention to return to editor mode you will have to go back to editor mode by the F2 key).</li>
+<li>Note that if you clicked on a title, that title is automatically selected in the help window.</li>
+<li>The second thing to notice is that the title of the song appears in the status area at the bottom of the screen. We will come back to it.</li>
+</ul>
+<h2 id="the-status-bar"><span class="header-section-number">2.2</span> The status bar</h2>
+<figure>
+<img src="./img/statusbar.png" alt="Status bar" /><figcaption>Status bar</figcaption>
+</figure>
+<ol type="1">
+<li>The window in which you are can be the text editor, the global definitions, the text mode settings, the chord mode settings, the chord mode and text settings, and the word monitoring world management</li>
+<li>The name of the file which appears in green if the file can be modified and in red otherwise</li>
+<li>The name of the directory which appears in green if the directory can be accessible in writing modified and in red in the opposite case</li>
+<li>The number of songs contained in the current file</li>
+<li>The name of the selected song or the song whose selection is retained.</li>
+<li>A blocking mode to keep the selected song saved, which can be useful if you are working in the lyrics monitoring mode especially in the case of a recording session where the song will be recorded several times.</li>
+</ol>
+<h1 id="le-menu-g&#233;n&#233;ral"><span class="header-section-number">3</span> Le menu g&#233;n&#233;ral</h1>
+<h2 id="pr&#233;sentation"><span class="header-section-number">3.1</span> Pr&#233;sentation</h2>
+<figure>
+<img src="./img/menu.png" alt="The menu" /><figcaption>The menu</figcaption>
+</figure>
+<p>The general menu allows you to manage - the File menu - the Editing submenu - the Window submenu - the Tools submenu - the Help submenu</p>
+<h2 id="the-file-submenu"><span class="header-section-number">3.2</span> The File submenu</h2>
+<p>By starting to manipulate the different menu items, which are at least very classical, we can notice that we can open cho3 files or project files.</p>
+<p>Cho3 files are classic chord files, with tags extended chordV.</p>
+<p>Chop files are project files containing - an cho3 file included in the file and not a linked file. This means that you can copy only the chop file that is completely autonomous. - Ini format attributes that allow you to save everything what you are interested in the layout: color of cover, front and back, margins etc &#8230;</p>
+<p>Currently the standard cho evolves to allow the addition of these attributes but on the one hand the files quickly become unreadable the opportunities offered are much more limited than those offered that offers you chordV.</p>
+<p>It is therefore advisable to work with chop files and if you must give someone who uses chordpro &#8203;&#8203;a file that he can read, just export the file.</p>
+<p>Similarly if you find a chorpro file you can import it by the file menu.</p>
+<p>Finally note that at the end of the list of items you can recover the list of the last 10 open chop files.</p>
+<h2 id="the-edition-sub-menu"><span class="header-section-number">3.3</span> The Edition sub menu</h2>
+<h2 id="the-view-sub-menu"><span class="header-section-number">3.4</span> The View sub menu</h2>
+<h2 id="the-tools-sub-menu"><span class="header-section-number">3.5</span> The tools sub menu</h2>
+<h2 id="the-help-sub-menu"><span class="header-section-number">3.6</span> The help sub menu</h2>
+<h1 id="chordv-tags"><span class="header-section-number">4</span> ChordV tags</h1>
+<h2 id="the-chord-pro-tag-language"><span class="header-section-number">4.1</span> The chord pro tag language</h2>
+<p>It may be strange that modern software does not WysiWyg interface, that looks like the output paper. Actually ChordV takes only one input format and is capable of to generate a text booklet, a booklet of text and chords, a booklet with chords grids and memory aid. In what mode He choose to work? We chose the tag mode that a pivot format.</p>
+<p>In addition this pivot format is written in the chord pro language of the extensions useful to the program. So you can load in ChordV all chord pro files available in the resources music of the net.</p>
+<h2 id="the-titles"><span class="header-section-number">4.2</span> The titles</h2>
+<h3 id="document-title"><span class="header-section-number">4.2.1</span> Document title</h3>
+<pre class="chord"><code>{covertitle: title}</code></pre>
+<p>Provides the title of the document Only one title per document is allowed</p>
+<p>The abbreviated notation is {ct: title}</p>
+<h3 id="subtitle-of-the-document"><span class="header-section-number">4.2.2</span> Subtitle of the document</h3>
+<pre class="chordpro"><code>{coversubtitle: under title}</code></pre>
+<p>Provides the subtitle of the document, ie a text accompanying the title One subtitle per document</p>
+<p>The abbreviated notation is {cs: title}</p>
+<h3 id="title-of-a-song"><span class="header-section-number">4.2.3</span> Title of a song</h3>
+<pre><code>{title: title of the song}</code></pre>
+<p>It&#8217;s the title of a song. There are as many title headings as songs in the document. You can only have one title per song. If we define two consecutive titles one provokes a page break with an empty song for the first.</p>
+<p>The abbreviated notation is {t: title}</p>
+<h3 id="subtitle-of-a-song"><span class="header-section-number">4.2.4</span> Subtitle of a song</h3>
+<pre><code>{subtitle: subtitle of a song}</code></pre>
+<p>It&#8217;s a subtitle, accompanying the song. Several subtitles can be provided which will be separated by line breaks.</p>
+<p>The names of authors, composers or performers can be found in this category.</p>
+<p>The abbreviated notation is {st: title}</p>
+<h2 id="paging-order"><span class="header-section-number">4.3</span> Paging order</h2>
+<h3 id="jumps"><span class="header-section-number">4.3.1</span> Jumps</h3>
+<pre><code>-----</code></pre>
+<h3 id="number-of-columns-for-the-song"><span class="header-section-number">4.3.2</span> Number of columns for the song</h3>
+<pre><code>{Columns: 2}</code></pre>
+<p>Sets the number of print columns for the song</p>
+<h3 id="skip-columns"><span class="header-section-number">4.3.3</span> Skip columns</h3>
+<pre><code>{Column_break}</code></pre>
+<p>Causes the generation of a new column.</p>
+<p>The abbreviated notation is {colb}</p>
+<h3 id="new-song"><span class="header-section-number">4.3.4</span> New song</h3>
+<pre><code>{New_song}</code></pre>
+<p>Recognized but not used, this tag is for compatibility with other implementations of forma cho</p>
+<p>The abbreviated notation is {ns}</p>
+<h4 id="decrease-in-line-spacing"><span class="header-section-number">4.3.4.1</span> Decrease in line spacing</h4>
+<pre><code>{Compress}</code></pre>
+<p>If a song does not fit properly in a page, you can activate the mode compress that will reduce the leading of the song from the moment the argument is met</p>
+<h2 id="sections"><span class="header-section-number">4.4</span> Sections</h2>
+<h3 id="chorus-start"><span class="header-section-number">4.4.1</span> Chorus start</h3>
+<pre><code>{Start_of_chorus}</code></pre>
+<p>Indicates the beginning of a chorus.</p>
+<p>The abbreviated notation is {soc}</p>
+<h3 id="end-of-the-chorus"><span class="header-section-number">4.4.2</span> End of the chorus</h3>
+<pre><code>{End_of_chorus}</code></pre>
+<p>Indicates the end of the chorus</p>
+<p>Abbreviated lantern is {eoc}</p>
+<h3 id="chorus"><span class="header-section-number">4.4.3</span> Chorus</h3>
+<pre><code>{Refrain}</code></pre>
+<p>Indicates the chorus</p>
+<h2 id="SignatureRytmique"><span class="header-section-number">4.5</span> Rhythmic signature and tempo</h2>
+<h3 id="notes"><span class="header-section-number">4.5.1</span> Notes</h3>
+<p>These values &#8203;&#8203;will be reported in the chord grid mode and widely used in the memory aid mode.</p>
+<h3 id="tempo"><span class="header-section-number">4.5.2</span> Tempo</h3>
+<ul>
+<li>The tempo will be represented by the beacon</li>
+</ul>
+<pre><code>{Tempo: 12O}
+{Tempo: 112.5}</code></pre>
+<p>If the tempo is omitted, the value 120 will be assigned.</p>
+<p>The tempo is the number of times per minute. It can include one or more decimals, the decimal separator is the point whatever the language chosen.</p>
+<p>The introduction of a decimal is unusual in conventional musical notation, but some software allows this extension for example when they deduce the value of the tempo of a piece</p>
+<h3 id="rhythmic-signature"><span class="header-section-number">4.5.3</span> Rhythmic signature</h3>
+<ul>
+<li><p>The rhythmic signature of a song is represented by the tag {time: 4/4}</p></li>
+<li><p>If no rhythmic signature is mentioned for a song, the value 4/4 will be assigned</p></li>
+</ul>
+<h2 id="chord"><span class="header-section-number">4.6</span> Chord</h2>
+<h3 id="basic-notation"><span class="header-section-number">4.6.1</span> Basic notation</h3>
+<ul>
+<li>In English format (if the format is configured in English) we follow the notation ABCDEFG</li>
+</ul>
+<pre><code>[A]</code></pre>
+<ul>
+<li>In French format (if configured as such), we follow the notation La Si Do R&#233; Mi Fa Sol</li>
+</ul>
+<pre><code>[La]</code></pre>
+<ul>
+<li>The minor mode is noted - if the chords are in English and m if they are in French and configured as such</li>
+<li>The mode 7 6 5 13 etc are noted in numbers</li>
+</ul>
+<h3 id="extended-notation"><span class="header-section-number">4.6.2</span> Extended notation</h3>
+<ul>
+<li>The bars are noted in Roman numerals with the box of the bar:</li>
+</ul>
+<pre><code>[A(V)]</code></pre>
+<ul>
+<li>Extention of time</li>
+</ul>
+<p>These extensions were introduced by chord V and are being discussed with the authors of the ChordPro format definition</p>
+<p>x number indicates the number of measurements of the chord</p>
+<pre><code>[A(V)x3]</code></pre>
+<p>By default an chord without added measure will be considered as an chord of a measure</p>
+<p>So [A] will be an chord of a measure</p>
+<ul>
+<li>division of time</li>
+</ul>
+<p>: indicates a division of the measure {#TimeSignature}</p>
+<p>So for a 4/4 signature measure the ratings:</p>
+<ul>
+<li>[A:2] will mean a measure divided by 2 ie 2 beats</li>
+<li>[A:4] will mean a measure divided by 4 ie 1 time</li>
+</ul>
+<h3 id="inserting-chords-into-the-editor"><span class="header-section-number">4.6.3</span> Inserting chords into the editor</h3>
+<p>By double clicking on the text the chord include window you to select a chord by pressing the Insert button the chord. This action can also be taken by the support of the F4 key (while the F3 key is used to enter the management chord)</p>
+<p>You can change the tempo by using the mouse wheel holding down the SHIFT key in the editor.</p>
+<h1 id="software-preferences"><span class="header-section-number">5</span> Software preferences</h1>
+<h2 id="the-general-preferences"><span class="header-section-number">5.1</span> The general preferences</h2>
+<ul>
+<li>Preferences allow you to set options for all songbooks to allow a collection of book with the same aspect</li>
+<li>Imagine that you want to build a collection of songs from Beatle&#8217;s song, a collection of David Bowie songs and a collection of Jango Renhardt chords . For each of these collections, you can choose You may wish to define the same formats for each of them, or at least some common options in fonts characters or other. It is in the preferences that you can these global options, even if they can be adapted to each artists thereafter</li>
+<li>It should be noted that there are shortcuts of preferences called Preferably gadgets.
+<ul>
+<li>One allows you to return to the initial choices of the software at Cases where your tests are not satisfactory</li>
+<li>One allows you to set a setting for an artist like the Default setting in the future.</li>
+</ul></li>
+</ul>
+<h2 id="the-preferences-menu"><span class="header-section-number">5.2</span> The preferences menu</h2>
+<ul>
+<li>Preferences are accessed via the Preferences menu or by the shortcut Keyboard CTRL + O as shown in the following figure</li>
+</ul>
+<figure>
+<img src="./img/menupreferences.png" alt="Preferences menu" /><figcaption>Preferences menu</figcaption>
+</figure>
+<h2 id="general-preferences"><span class="header-section-number">5.3</span> General preferences</h2>
+<figure>
+<img src="./img/preferencegeneral.png" alt="General options" /><figcaption>General options</figcaption>
+</figure>
+<ol type="1">
+<li>You can choose the language of the software. If your language is not in the list, you can make a translation file (See part # (translation-of-software-in-a-language))</li>
+<li>Select the measurement system that is most convenient for you cm, mm and inch</li>
+<li>ChordV launches a PDF reader when you want to view the delivered generated by the application. In this area, the name of the program</li>
+<li>The name of the booklet author can be entered here. It will be used in the production of documents.</li>
+</ol>
+<h2 id="the-options-for-each-booklet-mode"><span class="header-section-number">5.4</span> The options for each booklet mode</h2>
+<p>These options are not necessarily exactly the same for each booklet, indeed in text mode the font of the chords does not exist since in this mode the chords do not exist. We will separate the presentation of the common and specific options in each mode.</p>
+<p>There are two tabs, one called Document, and the other one for each of the</p>
+<h3 id="common-options-on-the-document-tab"><span class="header-section-number">5.4.1</span> Common options on the Document tab</h3>
+<figure>
+<img src="./img/preferencetext.png" alt="General options" /><figcaption>General options</figcaption>
+</figure>
+<ol type="1">
+<li>Width selection area. If you put values &#8203;&#8203;here Corresponding to an existing format, this format will be displayed in the</li>
+<li></li>
+<li>Height selection area. If you put values &#8203;&#8203;here Corresponding to an existing format, this format will be displayed in the</li>
+<li>This field allows you to choose a PDF format by an IS0 name. Yes You select a format from this menu, you will see the sizes Displayed in zones 1 and 2</li>
+<li>Italian inverses the heights and widths</li>
+<li>Select the default font for the document. Refer To the documentation relating to [Font Selection] (# Font Selection)</li>
+<li>Select the font for the titles on each page. If you select a background color (Refer to To the documentation relating to [Font Selection] (# font-selection), a color frame Selected will frame the title over the entire width of the page.</li>
+<li>Select the subtitle font for each subtitle. page. If you select a background color (Refer to To the documentation relating to [Font Selection] (# font-selection), a color frame Selected will frame the title over the entire width of the page.</li>
+<li>Selects 1-sided or 2-sided. If you select the Duplex mode, page numbers if they are offset to the right Will be eccentric to the left one page out of two.</li>
+<li>By specifying the color of the paper, the frame colors of the titles And subtitles if they are of this color will not be drawn. This avoids erasing characters that could be set under the framework.</li>
+<li>This field is used to number the pages with the number on the right, Center or left</li>
+<li>Selects the page numbering style 1, - 1 - or 1 / n</li>
+<li>This area allows you to choose the typeface of the Page numbers. If the font color is not the same To the color of the paper a frame will be drawn around the page number.</li>
+<li>Sets the horizontal margin</li>
+<li>Set the vertical margin</li>
+</ol>
+<h3 id="common-options-on-the-content-tab"><span class="header-section-number">5.4.2</span> Common options on the Content tab</h3>
+<figure>
+<img src="./img/preferencestextcontent.png" alt="General options contained part" /><figcaption>General options contained part</figcaption>
+</figure>
+<ol type="1">
+<li>The PDF file includes a cover</li>
+<li>The font of the cover is positioned</li>
+<li>The title may be one-third of the height, half or two-thirds</li>
+<li>Selecting an optional image for Coverage</li>
+<li>Table of Contents in compressed Mode</li>
+<li>Number of columns in table of contents</li>
+<li>Typeface used for table of contents</li>
+<li>Characters used between the title name and the page in the table subjects</li>
+<li>Position of the table of contents at the beginning, at the end of the document or No table of contents</li>
+<li>Extension added to the output file</li>
+<li>Vertical Spacing</li>
+<li>Opening the PDF in full screen mode</li>
+<li>Force titles in uppercase</li>
+</ol>
+<h3 id="memory-mode-preferences"><span class="header-section-number">5.4.3</span> Memory mode preferences</h3>
+<figure>
+<img src="./img/LyricsMonitoring.png" alt="Memory mode" /><figcaption>Memory mode</figcaption>
+</figure>
+<ol type="1">
+<li>Allows you to select the font and its color and the background color as it appears in zone 5</li>
+<li>Indicates whether the monitoring window will be at the top of the screen, in the middle or on the right. If the full screen mode is selected this mode will no longer be accessible. This mode is for the recording mode of a song when the singer wants to follow the progress of his recording on his recording software</li>
+<li>Full-screen mode rather intended for karaoke, although we can project a video and or images while the music is activated with the mode picture at the bottom of the screen.</li>
+<li>Two lines are displayed, the brighter line on lyrics in course and the darker line on the following lyrics. If this mode is not selected, only one line is displayed.</li>
+<li>Rendering of the font</li>
+<li>Each time is materialized by the display of a red bubble for the first time and a green bubble for other times.</li>
+<li>An audible click is activated on each beat</li>
+<li>Click Volume Adjustment</li>
+<li>The first sound time is more marked than the other times</li>
+<li>Advance Display, Set Time Display Advance on the lyrics to allow the singer to read slightly in advance</li>
+<li>Number of measurements before starting the recording.</li>
+</ol>
+<h2 id="conventions"><span class="header-section-number">5.5</span> Conventions</h2>
+<h3 id="select-fonts"><span class="header-section-number">5.5.1</span> Select fonts</h3>
+<figure>
+<img src="./img/fontselection.png" alt="Font Selection" /><figcaption>Font Selection</figcaption>
+</figure>
+<p>Select fonts to select the font family Its size, its style and all the traditional options To which are added: - the background color - the color of the font Selecting a color will change the color of the button to Show you the color it contains An explanation of background color is required.</p>
+<h2 id="inserting-chords-in-the-editor"><span class="header-section-number">5.6</span> Inserting chords in the editor</h2>
+<p>By double clicking on the text the chord inclusion window you allows you to select a chord by pressing the insert button the chord. This action may also be supported by the the F4 key (while the F3 key is used to enter the Management of chords)</p>
+<p>You can change the tempo by using the mouse wheel by holding down the SHIFT key in the editor.</p>
+<h2 id="chords-definition"><span class="header-section-number">5.7</span> Chords definition</h2>
+<h3 id="presentation-1"><span class="header-section-number">5.7.1</span> Presentation</h3>
+<p>The chord definition window is divided into four tabs: - The definition of the chord which makes it possible to reach chord the position of the fingers on the handle - A chord management module allowing visualization, amendment or deletion of each chord - A module to approve each unapproved chord - A module for importing a list of accretions contained in a text file</p>
+<h3 id="defining-an-chord"><span class="header-section-number">5.7.2</span> Defining an chord</h3>
+<figure>
+<img src="./img/chorddefinition.png" alt="Definition of chord" /><figcaption>Definition of chord</figcaption>
+</figure>
+<ol type="1">
+<li>Select the boxes on the handle</li>
+<li>selection of the empty strings with a round not played with a cross</li>
+<li>Name of the chosen chord</li>
+<li>Selecting the choice between several possible tuning names</li>
+<li>Notation boxes</li>
+<li>Resulting notation in the define</li>
+<li>Adding the chord to the database</li>
+<li>Green if chord is known in the database</li>
+<li>Green if chordis approved</li>
+</ol>
+<h3 id="using-the-mouse"><span class="header-section-number">5.7.3</span> Using the mouse</h3>
+<ul>
+<li>Click on the left mouse button to select
+<ul>
+<li>either a string between two freight</li>
+<li>either an open string by clicking at the top of the handle</li>
+</ul></li>
+<li>By clicking on the right button we select the same freight pressed all the strings in order to be able to define bars</li>
+<li>By clicking on the middle mouse button, the open string is selected</li>
+<li>Double click on the left mouse button to select the unplayed string</li>
+<li>By using the mouse wheel you raise or lower the supported strings.</li>
+</ul>
+<h3 id="managing-chords"><span class="header-section-number">5.7.4</span> Managing chords</h3>
+<figure>
+<img src="./img/chordmanagement.png" alt="Chord management" /><figcaption>Chord management</figcaption>
+</figure>
+<ol type="1">
+<li>This selector lets you choose a chord, you can also Restrict or order the list of chords using filters 3 and 2</li>
+<li>chords may be sorted according to the name of the chord, the number Fret or index that is the order number of the chord in the database.</li>
+<li>The filter makes it possible to restrict the chords presented by choosing The first letters of the chord in the English language. The Little Cross Next to the edit line allows to erase the name of the fugating chord In the filter.</li>
+<li>Display of the name of the chord, if this name is modified it can be saved. But be careful the name of the deal must be unique. We Will distinguish two chord names by the use of parentheses with For example a notation in Roman numerals of the fret.</li>
+<li>Chord finger display. This fingering can be changed.</li>
+<li>Button to delete the chord</li>
+<li>Button to modify the current chord with the values Entries in boxes 4 and 5</li>
+<li>Display of the chord.</li>
+</ol>
+<h3 id="chord-approval-mode"><span class="header-section-number">5.7.5</span> chord approval mode</h3>
+<figure>
+<img src="./img/chordapprovement.png" alt="Approval of chords" /><figcaption>Approval of chords</figcaption>
+</figure>
+<p>Chords can be defined in the song files by Example by Directive</p>
+<pre><code>{Define: Eb95 base-freight 5 frets 5 6 6 5 6 x}</code></pre>
+<p>Such a chord is automatically included in the database, but It will be necessary to approve it so that it is operational.</p>
+<ol type="1">
+<li>This selector lets you choose a chord</li>
+<li>The box shows the name of the chord. You can copy this name But not modify it</li>
+<li>The box shows the fingering of the chord that can be copied but not amended.</li>
+<li>The chord may be deleted from the base, in which case the Deleted from the song file, otherwise it will be inserted again.</li>
+<li>The chord may be accepted in the database</li>
+<li>This area allows you to view the chord.</li>
+</ol>
+<h3 id="importing-chords"><span class="header-section-number">5.7.6</span> Importing chords</h3>
+<figure>
+<img src="./img/chordimport.png" alt="Import chords" /><figcaption>Import chords</figcaption>
+</figure>
+<ol type="1">
+<li>By copying a chord list, with one chord per row, You can import the database. chords should be Be in the form Name = freight</li>
+<li>The button will request the actual import</li>
+</ol>
+<h2 id="conversions"><span class="header-section-number">5.8</span> Conversions</h2>
+<h3 id="chord-conversions-on-2-lines-to-chordpro"><span class="header-section-number">5.8.1</span> Chord conversions on 2 lines to chordpro</h3>
+<h3 id="change-the-chord-language."><span class="header-section-number">5.8.2</span> Change the chord language.</h3>
+<h3 id="transposer-les-accords"><span class="header-section-number">5.8.3</span> Transposer les accords</h3>
+<figure>
+<img src="./img/transpose.png" alt="Transposer the cords" /><figcaption>Transposer the cords</figcaption>
+</figure>
+<ol type="1">
+<li>The wheel has the same action as the input zone 2, it allows to define the number of positive or negative semitones you want to transpose the chord.</li>
+<li>The input area allows you to define the number of positive or negative semitones you want to transpose the chord.</li>
+<li>You can transpose the chord onto the chord under the mouse, all of the current line, the current song or the whole file</li>
+<li>Close the dialog box</li>
+<li>Transpose the chord</li>
+</ol>
+<figure>
+<img src="./img/chordlanguageconversion.png" alt="Conversion de la langue des accords" /><figcaption>Conversion de la langue des accords</figcaption>
+</figure>
+<ol type="1">
+<li>Choose the original language (in general it is set automatically)</li>
+<li>Choose the letter to signify that the agreement in the language of origin is minor</li>
+<li>Choose the language to which you want to convert the chord names</li>
+<li>Choose the letter to signify that the agreement in the language to be converted is minor</li>
+<li>Click on convert</li>
+</ol>
+<h2 id="display-pdf"><span class="header-section-number">5.9</span> Display PDF</h2>
+<p>ChordV launches the PDF viewer that you have positioned in the preferences</p>
+<p>This option is available in the tools menu</p>
+<h2 id="build-pdf"><span class="header-section-number">5.10</span> Build PDF</h2>
+<p>The construction of a PDF file is almost instantaneous. She is integrated into the software.</p>
+<p>This option is available in the tools menu</p>
+<h2 id="build-and-display-pdf"><span class="header-section-number">5.11</span> Build and display PDF</h2>
+<p>This mode builds a PDF file and starts its display.</p>
+<p>This option is available in the tools menu</p>
+<h1 id="memory-mode-or-lyrics-monitoring"><span class="header-section-number">6</span> Memory mode or lyrics monitoring</h1>
+<h2 id="presentation-2"><span class="header-section-number">6.1</span> Presentation</h2>
+<p>This mode allows you to display the lyrics that appear by scrolling following the speed of the song. The refrains are reinserted between each verse. It is necessary for this world to work precisely that: 1. Chords are entered with notation [Dox2] for example explaining although the chord is done on two measures 2. The tempo is suitably defined for the song via the tag {tempo: xxx}, if not set, the value of 120 beats per second will be assigned to the tempo The tempo tag accepts the decimal value where the point is the value separator decimal regardless of the language. 3. The time signature is entered via the tag {time: xxx}. If the signature is not set the value 4/4 is initialized.</p>
+<p>Finally we must keep in mind that the memory help mode can be clocked via the transport jack. So if you record with Ardour, triggering playback or recording in Ardour, scrolling will begin automatically.</p>
+<h2 id="memory-mode-d&#233;finition"><span class="header-section-number">6.2</span> Memory mode d&#233;finition</h2>
+<figure>
+<img src="./img/LyricsMonitoring.png" alt="Memory mode" /><figcaption>Memory mode</figcaption>
+</figure>
+<ol type="1">
+<li>Allows you to select the font and its color and the background color as it appears in zone 5</li>
+<li>Indicates whether the monitoring window will be at the top of the screen, in the middle or on the right. If the full screen mode is selected this mode will no longer be accessible. This mode is for the recording mode of a song when the singer wants to follow the progress of his recording on his recording software</li>
+<li>Full-screen mode rather intended for karaoke, although we can project a video and or images while the music is activated with the mode picture at the bottom of the screen.</li>
+<li>Two lines are displayed, the brighter line on lyrics in course and the darker line on the following lyrics. If this mode is not selected, only one line is displayed.</li>
+<li>Rendering of the font</li>
+<li>Each time is materialized by the display of a red bubble for the first time and a green bubble for other times.</li>
+<li>An audible click is activated on each beat</li>
+<li>Click Volume Adjustment</li>
+<li>The first sound time is more marked than the other times</li>
+<li>Advance Display, Set Time Display Advance on the lyrics to allow the singer to read slightly in advance</li>
+<li>Number of measurements before starting the recording.</li>
+</ol>
+<h1 id="technical-part"><span class="header-section-number">7</span> Technical part</h1>
+<h2 id="keyboard-shortcuts---mouse-actions"><span class="header-section-number">7.1</span> Keyboard shortcuts - Mouse actions</h2>
+<h3 id="keyboard-shortcuts"><span class="header-section-number">7.1.1</span> Keyboard shortcuts</h3>
+<table style="width:86%;">
+<caption>Keyboard shortcuts</caption>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 22%" />
+<col style="width: 18%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Shortcuts</th>
+<th style="text-align: center;">Action</th>
+<th style="text-align: center;">Shortcut</th>
+<th style="text-align: center;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">CTRL + F</td>
+<td style="text-align: center;">Search</td>
+<td style="text-align: center;">F1</td>
+<td style="text-align: center;">Documentation</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CTRL + O</td>
+<td style="text-align: center;">Preferences</td>
+<td style="text-align: center;">F2</td>
+<td style="text-align: center;">Text Edition mode</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">CTRL + R</td>
+<td style="text-align: center;">Replace</td>
+<td style="text-align: center;">F3</td>
+<td style="text-align: center;">Define chords</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CTRL + S</td>
+<td style="text-align: center;">Save</td>
+<td style="text-align: center;">F4</td>
+<td style="text-align: center;">Insert chord</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">CTRL + +</td>
+<td style="text-align: center;">Zoom +</td>
+<td style="text-align: center;">F5</td>
+<td style="text-align: center;">Produce PDF in text mode</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CTRL + -</td>
+<td style="text-align: center;">Zomr -</td>
+<td style="text-align: center;">F6</td>
+<td style="text-align: center;">Produce PDF in text and lyrics mode</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">F7</td>
+<td style="text-align: center;">Produce PDF in grid mode</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">F8</td>
+<td style="text-align: center;">Memory Mode</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">F10</td>
+<td style="text-align: center;">Launch memory mode action</td>
+</tr>
+</tbody>
+</table>
+<h2 id="translation-of-the-software-into-a-language"><span class="header-section-number">7.2</span> Translation of the software into a language</h2>
+<h3 id="presentation-3"><span class="header-section-number">7.2.1</span> Presentation</h3>
+<ul>
+<li>You do not need the source codes to translate the software.</li>
+<li>If you go to the system menu of the application, you Find the path of the configuration file for example:</li>
+</ul>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb21-1" title="1"><span class="ex">/home/gilles/.config/ChordV/ChordV.conf</span></a></code></pre></div>
+<ul>
+<li>in the /home/gilles/.config/ChordV/ directory are the files languages &#8203;&#8203;in the Languages &#8203;&#8203;containing languages written with the name in the translated language. For French it will be found whe name with the cedille exactly as a French could read it.</li>
+<li>Inside the French repertory there are three files
+<ul>
+<li>fr.png: this file is a flag of the language in png format</li>
+<li>fr.ts: this file is the file containing the translation pairs</li>
+<li>fr.qm: this file contains the compiled ts file</li>
+<li>fr.html : the documentation of software translated</li>
+</ul></li>
+</ul>
+<h3 id="translation-of-the-file-fr.ts"><span class="header-section-number">7.2.2</span> Translation of the file fr.ts</h3>
+<ul>
+<li>Create a language directory with the name for example Espa&#241;ol</li>
+<li>Copy the file fr.png to es.pgn</li>
+<li>You can download the linguist program and open the file fr.png</li>
+<li>In linguist save the es.ts file and activate the menu File / Publish ts.qm will be created</li>
+<li>Do not forget to write to the author of the software to Es.ts file so that it is included in the next software distribution</li>
+</ul>
+<h2 id="batch-mode-and-graphic-mode"><span class="header-section-number">7.3</span> Batch mode and graphic mode</h2>
+<ul>
+<li>Without any argument chordV is launched with a GUI</li>
+<li>With the -t chordV argument does not start the GUI and will produce the PDFs for the default configuration</li>
+<li>You can also run chordV with a file.chop argument to open it automatically at startup.</li>
+</ul>
+<h2 id="documentation-of-chord-v"><span class="header-section-number">7.4</span> Documentation of Chord V</h2>
+<h2 id="presentation-4"><span class="header-section-number">7.5</span> Presentation</h2>
+<p>The documentation is accessible in the software via the help menu To the Documentation item.</p>
+<p>This documentation has been automatically From the Markdown to HTML format via the Pandoc program.</p>
+<p>The documentation file is located in the directory cited part <a href="#translation-of-the-software-into-a-language">Translation of the software into a language</a> (# translation-of-software-in-a-language)</p>
+<h3 id="translation-process"><span class="header-section-number">7.5.1</span> Translation Process</h3>
+<p>If you wish to translate the software documentation, you must The md file in the desired language, convert it via a translator Automatic and correct it.</p>
+<p>Beware because the translator tends to transform the codes Md style</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb22-1" title="1">! <span class="ot">[The editing window] (./img/ editor.png)</span></a></code></pre></div>
+<p>in</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb23-1" title="1">! <span class="ot">[The editing window] (./img/editor.png)</span></a></code></pre></div>
+<p>Once the file is translated, you can convert it to html format Via the command (after retrieving the css style sheet on the Internet)</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb24-1" title="1"><span class="ex">Pandoc</span> --toc --ascii --smart -N --css = pandoc.css --from = markdown --to = html --output = es.html es.md</a></code></pre></div>
+<h3 id="images"><span class="header-section-number">7.5.2</span> Images</h3>
+<p>The images are to be included in the img directory of the / es languages &#8203;&#8203;directory, They come from screenshots. If you use gimp you can use The plugin drawnumbers which allows to produce the red pellets.</p>
+<p>It is available at [Draw-number] (xhttp: //www.gillesmaire.com/tiki-index.php page = draw-numbers?)</p>
+<h2 id="compatibility-chordpro"><span class="header-section-number">7.6</span> Compatibility Chordpro</h2>
+<h3 id="introduction-1"><span class="header-section-number">7.6.1</span> Introduction</h3>
+<p>Chord V is designed to produce 4 types of documents at the same time and some chord pro tags are designed for a single use. So we do not want to output the same format for each of the documents, knowing that the booklets of words are perhaps intended to a printed file and the tuning grid files may be be for PDF files for a reader or tablet.</p>
+<p>Chord reads Chordpro &#8203;&#8203;files and knows how to extract ChordPro compatible file.</p>
+<p>Some tags are not used because replaced by the graphical interface.</p>
+<h3 id="compatibility-chordpro-2ii"><span class="header-section-number">7.6.2</span> Compatibility ChordPro 2ii</h3>
+<table style="width:65%;">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ChordPro 2ii</th>
+<th style="text-align: right;">Chord V</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">{New_song} {ns}</td>
+<td style="text-align: right;">Read but replaced by title</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{Title} {t}</td>
+<td style="text-align: right;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Subtitle} {st}</td>
+<td style="text-align: right;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{Comment: text} {c: text}</td>
+<td style="text-align: right;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Comment_italic: text} {ci:</td>
+<td style="text-align: right;">text} X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{Comment_box: text} {cb: tex</td>
+<td style="text-align: right;">t} X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Start_of_chorus} {soc}</td>
+<td style="text-align: right;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{End_of_chorus} {eoc}</td>
+<td style="text-align: right;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Start_of_tab} {sot}</td>
+<td style="text-align: right;">nO</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{End_of_tab} {eot}</td>
+<td style="text-align: right;">nO</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Define &#8230;} biEntot</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{Textfont: fontname} {tf: fo</td>
+<td style="text-align: right;">ntname} Graphical interface</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Textsize: fontsize} {ts: fo</td>
+<td style="text-align: right;">ntsize} graphic interface</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{Chordfont: fontname} {cf: f</td>
+<td style="text-align: right;">ontname} Graphical interface</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Chordsize: fontsize} {cs: f</td>
+<td style="text-align: right;">ontsize} graphic interface</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{No_grid} {ng}</td>
+<td style="text-align: right;">nO</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Grid} {g}</td>
+<td style="text-align: right;">nO</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{Titles: flush}</td>
+<td style="text-align: right;">nO</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{New_page} {np}</td>
+<td style="text-align: right;">ASAP</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{New_physical_page} {npp}</td>
+<td style="text-align: right;">nO</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Columns: number} {col: numb</td>
+<td style="text-align: right;">er} X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">{Column_break} {colb}</td>
+<td style="text-align: right;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">{Pageize: type} {papersize:</td>
+<td style="text-align: right;">type} Graphical interface</td>
+</tr>
+</tbody>
+</table>
+<p>:: List of commands chordpro &#8203;&#8203;2ii</p>
+<h1 id="technical-part-1"><span class="header-section-number">8</span> Technical part</h1>
+<h2 id="foreword"><span class="header-section-number">8.1</span> Foreword</h2>
+<h3 id="the-sourceforge-project"><span class="header-section-number">8.1.1</span> The SourceForge project</h3>
+<p>This part is intended for people who want to develop the software.</p>
+<p>The software sources are available on the sourceforge site under the chordV project</p>
+<p>Here is the address of the page</p>
+<p>https://sourceforge.net/projects/chordv/</p>
+<p>Source recovery is done using the git command</p>
+<p>bash ~~~ git git clone https://git.code.sf.net/p/chordv/code chordv-code ~~~</p>
+<h2 id="organization-of-documentation"><span class="header-section-number">8.2</span> Organization of documentation</h2>
+<h3 id="presentation-5"><span class="header-section-number">8.2.1</span> Presentation</h3>
+<p>The documentation is accessible in the software via the help menu to the Documentation item.</p>
+<p>This documentation has been automatically transformed from from Markdown format to HTML via the Pandoc program.</p>
+<p>The documentation file is in the directory cited in the section [Translation of software into a language] (# Translation)</p>
+<p>In the project directory the Documentation is located in the Docs directory if you have source codes. If you don&#8217;t have source codes, the documentation file in source format is available in the following directory: - If you are on Linux: /usr/share/chordV/Languages/Fran&#231;ais/fr.md The resulting html file is automatically generated so do not modify it but send me the md file to gilles@gillesmaire.com - If you are on Windows: c: &#160;ProgramData &#160;chordV &#160;Languages &#8203;&#8203;&#160;Fran&#231;ais &#160;fr.md The resulting html file is automatically generated so do not modify it but send me the md file to gilles@gillesmaire.com</p>
+<p>The documentation tree is as follows:</p>
+<ul>
+<li>** css: ** common css files may also be basic latex file</li>
+<li>** html: ** documentation files in HTML format generated automatically by the Makefile</li>
+<li>** pdf: ** documentation files in PDF format generated automatically by the Makefile</li>
+<li>** txt: ** source files in text format following the markdown format</li>
+</ul>

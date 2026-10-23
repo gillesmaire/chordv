@@ -1,0 +1,3 @@
+3. new_page is shown without action
+4. Comments doesn't have action
+5. The last song doens't have multicolumn effect

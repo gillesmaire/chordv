@@ -1,0 +1,79 @@
+chordv (2.4)  stable; urgency=high
+ 
+  * First support of MMA files
+
+  -- gilles <gilles@gillesmaire.com>  Mon, 07 Jan  2026 14:06:02 +0100
+
+
+chordv (1.61) stable; urgency=high
+
+  * yet bug correction in JJazzLab export 
+  
+chordv (1.60) stable; urgency=high
+
+  * English translation
+  * add a file with tempo in the export dir
+  * allow to don't display location message of jjazzlab file
+
+chordv (1.55) stable; urgency=high
+
+  * Correction of export of chord like D:2 or D:3, ie several chords by mesure
+
+chordv (1.54) stable; urgency=medium
+
+  * debian/usr directory suppressed in git
+  * bug corrected in tempo and times in JazzLab Export
+
+chordv (1.53) stable; urgency=high
+
+  * Chord was published on markdown export
+
+chordv (1.52) stable; urgency=high
+
+  * Typo corrected (in Jjazlab export) A# was repaced by Eb and not Bb
+
+chordv (1.51) stable; urgency=medium
+
+  * Bug in JazzLab Format
+
+chordv (1.5) stable; urgency=medium
+
+  * color improvment
+  * some minor bugs
+  * generation of all songs in markdown format for Hugo site for example
+  * generation of all songs in JJazzLab format 
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 07 Jan  2026 14:06:02 +0100
+
+chordv (1.2) stable; urgency=medium
+
+  * On the neck a mouse double click unset the string 
+  * On the neck a mouse middle button click the string empty 
+  * memory leak corrected
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 16 Nov 2020 14:06:02 +0100
+
+chordv (1.1) UNRELEASED; urgency=medium
+
+  * improvment and bug correction in neck designer
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 16 Nov 2020 02:25:56 +0100
+
+chordv (1.0) UNRELEASED; urgency=medium
+
+  * On windows installer add vcruntime140.dll msvcp140.dll cvruntime140.dll
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 16 Nov 2020 02:25:56 +0100
+
+chordv (0.9) UNRELEASED; urgency=medium
+
+  * After podofo compilation on Windows chordV is avalaible on Windows
+  * allows to suppress chords in Selection
+  * allows to  transform space chord space to [chord] 
+  * Bugs corrected
+
+
+ -- gilles <gilles@gillesmaire.com>  Mon, 14 Feb 2020 13:44:34 +0100
+
+# Older entries have been removed from this changelog.
+# To read the complete changelog use `apt changelog chordv`.

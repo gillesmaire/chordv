@@ -1,0 +1,31 @@
+#!/bin/sh -x
+# for developpers only 
+# copy database and language files in .config/ChordV directory
+
+Copy()
+{
+lang=$1
+mkdir -p /usr/share/chordV/$lang
+cp translations/$lang/code.txt /usr/share/chordV/$lang
+cp translations/$lang/lang.qm /usr/share/chordV/$lang
+cp translations/$lang/flag.png /usr/share/chordV/$lang
+cp translations/$lang/lang.ts /usr/share/chordV/$lang
+cp translations/$lang/chords.txt /usr/share/chordV/$lang
+cp Docs/User/$lang/html/doc.html /usr/share/chordV/$lang
+cp Docs/User/$lang/txt/doc.md /usr/share/chordV/$lang
+cp Docs/User/$lang/pdf/doc.pdf /usr/share/chordV/$lang
+cp Example/$lang/demo.chop /usr/share/chordV/$lang
+cp -r Docs/User/$lang/html/img /usr/share/chordV/$lang
+cp Install/chordV.desktop /usr/share/applications
+
+}
+
+if [ `whoami` != "root" ]
+then
+	echo "you must be root to install"
+	exit 0
+fi
+mkdir -p ~/.config/ChordV
+Copy Français
+Copy English
+

@@ -1,0 +1,19 @@
+Source: chordv
+Section: Multimedia
+Priority: optional
+Maintainer: Gilles Maire <gilles@gillesmaire.com>
+Build-Depends: debhelper-compat (= 13), qt6-base-dev, qt6-multimedia-dev, qt6-base-dev-tools
+Standards-Version: 3.9.8
+Homepage: https://www.gillesmaire.com/tiki-index.php?page=chordV
+Vcs-Git: git clone https://git.code.sf.net/p/chordv/code
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/chordv.git
+
+Package: chordv
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ChordPro studio to produce songs in many output format.
+ ChordPro provides a chordpro editor to write chord in songs. 
+ It provides a chord designer and allows to set the fonts and options 
+ of all the output. 
+ The output formats are text only PDF, text + chord PDF or only chords in
+ grid.

@@ -1,0 +1,24 @@
+[General]
+automatically_added_at_and_of_document=
+automatically_added_at_begin_of_document=
+automatically_added_at_begin_of_page=
+automatically_added_at_end_of_Page=::((Paroles des chansons))::
+column_break=
+columns=
+copyright=
+cover_subtitle=
+cover_title=
+end_of_chorus=
+end_of_grid=
+end_of_refrain=
+end_of_verse=
+new_page=
+start_of_chorus=
+start_of_grid=
+start_of_refrain=
+start_of_verse=
+subtitle=__$subtitle__
+tempo=
+time=
+title=! $title^
+version=

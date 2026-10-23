@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/Image">
+        <file>../Images/icon.png</file>
+        <file>../Images/neck.jpg</file>
+        <file>../Images/warning.png</file>
+        <file>../Images/gilles.jpg</file>
+        <file>../Images/cross.png</file>
+        <file>../Images/task-complete.png</file>
+        <file>../Images/task-reject.png</file>
+        <file>../Images/logo.svg</file>
+        <file>../Images/greenbull.png</file>
+        <file>../Images/redbull.png</file>
+        <file>../Images/settings.png</file>
+        <file>../Images/Verse.png</file>
+        <file>../Images/Solo.png</file>
+        <file>../Images/Chorus.png</file>
+    </qresource>
+    <qresource prefix="/Base">
+        <file>../Bd/Chord.db</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>../Images/warning.png</file>
+        <file>../Images/logo.svg</file>
+        <file>../sound/1.wav</file>
+        <file>../sound/2.wav</file>
+    </qresource>
+    <qresource prefix="/Font">
+        <file>ELEKTRA_.ttf</file>
+    </qresource>
+</RCC>

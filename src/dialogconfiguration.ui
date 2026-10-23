@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogConfiguration</class>
+ <widget class="QDialog" name="DialogConfiguration">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1166</width>
+    <height>749</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configuration</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_18">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_9">
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allow to set general informations as default artist, default compositor, user interface language, unit &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="currentIndex">
+        <number>6</number>
+       </property>
+       <widget class="QWidget" name="GeneralConfig">
+        <attribute name="title">
+         <string>General</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="labelInterfaceLanguage">
+                   <property name="text">
+                    <string> Interface language</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelUnit">
+                   <property name="text">
+                    <string>Preferred units</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelPDFReaderName">
+                   <property name="text">
+                    <string>PDF Reader program</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="checkBoxInternalPDFReader">
+                   <property name="text">
+                    <string>Internal PDF reader</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelArtistName">
+                   <property name="text">
+                    <string>Default artist name</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelComposerName">
+                   <property name="text">
+                    <string>Default composer name</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelLyricistName">
+                   <property name="text">
+                    <string>Default lyricist name</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelArrangerName">
+                   <property name="text">
+                    <string>Default arranger name</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelChordTextColor">
+                   <property name="text">
+                    <string>Chord text color</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelTagsXColor">
+                   <property name="text">
+                    <string>Tags text color</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_2">
+                 <item>
+                  <widget class="QComboBox" name="comboBoxInterfaceLanguage"/>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBoxUnit">
+                   <item>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>cm</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>in</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <item>
+                    <widget class="QLineEdit" name="lineEditPDFReaderName"/>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButtonPDFReaderName">
+                     <property name="text">
+                      <string>...</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditArtistName"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditComposerName"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditLyricistName"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditArrangerName"/>
+                 </item>
+                 <item>
+                  <widget class="ColorButton" name="toolButtonChordTextColor">
+                   <property name="text">
+                    <string>...</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="ColorButton" name="toolButtonTagsTextColor">
+                   <property name="text">
+                    <string>...</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="LyricsMode">
+        <attribute name="title">
+         <string>Lyrics mode</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="LyricsConfig" name="lyricsConfig" native="true"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="ChordModeConfig">
+        <attribute name="title">
+         <string>Chord mode</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="ChordConfig" name="chordConfig" native="true"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="TextModeConfig">
+        <attribute name="title">
+         <string>Text mode</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="TextConfig" name="textConfig" native="true"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="MemoryModeConfig">
+        <attribute name="title">
+         <string>Memory mode</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_11">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="FormMemoryInfo" name="widgetMemory" native="true"/>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="ExportModeConfig">
+        <attribute name="title">
+         <string>Export mode</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <item>
+            <widget class="QLabel" name="labelExplanation">
+             <property name="text">
+              <string>You can define export process to web page for example or other format needed</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonLoadFormat">
+             <property name="text">
+              <string>Load</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonSaveDefaultFormat">
+             <property name="text">
+              <string>Save  as default</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonSaveFormat">
+             <property name="text">
+              <string>Save </string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>1108</width>
+              <height>1038</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_13">
+             <item>
+              <widget class="QSplitter" name="splitter">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <widget class="QWidget" name="layoutWidget">
+                <layout class="QVBoxLayout" name="verticalLayout_22">
+                 <item>
+                  <widget class="QLabel" name="labelCovertTitle">
+                   <property name="text">
+                    <string>Cover title ($cover_title)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelCoverSubtitle">
+                   <property name="text">
+                    <string>Covert subtitle ($covert_subtitle)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelTitle">
+                   <property name="text">
+                    <string>Title ($title)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelsubtitle">
+                   <property name="text">
+                    <string>Subtitle ($subtitle)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelCopyright">
+                   <property name="text">
+                    <string>Copyright ($copyright)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelVersion">
+                   <property name="text">
+                    <string>Version ($version)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelTempo">
+                   <property name="text">
+                    <string>Tempo ($tempo)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelColumns">
+                   <property name="text">
+                    <string>Columns ($columns)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelTime">
+                   <property name="text">
+                    <string>Time ($time)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelColumnBreak">
+                   <property name="text">
+                    <string>Column break ($column_break)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelStartOfSolo">
+                   <property name="text">
+                    <string>Start of solo ($start_of_solo)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelEndOfSolo">
+                   <property name="text">
+                    <string>End of solo ($end_of_solo)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelStartOfChorus">
+                   <property name="text">
+                    <string>Start of chorus ($start_of_chorus)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelEndOfChorus">
+                   <property name="text">
+                    <string>End of chorus ($end_of_chorus)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelStartOfVerse">
+                   <property name="text">
+                    <string>Start of verse ($start_of_verse)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelEndOfVerse">
+                   <property name="text">
+                    <string>End of verse ($end_of_verse)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelStartOfGrid">
+                   <property name="text">
+                    <string>Start of grid ($start_of_grid)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelEndOfGrid">
+                   <property name="text">
+                    <string>End of grid ($end_of_grid)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelNewPage">
+                   <property name="text">
+                    <string>New page ($new_page)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelComposer">
+                   <property name="text">
+                    <string>Composer ($composer)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelLyricist">
+                   <property name="text">
+                    <string>Lyricist ($lyricist)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelArranger">
+                   <property name="text">
+                    <string>Arranger ($arranger)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelArtist">
+                   <property name="text">
+                    <string>Artist ($artist)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelAlbum">
+                   <property name="text">
+                    <string>Album ($album)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelYear">
+                   <property name="text">
+                    <string>Year ($year)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelDuration">
+                   <property name="text">
+                    <string>Duration ($duration)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelKey">
+                   <property name="text">
+                    <string>Key ($key)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelNewSong">
+                   <property name="text">
+                    <string>New Song ($new_song)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelAutomaticallyAddedAtBeginOfPage">
+                   <property name="text">
+                    <string>AutomaticallyAddedAtBeginOfPage ($automatically_..._of_page)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelAutomaticallyAddedAtEndOfPage">
+                   <property name="text">
+                    <string>AutomaticallyAddedAtEndOfPage ($automatically_..._of_page)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelAutomaticallyAddedAtBeginOfDocument">
+                   <property name="text">
+                    <string>AutomaticallyAddedAtBeginOfDocument ($automatically_.._of_document)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelAutomaticallyAddedAtEndOfDocument">
+                   <property name="text">
+                    <string>AutomaticallyAddedAtEnOfDocument ($automatically_..._document)</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="layoutWidget">
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <item>
+                  <widget class="QLineEdit" name="lineEditcover_title">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditcover_subtitle">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdittitle">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditsubtitle">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditcopyright">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditversion">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdittempo">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditcolumns">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdittime">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditcolumn_break">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditstart_of_solo"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditend_of_solo"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditstart_of_chorus"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditend_of_chorus"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditstart_of_verse"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditend_of_verse"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditstart_of_grid"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditend_of_grid"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditnew_page"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditcomposer"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditlyricist"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditarranger"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditartist"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditalbum"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdityear"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditduration"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditkey"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditnew_song"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditautomatically_added_at_begin_of_page"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditautomatically_added_at_end_of_Page"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditautomatically_added_at_begin_of_document"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditautomatically_added_at_and_of_document"/>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="MMAConfig">
+        <attribute name="title">
+         <string>MMA Export</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_24">
+           <item>
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_23">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_10">
+               <item>
+                <widget class="QLabel" name="labelMMA">
+                 <property name="text">
+                  <string>MMA Export Directory</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEditMMA"/>
+               </item>
+               <item>
+                <widget class="QToolButton" name="toolButtonMMA">
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_21">
+               <item>
+                <widget class="QCheckBox" name="checkBoxMMAExportShowDir">
+                 <property name="text">
+                  <string>Show message with location of files after generation </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBoxAddStartTempo">
+                 <property name="text">
+                  <string>Add click at begining of songs</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="MarkDownConfig">
+        <attribute name="title">
+         <string>Markdown export</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_17">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_16">
+           <item>
+            <widget class="QCheckBox" name="checkBoxSpitInSeparateFilesMarkDown">
+             <property name="text">
+              <string>Split in separate files</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Destination directory</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditDestinationDirectoryMarkDown"/>
+             </item>
+             <item>
+              <widget class="QToolButton" name="toolButtonDestinationDirectoryMarkDown">
+               <property name="text">
+                <string>...</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="labelDirectortyWthMusicFiles">
+               <property name="text">
+                <string>Directory layout/partials/sidebar</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditDirectoryWithMusicFilesMarkdown"/>
+             </item>
+             <item>
+              <widget class="QToolButton" name="toolButtonDirectiyWithMusicFilesMArkDown">
+               <property name="text">
+                <string>...</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBoxMarkDownExportShowDir">
+             <property name="text">
+              <string>Show message with location of files after generation </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="JJazzLab">
+        <attribute name="title">
+         <string>JJazLab Export</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_20">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_19">
+             <item>
+              <spacer name="verticalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QLabel" name="labelJazzLab">
+                 <property name="text">
+                  <string>Directory to export JJazzLab files :</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEditJazzLab"/>
+               </item>
+               <item>
+                <widget class="QToolButton" name="JazzLabToolButton">
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBoxGetJjazzLabShowDir">
+               <property name="text">
+                <string>Show message with location of files after generation </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Orientation::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="EditorConfig">
+        <attribute name="title">
+         <string>Editor</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QWidget" name="widget" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QCheckBox" name="checkBoxOpenLastFileOnStart">
+              <property name="text">
+               <string>Open last file on start </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonClose">
+       <property name="text">
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonSave">
+       <property name="text">
+        <string>Save</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LyricsConfig</class>
+   <extends>QWidget</extends>
+   <header>lyricsconfig.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ChordConfig</class>
+   <extends>QWidget</extends>
+   <header>chordconfig.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TextConfig</class>
+   <extends>QWidget</extends>
+   <header>textconfig.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FormMemoryInfo</class>
+   <extends>QWidget</extends>
+   <header>formmemoryinfo.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorButton</class>
+   <extends>QToolButton</extends>
+   <header>colorbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

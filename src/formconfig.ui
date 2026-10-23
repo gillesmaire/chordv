@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormConfig</class>
+ <widget class="QWidget" name="FormConfig">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>776</width>
+    <height>636</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_6">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Document</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_35">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_20">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_20">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_18">
+             <item>
+              <widget class="QGroupBox" name="groupBoxPageSize">
+               <property name="title">
+                <string>PageSize</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_17">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_18">
+                    <item>
+                     <widget class="QLabel" name="labelPageWidth">
+                      <property name="text">
+                       <string>Page width</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="SpinBoxUnit" name="spuPageWidth" native="true"/>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_19">
+                    <item>
+                     <widget class="QLabel" name="labelPageHeight">
+                      <property name="text">
+                       <string>Page height</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="SpinBoxUnit" name="spuPageHeight" native="true"/>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_21">
+                    <item>
+                     <widget class="QLabel" name="labelPageDimension">
+                      <property name="text">
+                       <string>Page</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="PageSize" name="comboBoxMediaBox"/>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="checkBoxLandscape">
+                      <property name="text">
+                       <string>Landscape</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="groupBoxMargin">
+               <property name="title">
+                <string>Margin</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_25">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_16">
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_15">
+                    <item>
+                     <widget class="QLabel" name="labelMarginHorizontal">
+                      <property name="text">
+                       <string>Horizontal </string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="labelMarginVertical">
+                      <property name="text">
+                       <string>Vertical</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                    <item>
+                     <widget class="SpinBoxUnit" name="spuHorizontalMargin" native="true"/>
+                    </item>
+                    <item>
+                     <widget class="SpinBoxUnit" name="spuVerticalMargin" native="true"/>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBoxMiscellaneous">
+             <property name="title">
+              <string>Fonts</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_19">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_10">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_6">
+                  <item>
+                   <widget class="QLabel" name="labelNormalFont">
+                    <property name="text">
+                     <string>Default Font</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ExampleLabel" name="labelNormalFontExample">
+                    <property name="text">
+                     <string>Example</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="FontButton" name="toolButtonNormalFont">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QLabel" name="labelTitleFont">
+                    <property name="text">
+                     <string>Title Font</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ExampleLabel" name="labelTitleFontExample">
+                    <property name="text">
+                     <string>Example</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="FontButton" name="toolButtonTitleFont">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_28">
+                  <item>
+                   <widget class="QLabel" name="labelSubtitleFont">
+                    <property name="text">
+                     <string>Subtitle Font</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ExampleLabel" name="labelSubtitleFontExample">
+                    <property name="text">
+                     <string>Example</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="FontButton" name="toolButtonSubtitleFont">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <widget class="QLabel" name="labelCommentFont">
+                    <property name="text">
+                     <string>Comment Font</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ExampleLabel" name="labelCommentFontExample">
+                    <property name="text">
+                     <string>Example</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="FontButton" name="toolButtonCommentFont">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_34">
+                  <item>
+                   <widget class="QLabel" name="labelCommentItalicFont">
+                    <property name="text">
+                     <string>Comment ItalicFont</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ExampleLabel" name="labelCommentItalicFontExample">
+                    <property name="text">
+                     <string>Example</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="FontButton" name="toolButtonCommentItalicFont">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_29">
+                  <item>
+                   <widget class="QLabel" name="labelCommentBoxFont">
+                    <property name="text">
+                     <string>Comment Font in box</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ExampleLabel" name="labelCommentBoxFontExample">
+                    <property name="text">
+                     <string>Example</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="FontButton" name="toolButtonCommentBoxFont">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_33">
+           <item>
+            <widget class="QGroupBox" name="groupBoxPageNumber">
+             <property name="title">
+              <string>Page number</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_25">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_26">
+                  <item>
+                   <widget class="QLabel" name="labelPageNumber">
+                    <property name="text">
+                     <string>Page number</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxPageNumber">
+                    <item>
+                     <property name="text">
+                      <string>No</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Center</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Outside</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                  <item>
+                   <widget class="QLabel" name="labelPageNumberStyle">
+                    <property name="text">
+                     <string>Page style</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxPageNumberStyle">
+                    <item>
+                     <property name="text">
+                      <string>1</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>- 1 - </string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>1/50</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>&lt;&lt; 1 &gt;&gt;</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <item>
+                   <widget class="QLabel" name="labelPageNumberPosition">
+                    <property name="text">
+                     <string>Page number position</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="SpinBoxUnit" name="spuPageNumberPosition" native="true"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_14">
+                  <item>
+                   <widget class="QLabel" name="labelPageNumberFont">
+                    <property name="text">
+                     <string>Page Number  Font</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ExampleLabel" name="labelPageNumberFontExample">
+                    <property name="text">
+                     <string>Example</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="FontButton" name="toolButtonPageNumberFont">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
+              <string>Page topology</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_38">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_16">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_27">
+                  <item>
+                   <widget class="QLabel" name="labelDuplex">
+                    <property name="text">
+                     <string>Duplex</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxDuplex">
+                    <item>
+                     <property name="text">
+                      <string>Simplex</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Duplex</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Duplex with new song on right page</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_32">
+                  <item>
+                   <widget class="QLabel" name="labelPageColor">
+                    <property name="text">
+                     <string>Paper color</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ColorButton" name="colorButtonPaperColor">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_13">
+                  <item>
+                   <spacer name="horizontalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButtonSetAsDefault1">
+                    <property name="toolTip">
+                     <string>Save this as default</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../Resources/resources.qrc">
+                      <normaloff>:/Image/Images/settings.png</normaloff>:/Image/Images/settings.png</iconset>
+                    </property>
+                    <property name="shortcut">
+                     <string>Shift+S, Esc</string>
+                    </property>
+                    <property name="flat">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_36">
+                  <item>
+                   <widget class="QLabel" name="labelVerticalPausePerPage">
+                    <property name="text">
+                     <string>Page per height</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxVerticalPausePerPage">
+                    <item>
+                     <property name="text">
+                      <string>1</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>3</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_37">
+                  <item>
+                   <widget class="QLabel" name="labelColumnNumber">
+                    <property name="text">
+                     <string>Force column</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxColumnNumber">
+                    <item>
+                     <property name="text">
+                      <string>Keep song definition</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>1</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>3</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>4</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Content</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_23">
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QWidget" name="layoutWidget">
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="QGroupBox" name="groupBoxCover">
+             <property name="title">
+              <string>Cover</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <property name="leftMargin">
+               <number>1</number>
+              </property>
+              <property name="topMargin">
+               <number>1</number>
+              </property>
+              <property name="rightMargin">
+               <number>1</number>
+              </property>
+              <property name="bottomMargin">
+               <number>1</number>
+              </property>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                 <widget class="QCheckBox" name="checkBoxCover">
+                  <property name="text">
+                   <string>Cover</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_10">
+                  <item>
+                   <widget class="QLabel" name="labelCoverFont">
+                    <property name="text">
+                     <string>Cover Font</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ExampleLabel" name="labelCoverFontExample">
+                    <property name="text">
+                     <string>Example</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="FontButton" name="toolButtonCoverFont">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_11">
+                  <item>
+                   <widget class="QLabel" name="labelTitlePosition">
+                    <property name="text">
+                     <string>Title position from top</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxTitlePosition">
+                    <item>
+                     <property name="text">
+                      <string>1/4</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>1/2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>3/4</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <item>
+                   <widget class="QLabel" name="labelCoverImage">
+                    <property name="text">
+                     <string> Image</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="labelCoverViewImage">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QToolButton" name="toolButtonSuppressCoverImage">
+                    <property name="text">
+                     <string> - </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="ImageButton" name="toolButtonCoverImage">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBoxToc">
+             <property name="title">
+              <string>Toc</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
+              <property name="leftMargin">
+               <number>1</number>
+              </property>
+              <property name="topMargin">
+               <number>1</number>
+              </property>
+              <property name="rightMargin">
+               <number>1</number>
+              </property>
+              <property name="bottomMargin">
+               <number>1</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_24">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_5">
+                  <item>
+                   <widget class="QLabel" name="labelTocVerticalSpacing">
+                    <property name="text">
+                     <string>Toc vertical spacing</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="labelTocMargin">
+                    <property name="text">
+                     <string>Toc horizontal margin</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="labelTocColumn">
+                    <property name="text">
+                     <string>Toc column number</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_12">
+                    <item>
+                     <widget class="QLabel" name="labelTocFont">
+                      <property name="text">
+                       <string>Toc Font</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="ExampleLabel" name="labelTocFontExample">
+                      <property name="text">
+                       <string>Example</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="labelTocSpaceCharacter">
+                    <property name="text">
+                     <string>Space character</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label">
+                    <property name="text">
+                     <string>Position </string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
+                  <item>
+                   <widget class="VerticalSpacing" name="comboBoxTocVerticalSpacing"/>
+                  </item>
+                  <item>
+                   <widget class="SpinBoxUnit" name="spuTocHorizontalMargin" native="true"/>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxTocColumnNumber">
+                    <item>
+                     <property name="text">
+                      <string>1</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>3</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="FontButton" name="toolButtonTocFont">
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxTocSpaceCharacter">
+                    <item>
+                     <property name="text">
+                      <string>. . . .</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>- - - -</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxTocPosition">
+                    <item>
+                     <property name="text">
+                      <string>No</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>At begining</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>At end</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget1">
+          <layout class="QVBoxLayout" name="verticalLayout_22">
+           <item>
+            <widget class="QGroupBox" name="groupBoxChord">
+             <property name="title">
+              <string>Chord</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_14">
+              <property name="leftMargin">
+               <number>1</number>
+              </property>
+              <property name="topMargin">
+               <number>1</number>
+              </property>
+              <property name="rightMargin">
+               <number>1</number>
+              </property>
+              <property name="bottomMargin">
+               <number>1</number>
+              </property>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_15">
+                  <item>
+                   <widget class="QLabel" name="labelChordDiagramHSize">
+                    <property name="text">
+                     <string>Chord diagram horizontal size</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="SpinBoxUnit" name="spuChordHorizontalSize" native="true"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_12">
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_8">
+                    <item>
+                     <widget class="QLabel" name="labelChordFont">
+                      <property name="text">
+                       <string>Chord Font</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="ExampleLabel" name="labelChordFontExample">
+                      <property name="text">
+                       <string>Example</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="FontButton" name="toolButtonChordFont">
+                      <property name="text">
+                       <string>...</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_22">
+                  <item>
+                   <widget class="QLabel" name="labelChordLang">
+                    <property name="text">
+                     <string>Chord Lang</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxChordLang"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_23">
+                  <item>
+                   <widget class="QLabel" name="labelChordLangInText">
+                    <property name="text">
+                     <string>Chord display</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxChordInText">
+                    <item>
+                     <property name="text">
+                      <string>diagram in text</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>chords at begining</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>name in text only</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBoxMiscellaneousContent">
+             <property name="title">
+              <string>Miscellaneous</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_39">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_26">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_9">
+                  <item>
+                   <widget class="QLabel" name="labelOutputFileName">
+                    <property name="text">
+                     <string>Output file name</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="lineEditOutFile"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_30">
+                  <item>
+                   <widget class="QLabel" name="labelVerticalSpacing">
+                    <property name="text">
+                     <string>Text vertical spacing</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="VerticalSpacing" name="comboBoxVerticalSpacing"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_31">
+                  <item>
+                   <widget class="QLabel" name="labelLimiteSubtitleNumber">
+                    <property name="text">
+                     <string>Limit subtitle number</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxSubtitleNumber">
+                    <item>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>1</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>3</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>4</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_17">
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_8">
+                    <item>
+                     <widget class="QCheckBox" name="checkBoxComposer">
+                      <property name="text">
+                       <string>Composer </string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="checkBoxLyricist">
+                      <property name="text">
+                       <string>Lyrist</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_24">
+                    <item>
+                     <widget class="QCheckBox" name="checkBoxYear">
+                      <property name="text">
+                       <string>Year</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="checkBoxArtist">
+                      <property name="text">
+                       <string>Artist</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBoxFullScreenMode">
+                  <property name="text">
+                   <string>Open in full screen mode</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                  <item>
+                   <widget class="QCheckBox" name="checkBoxTitleInUppercase">
+                    <property name="text">
+                     <string>Title in uppercase</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButtonSetAsDefault2">
+                    <property name="toolTip">
+                     <string>Save this as default</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../Resources/resources.qrc">
+                      <normaloff>:/Image/Images/settings.png</normaloff>:/Image/Images/settings.png</iconset>
+                    </property>
+                    <property name="flat">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ColorButton</class>
+   <extends>QToolButton</extends>
+   <header>colorbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>FontButton</class>
+   <extends>QToolButton</extends>
+   <header>fontbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SpinBoxUnit</class>
+   <extends>QWidget</extends>
+   <header>spinboxunit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ImageButton</class>
+   <extends>QToolButton</extends>
+   <header>imagebutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ExampleLabel</class>
+   <extends>QLabel</extends>
+   <header>examplelabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PageSize</class>
+   <extends>QComboBox</extends>
+   <header>pagesize.h</header>
+  </customwidget>
+  <customwidget>
+   <class>VerticalSpacing</class>
+   <extends>QComboBox</extends>
+   <header location="global">verticalspacing.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

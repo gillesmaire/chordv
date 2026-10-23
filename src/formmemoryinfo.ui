@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormMemoryInfo</class>
+ <widget class="QWidget" name="FormMemoryInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>380</width>
+    <height>492</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>1</number>
+   </property>
+   <property name="bottomMargin">
+    <number>1</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>Lyrics look</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="leftMargin">
+         <number>1</number>
+        </property>
+        <property name="topMargin">
+         <number>1</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QLabel" name="labelFontMemory">
+                <property name="toolTip">
+                 <string>The lyrics will be displayed in a colorized font. Click on the button to choose the font, the font color and the background color of the lyrics</string>
+                </property>
+                <property name="text">
+                 <string>Memory font</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelPositionMemory">
+                <property name="text">
+                 <string>Position</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="FontButton" name="toolButtonFontMemory">
+                <property name="toolTip">
+                 <string>Allow to choose font and font color to display on the monitoring screen</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBoxPositionMemory">
+                <property name="toolTip">
+                 <string>If not fullScreen mode is selected, allows to choose if window will be in top, bottom or in middle o the screen</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Top</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Middle</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Bottom</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBoxFullScreenMemory">
+            <property name="toolTip">
+             <string>Show monitoring window in fullscreen mode</string>
+            </property>
+            <property name="text">
+             <string>Full screen</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBoxTwoLines">
+            <property name="toolTip">
+             <string>Show one line or two lines</string>
+            </property>
+            <property name="text">
+             <string>Two lines displayed</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelExample">
+            <property name="toolTip">
+             <string>This show the font effect</string>
+            </property>
+            <property name="text">
+             <string>Example </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>Rythm render</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <property name="leftMargin">
+         <number>1</number>
+        </property>
+        <property name="topMargin">
+         <number>1</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QCheckBox" name="checkBoxShowRythmTextMemory">
+            <property name="toolTip">
+             <string>Show bullet changing with rythm</string>
+            </property>
+            <property name="text">
+             <string>Show rythm with bullet</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBoxClick">
+            <property name="toolTip">
+             <string>Set on  to listen a click on each beat</string>
+            </property>
+            <property name="text">
+             <string>Click</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="labelVolume">
+              <property name="toolTip">
+               <string>Set the volume of the click</string>
+              </property>
+              <property name="text">
+               <string>Volume</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="horizontalSliderVolume">
+              <property name="toolTip">
+               <string>Set the volume of the click</string>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBoxMarkFirst">
+            <property name="toolTip">
+             <string>You can mark the first beat of the bar</string>
+            </property>
+            <property name="text">
+             <string>Mark fist</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string>Time adjustment</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <property name="leftMargin">
+         <number>1</number>
+        </property>
+        <property name="topMargin">
+         <number>1</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <item>
+                 <widget class="QLabel" name="labelAdvance">
+                  <property name="toolTip">
+                   <string>Allows to show the lyrics before they are placed, to be usefull for the singer</string>
+                  </property>
+                  <property name="text">
+                   <string>Advance lyrics </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="labelTimeAddedBeforeStart">
+                  <property name="toolTip">
+                   <string>Number of beat before to start the first lyric</string>
+                  </property>
+                  <property name="text">
+                   <string>Delay before starting</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <widget class="QDoubleSpinBox" name="doubleSpinBoxAdvance">
+                  <property name="toolTip">
+                   <string>Allows to choose second and 1/100 of second</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="spinBoxTimeBeforeStart"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
+                <item>
+                 <widget class="QLabel" name="labelSeconds">
+                  <property name="text">
+                   <string>seconds</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBoxTimeBeforeUnit">
+                  <item>
+                   <property name="text">
+                    <string>seconds</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>beats</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>bars</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QCheckBox" name="checkBoxJackSynchronisation">
+                <property name="toolTip">
+                 <string>This option allow to synchronize the lyrics with the Jack complient program. It is useful with Ardour for example.</string>
+                </property>
+                <property name="text">
+                 <string>Jack synchronized</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonSetAsDefault">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Resources/resources.qrc">
+              <normaloff>:/Image/Images/settings.png</normaloff>:/Image/Images/settings.png</iconset>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FontButton</class>
+   <extends>QToolButton</extends>
+   <header>fontbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

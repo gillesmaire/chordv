@@ -1,0 +1,16 @@
+#!/bin/sh
+PATH=$PATH:./testChord
+rm -f *.pdf
+testChord Text/Cover=0 conf/Text.chop
+testChord Text/NormalFont="Ubuntu,16,-1,5,50,0,0,0,0,0" conf/Text.chop
+testChord Text/TocPosition=0 conf/Text.chop
+testChord Text/VerticalSpacing=5 conf/Text.chop
+testChord Text/Cover=0 Text/TocPosition=0 conf/Text.chop
+testChord Lyrics/ChordInText=0 conf/Lyrics.chop
+testChord Lyrics/ChordInText=2 conf/Lyrics.chop
+testChord Lyrics/Cover=0 Lyrics/TocPosition=0 conf/Lyrics.chop
+testChord conf/Chord.chop
+testChord conf/All.chop
+
+
+

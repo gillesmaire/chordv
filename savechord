@@ -1,0 +1,5 @@
+#!/bin/sh
+
+#get the active database running to source 
+
+cp ~/.config/ChordV/Chord.db Bd
