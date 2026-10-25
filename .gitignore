@@ -2,3 +2,16 @@ build
 bin
 windowslib
 windowsdll
+*.o
+ui_*.cpp
+ui_*.h
+moc_*.*
+*.pro.user*
+chordV
+*.pro.user
+*.pro.user
+src/version.h
+Makefile
+qrc_resources.cpp
+*.stash
+
