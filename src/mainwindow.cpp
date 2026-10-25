@@ -1690,7 +1690,7 @@ void MainWindow::ConvertInJazzFiles()
                     
                     {
                     out <<"\nGroove  Metronome2-4\n";
-                    out << "z*2\n\n";
+                    out << "z * 2\n\n";
                     }
                     
                     out << "Groove " << groove << "\n\n";

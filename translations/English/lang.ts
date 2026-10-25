@@ -793,6 +793,11 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../src/dialogconfiguration.ui" line="784"/>
+        <source>Add click at begining of songs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../src/dialogconfiguration.ui" line="824"/>
         <source>Markdown export</source>
         <translation type="unfinished"></translation>
@@ -830,11 +835,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="784"/>
-        <source>Add tempo at begining of songs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/dialogconfiguration.ui" line="999"/>
         <source>Editor</source>
         <translation type="unfinished"></translation>
@@ -855,38 +855,38 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="72"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="73"/>
         <source>Choose the directory where JJazzLibfiles are stored</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="91"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="92"/>
         <source>Choose the directory where MMA files are stored</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="128"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="129"/>
         <source>Choose the directory where musicfiles are stored</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="194"/>
-        <location filename="../../src/dialogconfiguration.cpp" line="212"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="195"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="213"/>
         <source>Format Export Chord (*.fec)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="195"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="196"/>
         <source>Choose file to get format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="214"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="215"/>
         <source>Choose file to save format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="230"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="231"/>
         <source>Choose PDF Reader program</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3229,14 +3229,14 @@ Box</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1719"/>
+        <location filename="../../src/mainwindow.cpp" line="1730"/>
         <source>Your MMA import files are located in %1 directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="1243"/>
         <location filename="../../src/mainwindow.cpp" line="1438"/>
-        <location filename="../../src/mainwindow.cpp" line="1722"/>
+        <location filename="../../src/mainwindow.cpp" line="1733"/>
         <source>Don&apos;t ask</source>
         <translation type="unfinished"></translation>
     </message>

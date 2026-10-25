@@ -804,6 +804,11 @@ p, li { white-space: pre-wrap; }
         <translation>Fin de chorus ($end_of_chorus)</translation>
     </message>
     <message>
+        <location filename="../../src/dialogconfiguration.ui" line="784"/>
+        <source>Add click at begining of songs</source>
+        <translation>Ajouter un clic au début des morceaux</translation>
+    </message>
+    <message>
         <source>Start of refrain ($start_of_refrain)</source>
         <translation type="vanished">Debut de refrain ($start_of_refrain)</translation>
     </message>
@@ -962,9 +967,8 @@ p, li { white-space: pre-wrap; }
         <translation>Afficher un message indiquant la localisation des fichiers après leur génération </translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="784"/>
         <source>Add tempo at begining of songs</source>
-        <translation>Ajouter le tempo au début de la chanson</translation>
+        <translation type="vanished">Ajouter le tempo au début de la chanson</translation>
     </message>
     <message>
         <location filename="../../src/dialogconfiguration.ui" line="999"/>
@@ -1020,39 +1024,39 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Choisisssez le répertoire où les fichiers Markdown doivent être générés</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="72"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="73"/>
         <source>Choose the directory where JJazzLibfiles are stored</source>
         <translation>Choisissez le répertoire où les fichiers JazzLab seront stockés</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="91"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="92"/>
         <source>Choose the directory where MMA files are stored</source>
         <translation>Choisissez le répertoire ou les fichiers MM seront stockés</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="128"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="129"/>
         <source>Choose the directory where musicfiles are stored</source>
         <translatorcomment>Choisissez le répertoire ou les fichiers  musiques seront stockés</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="194"/>
-        <location filename="../../src/dialogconfiguration.cpp" line="212"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="195"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="213"/>
         <source>Format Export Chord (*.fec)</source>
         <translation>Format d&apos;exportation Chord (*.fec)</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="195"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="196"/>
         <source>Choose file to get format</source>
         <translation>Choisir un fichier pour récupérer le format</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="214"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="215"/>
         <source>Choose file to save format</source>
         <translation>Choisir un fichier pour sauvegarder le format</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="230"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="231"/>
         <source>Choose PDF Reader program</source>
         <translation>Choisir un lecteur PDF</translation>
     </message>
@@ -3978,14 +3982,14 @@ solo</translation>
         <translation>Les fichiers d&apos;import JjazzLab sont stockés dans le  %1</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1719"/>
+        <location filename="../../src/mainwindow.cpp" line="1730"/>
         <source>Your MMA import files are located in %1 directory</source>
         <translation>Vos fichiers au format MMA sont présents dans le répertoire %1</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="1243"/>
         <location filename="../../src/mainwindow.cpp" line="1438"/>
-        <location filename="../../src/mainwindow.cpp" line="1722"/>
+        <location filename="../../src/mainwindow.cpp" line="1733"/>
         <source>Don&apos;t ask</source>
         <translation>Ne plus afficher</translation>
     </message>
