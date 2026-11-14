@@ -25,8 +25,11 @@ DialogConfiguration::DialogConfiguration(QWidget *parent) :
     ui->checkBoxMMAExportShowDir->setChecked(s.value("ShowMMADirectory").toBool());
     ui->checkBoxMarkDownExportShowDir->setChecked(s.value("ShowMarkDownDirectory").toBool());
     ui->checkBoxAddStartTempo->setChecked(s.value("ClickAtBegin").toBool());
+    ui->lineEditDefaultGroove->setText(s.value("DefaultGroove").toString());
+    ui->lineEditGrooveDirectory->setText(s.value("GrooveDirectory","/usr/share/mma/lib").toString());
     connect(ui->pushButtonClose,SIGNAL(clicked(bool)),this,SLOT(close()));
     connect(ui->pushButtonSave,SIGNAL(clicked(bool)),this,SLOT(Save()));
+    
     connect(ui->toolButtonPDFReaderName,SIGNAL(clicked(bool)),this,SLOT(SetPDFReader()));
     //connect(ui->checkBoxInternalPDFReader,SIGNAL(stateChanged(int)),this,SLOT(InternalPDFStatus(int)));
     connect(ui->pushButtonSaveFormat,SIGNAL(clicked(bool)),this,SLOT(SaveFormat()));
@@ -35,7 +38,8 @@ DialogConfiguration::DialogConfiguration(QWidget *parent) :
     connect(ui->toolButtonDestinationDirectoryMarkDown,SIGNAL(clicked(bool)),this,SLOT(setDestinationDirectoryMarkDown()));
     connect(ui->toolButtonDirectiyWithMusicFilesMArkDown,SIGNAL(clicked(bool)),this,SLOT(setDirectoryWithMusicMarkDown()));
     connect(ui->JazzLabToolButton,SIGNAL(clicked(bool)),this,SLOT(setDirectoryJjazzLib()));
-    connect(ui->toolButtonMMA,SIGNAL(clicked(bool)),this,SLOT(setDirectoryMMA()));
+    connect(ui->toolButtonMMexportDirectory,SIGNAL(clicked(bool)),this,SLOT(setDirectoryMMA()));
+    connect (ui->toolButtonMMAGrooveDirectory,SIGNAL(clicked(bool)),this,SLOT(SetDirectoryGrooveMMA()));
     connect (ui->checkBoxGetJjazzLabShowDir,SIGNAL(clicked(bool)),this,SLOT(setJjazzLabShowDir()));
     connect (ui->checkBoxMMAExportShowDir,SIGNAL(clicked(bool)),this,SLOT(setMMAShowDir()));
     connect (ui->checkBoxMarkDownExportShowDir,SIGNAL(clicked(bool)),this,SLOT(setDirectoryMarkDown()));
@@ -92,14 +96,37 @@ void DialogConfiguration::setDirectoryMMA()
                                                     tr("Choose the directory where MMA "
                                                        "files are stored"),
                                                     s.value("DestinationDirectoryMMAFiles",QDir::tempPath()).toString());
-    ui->lineEditMMA->setText(dir);
+    ui->lineEditMMAExportDirectory->setText(dir);
 }
 
 QString DialogConfiguration::getDirectoryMMA()
 {
    QSettings s;
-   return s.value("DestinationDirectoryMMAFiles",QDir::tempPath()).toString();
+   return s.value(""
+                  "",QDir::tempPath()).toString();
 }
+QString DialogConfiguration::getDirectoryGrooveMMA()
+{
+    QSettings s;
+    return s.value("GrooveDirectory", "/usr/share/mma/lib").toString();
+}
+
+
+void DialogConfiguration::SetDirectoryGrooveMMA()
+{
+    QSettings s;
+
+    QString dir = QFileDialog::getExistingDirectory(
+        this,
+        tr("Choose the directory where MMA Grooves files are stored"),
+        s.value("GrooveDirectory", "/usr/share/mma/lib").toString());
+
+    if (!dir.isEmpty()) {
+        ui->lineEditGrooveDirectory->setText(dir);
+        s.setValue("GrooveDirectory", dir);
+    }
+}
+
 
 QString DialogConfiguration::getDirectoryMarkDown()
 {
@@ -294,11 +321,12 @@ void DialogConfiguration::InitSettings()
     ui->checkBoxSpitInSeparateFilesMarkDown->setChecked(s.value("SplitInSeparateFile",Qt::Checked).toBool());
     ui->lineEditDestinationDirectoryMarkDown->setText(s.value("DestinationDirectoryMarkDown",QDir::tempPath()).toString());
     ui->lineEditJazzLab->setText(s.value("DestinationDirectoryJazzFiles",QDir::tempPath()).toString());
-    ui->lineEditMMA->setText(s.value("DestinationDirectoryMMAFiles",QDir::tempPath()).toString());
+    ui->lineEditMMAExportDirectory->setText(s.value("DestinationDirectoryMMAFiles",QDir::tempPath()).toString());
     ui->lineEditDirectoryWithMusicFilesMarkdown->setText(s.value("DirectoryWithMusicFilesMarkDown","").toString());
     ui->toolButtonChordTextColor->setColor(s.value("ChordTextColor","#55007f").toString());
     ui->toolButtonTagsTextColor->setColor(s.value("TagsTextColor","#005000").toString());
-    
+    ui->lineEditGrooveDirectory->setText(s.value("GrooveDirectory","/usr/share/mma/lib").toString());
+    ui->lineEditDefaultGroove->setText(s.value("DefaultGroove","swing").toString());
     //ui->checkBoxInternalPDFReader->setChecked(s.value("InternalPDFReader",Qt::Checked).toInt());
     //InternalPDFStatus(s.value("InternalPDFReader",Qt::Checked).toInt());
 }
@@ -325,10 +353,12 @@ void DialogConfiguration::Save()
    // s.setValue("InternalPDFReader",ui->checkBoxInternalPDFReader->checkState());
    s.setValue("DestinationDirectoryJazzFiles",ui->lineEditJazzLab->text());
    s.setValue("DestinationDirectoryMarkDown",ui->lineEditDestinationDirectoryMarkDown->text());
-   s.setValue("DestinationDirectoryMMAFiles",ui->lineEditMMA->text());
+   s.setValue("DestinationDirectoryMMAFiles",ui->lineEditMMAExportDirectory->text());
    s.setValue("DirectoryWithMusicFilesMarkDown",ui->lineEditDirectoryWithMusicFilesMarkdown->text());
    s.setValue("SplitInSeparateFile",ui->checkBoxSpitInSeparateFilesMarkDown->isChecked());
    s.setValue("ClickAtBegin",ui->checkBoxAddStartTempo->isChecked());
+   s.setValue("DefaultGroove",ui->lineEditDefaultGroove->text());
+   s.setValue("GrooveDirectory",ui->lineEditGrooveDirectory->text());
    //s.setValue("")
    s.setValue("ChordTextColor",ui->toolButtonChordTextColor->getColor().name());
    s.setValue("TagsTextColor",ui->toolButtonTagsTextColor->getColor().name());

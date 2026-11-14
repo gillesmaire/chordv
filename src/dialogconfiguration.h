@@ -24,6 +24,8 @@ public:
     static QString ConfigPath();
     static QString getDirectoryJjazzLib();
     static QString getDirectoryMMA();
+    static QString getDirectoryGrooveMMA();
+    
     static QString getDirectoryMarkDown();
 private slots:
     void Save();
@@ -43,10 +45,12 @@ private slots:
     bool getJjazzLabShowDir();
     void setJjazzLabShowDir();
 
+
     void setDirectoryMMA();
     bool getMMAShowDir();
     void setMMAShowDir();
 
+    void SetDirectoryGrooveMMA();
 
 private:
     Ui::DialogConfiguration *ui;

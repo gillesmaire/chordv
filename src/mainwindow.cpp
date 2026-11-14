@@ -48,6 +48,7 @@
 #include <QModelIndex>
 #include <QColor>
 #include <QRegularExpression>
+#include <QDirIterator>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -1450,7 +1451,7 @@ void MainWindow::ConvertInJazzFiles()
         QStringList lines =
             ui->textEditCho3File->document()->toPlainText().split('\n');
 
-        QString directory =
+        QString directoryName =
             s.value("DestinationDirectoryMMAFiles").toString();
 
         QFile file;
@@ -1458,11 +1459,17 @@ void MainWindow::ConvertInJazzFiles()
 
         QString title;
         QString songname;
-        QString time = "4/4";
-        QString tempo = "120";
-        QString style = "Swing";
+        QString time = "120";
+        QString tempo = "4/4";
+        QString Defaultgroove = s.value("DefaultGroove","stdlib:swing").toString();
+        QString groove;
+
         bool clickbegin=false;
 
+        bool GrooveMade=false;
+        bool TempoMade=false;
+        bool TimeMade=false;
+        
         // pre click
         
         
@@ -1477,7 +1484,7 @@ void MainWindow::ConvertInJazzFiles()
         static const QRegularExpression titleRe("^\\{title:(.*?) *\\}$");
         static const QRegularExpression timeRe("^\\{time:(.*?) *\\}$");
         static const QRegularExpression tempoRe("^\\{tempo:(.*?) *\\}$");
-        static const QRegularExpression styleRe("^\\{style:(.*?) *\\}$");
+        static const QRegularExpression grooveRe("^\\{style:(.*?) *\\}$");
         
 
         auto normalizeChord = [](QString chord) -> QString
@@ -1506,7 +1513,212 @@ void MainWindow::ConvertInJazzFiles()
             return chord.trimmed();
         };
 
-        auto convertVerseToMMA = [&](const QStringList &verse) -> QString
+// Ajoute les instruments du groove dans un bloc AllGrooves
+
+
+auto writeGrooveVoices = [&](const QString &grooveName)
+{
+    QString name = grooveName.trimmed();
+
+    if (name.endsWith(".mma", Qt::CaseInsensitive))
+        name.chop(4);
+
+    const QString libPath = "/usr/share/mma/lib";
+    QString groovePath;
+
+    // Respecte explicitement le sous-répertoire MMA :
+    // stdlib:swing -> /usr/share/mma/lib/stdlib/swing.mma
+    const int colon = name.indexOf(':');
+
+    if (colon >= 0) {
+        const QString library = name.left(colon);
+        const QString groove = name.mid(colon + 1);
+
+        groovePath = QDir(libPath).filePath(
+            library + "/" + groove + ".mma");
+    }
+    else {
+        QDirIterator it(libPath,
+                        QStringList() << "*.mma",
+                        QDir::Files,
+                        QDirIterator::Subdirectories);
+
+        while (it.hasNext()) {
+            const QString path = it.next();
+
+            if (QFileInfo(path).completeBaseName().compare(
+                    name, Qt::CaseInsensitive) == 0) {
+                groovePath = path;
+                break;
+            }
+        }
+    }
+
+    if (groovePath.isEmpty() || !QFile::exists(groovePath)) {
+        qWarning() << "Groove not found:" << grooveName
+                   << groovePath;
+        return;
+    }
+
+
+    QFile grooveFile(groovePath);
+
+    if (!grooveFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning() << "Cannot open groove:" << groovePath;
+        return;
+    }
+
+    QTextStream in(&grooveFile);
+
+    QString currentTrack;
+    QMap<QString, QString> voices;
+
+    static const QRegularExpression beginRx(
+        R"(^\s*Begin\s+(\S+)\s*$)",
+        QRegularExpression::CaseInsensitiveOption);
+
+    static const QRegularExpression voiceRx(
+        R"(^\s*Voice\s+(\S+))",
+        QRegularExpression::CaseInsensitiveOption);
+
+    static const QRegularExpression endRx(
+        R"(^\s*End\s*$)",
+        QRegularExpression::CaseInsensitiveOption);
+
+    while (!in.atEnd()) {
+        const QString line = in.readLine().trimmed();
+
+        const auto beginMatch = beginRx.match(line);
+
+        if (beginMatch.hasMatch()) {
+            currentTrack = beginMatch.captured(1);
+            continue;
+        }
+
+        if (endRx.match(line).hasMatch()) {
+            currentTrack.clear();
+            continue;
+        }
+
+        const auto voiceMatch = voiceRx.match(line);
+
+        if (voiceMatch.hasMatch() && !currentTrack.isEmpty())
+            voices.insert(currentTrack, voiceMatch.captured(1));
+    }
+
+    grooveFile.close();
+
+    if (voices.isEmpty()) {
+        qWarning() << "No Voice found in:" << groovePath;
+        return;
+    }
+
+    out << "Begin AllGrooves\n";
+
+    for (auto it = voices.cbegin(); it != voices.cend(); ++it)
+        out << "    " << it.key()
+            << " Voice " << it.value() << "\n";
+
+    out << "End\n\n";
+};
+
+
+
+// auto writeGrooveVoices = [&](const QString &grooveName)
+// {
+//     QString name = grooveName.trimmed();
+
+//     // Un nom comme stlib:68ballad devient simplement 68ballad.
+//     const int colon = name.indexOf(':');
+//     if (colon >= 0)
+//         name = name.mid(colon + 1);
+
+//     if (name.endsWith(".mma", Qt::CaseInsensitive))
+//         name.chop(4);
+
+//     const QString libPath = "/usr/share/mma/lib";
+//     QString groovePath;
+
+//     QDirIterator it(libPath,
+//                     QStringList() << "*.mma",
+//                     QDir::Files,
+//                     QDirIterator::Subdirectories);
+
+//     while (it.hasNext()) {
+//         const QString path = it.next();
+//         const QFileInfo info(path);
+
+//         if (info.completeBaseName().compare(
+//                 name, Qt::CaseInsensitive) == 0) {
+//             groovePath = path;
+//             break;
+//         }
+//     }
+
+//     if (groovePath.isEmpty()) {
+//         qWarning() << "Groove not found:" << grooveName;
+//         return;
+//     }
+
+//     QFile file(groovePath);
+
+//     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+//         qWarning() << "Cannot open groove:" << groovePath;
+//         return;
+//     }
+
+//     QTextStream in(&file);
+
+//     QString currentTrack;
+//     QMap<QString, QString> voices;
+
+//     static const QRegularExpression beginRx(
+//         R"(^\s*Begin\s+(\S+)\s*$)",
+//         QRegularExpression::CaseInsensitiveOption);
+
+//     static const QRegularExpression voiceRx(
+//         R"(^\s*Voice\s+(\S+))",
+//         QRegularExpression::CaseInsensitiveOption);
+
+//     static const QRegularExpression endRx(
+//         R"(^\s*End\s*$)",
+//         QRegularExpression::CaseInsensitiveOption);
+
+//     while (!in.atEnd()) {
+//         const QString line = in.readLine().trimmed();
+
+//         const auto beginMatch = beginRx.match(line);
+//         if (beginMatch.hasMatch()) {
+//             currentTrack = beginMatch.captured(1);
+//             continue;
+//         }
+
+//         if (endRx.match(line).hasMatch()) {
+//             currentTrack.clear();
+//             continue;
+//         }
+
+//         const auto voiceMatch = voiceRx.match(line);
+
+//         if (voiceMatch.hasMatch() && !currentTrack.isEmpty())
+//             voices.insert(currentTrack, voiceMatch.captured(1));
+//     }
+
+//     if (voices.isEmpty()) {
+//         qWarning() << "No Voice found in:" << groovePath;
+//         return;
+//     }
+
+//     out << "Begin AllGrooves\n";
+
+//     for (auto it = voices.cbegin(); it != voices.cend(); ++it)
+//         out << "    " << it.key()
+//             << " Voice " << it.value() << "\n";
+
+//     out << "End\n\n";
+// };
+      
+auto convertVerseToMMA = [&](const QStringList &verse) -> QString
         {
             QString result;
             int counter = 1;
@@ -1575,7 +1787,6 @@ void MainWindow::ConvertInJazzFiles()
                                           .arg(chord);
 
                             lastChordOfSong = chord;
-
                             counter++;
                         }
                     }
@@ -1623,7 +1834,26 @@ void MainWindow::ConvertInJazzFiles()
             // Maintenant que tous les couplets ont été convertis,
             // lastChordOfSong contient bien le dernier accord.
             //out << "KeySig " << lastChordOfSong << "\n";
-
+            
+            if ( ! GrooveMade )
+            {
+             if (  clickbegin && s.value("ClickAtBegin").toBool()) 
+                    {
+                    out <<"\nGroove  Metronome2-4\n";
+                    out << "z * 2\n\n";
+                    clickbegin=false;
+                    }
+                    
+             QString grov=groove.isEmpty()?Defaultgroove:groove;
+             out <<"Groove " << grov <<"\n\n";
+             writeGrooveVoices(grov);
+             groove.clear();
+             GrooveMade=true;
+             
+            }
+            if ( ! TempoMade ) out <<"Tempo " << tempo<<"\n";
+            if ( ! TimeMade ) out <<"Time " << time<<"\n";
+            
             out << "Repeat\n";
             out << fullSong;
             out << "RepeatEnd " << blockCount << "\n\n";
@@ -1655,23 +1885,27 @@ void MainWindow::ConvertInJazzFiles()
                     if (file.isOpen())
                         file.close();
 
+
                     auto m = titleRe.match(l);
                     title = m.captured(1).trimmed();
 
                     songname = title;
                     songname.remove(" ");
                     songname.remove("'");
-
+                    
                     time = "4/4";
                     tempo = "120";
+                    TimeMade=false;
+                    TempoMade=false;
+                    GrooveMade=false;
 
                     // Nouveau morceau :
                     // on efface le dernier accord du morceau précédent.
                     lastChordOfSong.clear();
 
-                    QDir().mkpath(directory + "/" + songname);
+                    QDir().mkpath(directoryName + "/" + songname);
 
-                    file.setFileName(directory + "/" +
+                    file.setFileName(directoryName + "/" +
                                      songname + "/" +
                                      songname + ".mma");
 
@@ -1699,6 +1933,7 @@ void MainWindow::ConvertInJazzFiles()
                     auto m = timeRe.match(l);
                     time = m.captured(1).trimmed();
                     out << "Time " << time << "\n\n";
+                    TimeMade=true;
                     continue;
                 }
 
@@ -1707,25 +1942,24 @@ void MainWindow::ConvertInJazzFiles()
                     auto m = tempoRe.match(l);
                     tempo = m.captured(1).trimmed();
                     out << "Tempo " << tempo << "\n\n";
+                    TempoMade=true;
                     continue;
                 }
-
                 
-                    
-                
-                if (l.contains(styleRe))
+                if (l.contains(grooveRe))
                 {
-                if (  clickbegin && s.value("ClickAtBegin").toBool())
-                    
+                if (  clickbegin && s.value("ClickAtBegin").toBool()) 
                     {
                     out <<"\nGroove  Metronome2-4\n";
                     out << "z * 2\n\n";
                     clickbegin=false;
                     }
-                auto m = styleRe.match(l);
-                style = m.captured(1).trimmed();
-                style.replace("/",":");
-                out << "Groove " << style << "\n\n";
+                auto m = grooveRe.match(l);
+                groove = m.captured(1).trimmed();
+                groove.replace("/",":");
+                out << "Groove " << groove << "\n\n";
+                writeGrooveVoices(groove); 
+                GrooveMade=true;
                 continue;
                 }
 
@@ -1753,5 +1987,18 @@ void MainWindow::ConvertInJazzFiles()
             if (dontask.isChecked()) s.setValue("ShowMMADirectory",false);
         }
     }
+    if (s.value("ShowDirectory").toBool())
+    {
+        QMessageBox msg(this);
+        msg.setText(tr("Your MMA import files are located in %1 directory")
+                        .arg(DialogConfiguration::getDirectoryMMA()));
+        msg.setStandardButtons(QMessageBox::Ok);
+        QCheckBox dontask(tr("Don't ask"));
+        msg.setCheckBox(&dontask);
+        if ( msg.exec() == QMessageBox::Ok) {
+            if (dontask.isChecked()) s.setValue("ShowMMADirectory",false);
+        }
+    }
+    
     }
 
