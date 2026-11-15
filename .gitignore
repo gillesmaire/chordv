@@ -16,3 +16,5 @@ qrc_resources.cpp
 *.stash
 *.pdf
 *.qm
+.qtc_clangd/
+
