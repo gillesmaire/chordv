@@ -793,20 +793,6 @@
             </layout>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkBoxMMAExportShowDir">
-             <property name="text">
-              <string>Show message with location of files after generation </string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="checkBoxAddStartTempo">
-             <property name="text">
-              <string>Add click at begining of songs</string>
-             </property>
-            </widget>
-           </item>
-           <item>
             <layout class="QHBoxLayout" name="horizontalLayout_11">
              <item>
               <widget class="QLabel" name="label_3">
@@ -832,6 +818,20 @@
               </spacer>
              </item>
             </layout>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBoxAddStartTempo">
+             <property name="text">
+              <string>Add click at begining of songs</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBoxMMAExportShowDir">
+             <property name="text">
+              <string>Show message with location of files after generation </string>
+             </property>
+            </widget>
            </item>
            <item>
             <spacer name="horizontalSpacer_6">

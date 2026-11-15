@@ -6,7 +6,7 @@
     QT       += core gui sql widgets multimedia
     TEMPLATE = app
     CONFIG += c++17
-    VERSIONWORK="Version 2.2"
+    VERSIONWORK="Version 3.0rc1"
     linux{
     DATEBUILD=$$system(date +"%Y/%m/%d")
     GIT=$$system(git log -n 1 --format="%H")

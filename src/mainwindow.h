@@ -15,6 +15,8 @@
 #include <QCheckBox>
 #include <QModelIndex>
 #include <QPlainTextEdit>
+#include <QMap>
+#include <QStringList>
 
 namespace Ui {
 class MainWindow;
@@ -130,6 +132,10 @@ private:
     DialogChordDefinition  *mDialChordDefinition;
     QList<QString> extractBracketWords(const QString &line);
     QString MakeChordsList(const QStringList &chords);
+    
+    QMap<QString, QStringList> getMmaMixLevels(const QString &groove);
+    bool addMmaMixLevels(const QString &fileName, const QString &groove);
+    
 public slots:
     ///
     /// \brief ChangeLanguage retranslate all the child window and tha main window

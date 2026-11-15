@@ -49,7 +49,10 @@
 #include <QColor>
 #include <QRegularExpression>
 #include <QDirIterator>
-
+#include <QTemporaryFile>
+#include <QFile>
+#include <QTextStream>
+#include <QMap>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -1346,7 +1349,6 @@ QString MainWindow::MakeChordsList(const QStringList &chords)
     return result.trimmed();
 }
 
-
 void MainWindow::ConvertInJazzFiles()
 {
     QSettings s;
@@ -1443,6 +1445,112 @@ void MainWindow::ConvertInJazzFiles()
         }
     }
 }
+
+
+QMap<QString, QStringList>
+MainWindow::getMmaMixLevels(const QString &groove)
+{
+    QMap<QString, QStringList> result;
+
+    QTemporaryFile trackFile;
+
+    if (!trackFile.open())
+        return result;
+
+    QTextStream out(&trackFile);
+
+    out << "Time 4/4\n";
+    out << "Groove " << groove << "\n";
+    out << "Print PISTES : $_Tracklist\n";
+
+    out.flush();
+    trackFile.flush();
+
+    QProcess process;
+    process.start("mma", QStringList() << trackFile.fileName());
+
+    if (!process.waitForFinished(5000))
+    {
+        process.kill();
+        return result;
+    }
+
+    QString output =
+        QString::fromLocal8Bit(process.readAllStandardOutput());
+
+    QStringList tracks;
+
+    for (const QString &line : output.split('\n'))
+    {
+        if (line.startsWith("PISTES :"))
+        {
+            tracks = line.mid(8).trimmed()
+                         .split(' ', Qt::SkipEmptyParts);
+            break;
+        }
+    }
+
+    if (tracks.isEmpty())
+        return result;
+
+    QTemporaryFile volumeFile;
+
+    if (!volumeFile.open())
+        return result;
+
+    QTextStream volumeOut(&volumeFile);
+
+    volumeOut << "Time 4/4\n";
+    volumeOut << "Groove " << groove << "\n";
+
+    for (const QString &track : tracks)
+    {
+        volumeOut << "Print VOLUME:" << track
+                  << " : $_" << track << "_Volume\n";
+    }
+
+    volumeFile.flush();
+    volumeOut.flush();
+    
+    process.start("mma", QStringList() << volumeFile.fileName());
+
+    if (!process.waitForFinished(5000))
+    {
+        process.kill();
+        return result;
+    }
+
+    output =
+        QString::fromLocal8Bit(process.readAllStandardOutput());
+
+    for (const QString &line : output.split('\n'))
+    {
+        if (!line.startsWith("VOLUME:"))
+            continue;
+
+        int separator = line.indexOf(" :");
+
+        if (separator < 0)
+            continue;
+
+        QString track = line.mid(
+            QString("VOLUME:").length(),
+            separator - QString("VOLUME:").length()).trimmed();
+
+        QString values =
+            line.mid(separator + 2).trimmed();
+
+        if (!track.isEmpty() && !values.isEmpty())
+        {
+            result.insert(
+                track,
+                values.split(' ', Qt::SkipEmptyParts));
+        }
+    }
+
+    return result;
+}
+
 
  void MainWindow::ConvertInMMAFiles()
     {
@@ -1612,114 +1720,39 @@ auto writeGrooveVoices = [&](const QString &grooveName)
         qWarning() << "No Voice found in:" << groovePath;
         return;
     }
+    out << "// If you change this groove, the following lines will be recalculated.\n";
+    out << "// Feel free to change the instrument names here without changing "
+    << grooveName << ".\n\n";
+    
+   out << "Begin AllGrooves\n";
 
-    out << "Begin AllGrooves\n";
+   for (auto it = voices.cbegin(); it != voices.cend(); ++it)
+    out << "    " << it.key()
+        << " Voice " << it.value() << "\n";
 
-    for (auto it = voices.cbegin(); it != voices.cend(); ++it)
-        out << "    " << it.key()
-            << " Voice " << it.value() << "\n";
+    // Récupération des volumes définis dans le groove
+    QMap<QString, QStringList> levels =
+    getMmaMixLevels(grooveName);
+
+    // Écriture des volumes dans AllGrooves 
+    for (auto it = levels.cbegin(); it != levels.cend(); ++it)
+    {
+    if (it.value().isEmpty())
+        continue;
+
+    out << "    " << it.key()
+        << " Volume " << it.value().first() << "\n";
+    }
 
     out << "End\n\n";
+    
 };
 
 
-
-// auto writeGrooveVoices = [&](const QString &grooveName)
-// {
-//     QString name = grooveName.trimmed();
-
-//     // Un nom comme stlib:68ballad devient simplement 68ballad.
-//     const int colon = name.indexOf(':');
-//     if (colon >= 0)
-//         name = name.mid(colon + 1);
-
-//     if (name.endsWith(".mma", Qt::CaseInsensitive))
-//         name.chop(4);
-
-//     const QString libPath = "/usr/share/mma/lib";
-//     QString groovePath;
-
-//     QDirIterator it(libPath,
-//                     QStringList() << "*.mma",
-//                     QDir::Files,
-//                     QDirIterator::Subdirectories);
-
-//     while (it.hasNext()) {
-//         const QString path = it.next();
-//         const QFileInfo info(path);
-
-//         if (info.completeBaseName().compare(
-//                 name, Qt::CaseInsensitive) == 0) {
-//             groovePath = path;
-//             break;
-//         }
-//     }
-
-//     if (groovePath.isEmpty()) {
-//         qWarning() << "Groove not found:" << grooveName;
-//         return;
-//     }
-
-//     QFile file(groovePath);
-
-//     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-//         qWarning() << "Cannot open groove:" << groovePath;
-//         return;
-//     }
-
-//     QTextStream in(&file);
-
-//     QString currentTrack;
-//     QMap<QString, QString> voices;
-
-//     static const QRegularExpression beginRx(
-//         R"(^\s*Begin\s+(\S+)\s*$)",
-//         QRegularExpression::CaseInsensitiveOption);
-
-//     static const QRegularExpression voiceRx(
-//         R"(^\s*Voice\s+(\S+))",
-//         QRegularExpression::CaseInsensitiveOption);
-
-//     static const QRegularExpression endRx(
-//         R"(^\s*End\s*$)",
-//         QRegularExpression::CaseInsensitiveOption);
-
-//     while (!in.atEnd()) {
-//         const QString line = in.readLine().trimmed();
-
-//         const auto beginMatch = beginRx.match(line);
-//         if (beginMatch.hasMatch()) {
-//             currentTrack = beginMatch.captured(1);
-//             continue;
-//         }
-
-//         if (endRx.match(line).hasMatch()) {
-//             currentTrack.clear();
-//             continue;
-//         }
-
-//         const auto voiceMatch = voiceRx.match(line);
-
-//         if (voiceMatch.hasMatch() && !currentTrack.isEmpty())
-//             voices.insert(currentTrack, voiceMatch.captured(1));
-//     }
-
-//     if (voices.isEmpty()) {
-//         qWarning() << "No Voice found in:" << groovePath;
-//         return;
-//     }
-
-//     out << "Begin AllGrooves\n";
-
-//     for (auto it = voices.cbegin(); it != voices.cend(); ++it)
-//         out << "    " << it.key()
-//             << " Voice " << it.value() << "\n";
-
-//     out << "End\n\n";
-// };
       
 auto convertVerseToMMA = [&](const QStringList &verse) -> QString
         {
+            QString FileName;
             QString result;
             int counter = 1;
 
@@ -1847,7 +1880,7 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
              QString grov=groove.isEmpty()?Defaultgroove:groove;
              out <<"Groove " << grov <<"\n\n";
              writeGrooveVoices(grov);
-             groove.clear();
+ 
              GrooveMade=true;
              
             }
@@ -1904,23 +1937,27 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
                     lastChordOfSong.clear();
 
                     QDir().mkpath(directoryName + "/" + songname);
-
-                    file.setFileName(directoryName + "/" +
+                    QString FileName=directoryName + "/" +
                                      songname + "/" +
-                                     songname + ".mma");
+                                     songname + ".mma";
+                    file.setFileName(FileName);
 
                     if (!file.open(QIODevice::WriteOnly |
                                    QIODevice::Text))
                     {
-                        qWarning() << "Cannot open file";
-                        return;
+                        qWarning() << "Cannot open file";                        return;
                     }
 
                     out.setDevice(&file);
 
-                    out << "// Generated by ChordV\n";
-                    out << "// SongName " << songname << "\n";
-                    out << "// Title \"" << title << "\"\n\n";
+                    out << tr("// Generated by ChordV\n");
+                    out << tr("// SongName ") << songname << "\n";
+                    out << tr("// Title ") << title << "\"\n\n";
+                    out << tr("// *** IMPORTANT **** ") << "\n" ;
+                    out << tr("// This file is generated automatically)")<<"\n";
+                    out << tr("// If you want to modify this file rename it")<<"\n";
+                    out << tr("// On the nex generation the modifications will be lost !")<<"\n\n";
+                    
 
                     clickbegin=true;                  
                    
@@ -1932,7 +1969,7 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
                 {
                     auto m = timeRe.match(l);
                     time = m.captured(1).trimmed();
-                    out << "Time " << time << "\n\n";
+                    out << "Time " << time << "\n";
                     TimeMade=true;
                     continue;
                 }
@@ -1941,7 +1978,7 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
                 {
                     auto m = tempoRe.match(l);
                     tempo = m.captured(1).trimmed();
-                    out << "Tempo " << tempo << "\n\n";
+                    out << "Tempo " << tempo << "\n";
                     TempoMade=true;
                     continue;
                 }
@@ -1958,6 +1995,9 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
                 groove = m.captured(1).trimmed();
                 groove.replace("/",":");
                 out << "Groove " << groove << "\n\n";
+                out << tr("// if you change this groove the following lines will be recalculated\n");
+                out << tr("// feel free to change the name of instruments here whithout change ")<<groove<<"\n";
+                out.flush();
                 writeGrooveVoices(groove); 
                 GrooveMade=true;
                 continue;
@@ -1974,6 +2014,7 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
 
         if (file.isOpen())
             file.close();
+            
 
     if (s.value("ShowMMADirectory").toBool())
     {

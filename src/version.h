@@ -1,3 +1,3 @@
-#define VERSIONWORK "Version 2.2"
+#define VERSIONWORK "Version 3.0rc1"
 #define DATEBUILD "2026/11/14"
-#define GIT "82d49d32193cf6d9fc40e224a3dcac2749d87cca"
+#define GIT "b143921750b491b76c17a2a30b96a0fc24180599"

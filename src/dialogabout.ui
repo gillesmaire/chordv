@@ -137,7 +137,7 @@
              <item>
               <widget class="QLineEdit" name="lineEditVersion">
                <property name="text">
-                <string/>
+                <string>V3.0</string>
                </property>
                <property name="readOnly">
                 <bool>true</bool>

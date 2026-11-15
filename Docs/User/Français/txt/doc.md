@@ -1,6 +1,6 @@
 %Documentation utilisateur de Chord V
 %Gilles Maire 
-%Février 2020 Version 1.0
+%Novembre 2026 Version 3.0
 
 
 # Partie utilisateur 
@@ -27,7 +27,7 @@ C'est le mode classique qui convient bien à tous les amateurs.
 Par contre, si j'ai connu beaucoup de chansons que j'aurais voulu
 rassembler dans ce type de  livrets, il se trouve qu'il y a un peu plus
 de dix ans, je me suis produit sur de petites scènes parisiennes avec
-des propres chansons. On m'a peu à peu demandé d'aller chanter ici ou
+mes propres chansons. On m'a peu à peu demandé d'aller chanter ici ou
 là en France et un peu partout mes petites rengaines. J'ai rencontré
 assez rapidement des musiciens qui ont eu la gentillesse de 
 m'accompgner qui me demandaient non plus des carnets de chant, 
@@ -56,6 +56,18 @@ C'est ainsi que j'ai pensé lier Ardour à ChordV pour que les paroles
 reviennent au début lorsque je demande à l'enregistreur de revenir au
 début.
 
+Vingt après la première version de chordV, j'ai ajouté d'autres 
+fonctionnalités de format de sortie  :
+- un mode de sortie MarkDown qui permet de produire toute les chansons
+et une table des matières. Ce format est compatible avec les outils de
+fabrication de page HTML comme pandoc ou Hugo. D'ailleurs à ce titre,
+le site https://www.lesjetesdelencre.com affiche mes propres chansons
+générées à partir de ChordV
+- un mode génératon de fichiers  au format JJazzLab permettant la sortie
+au format MIDI
+- un mode génération de fichiers au format MMA permettant de façon 
+bien plus puissante la génération de fichiers au format MIDI
+
 Il me manque un dernier point pour être complet, j'aime l'Open Source, 
 c'est ma philosophie de vie et mon métier, j'aime développer. 
 Mes chansons sont toutes Open Sources en Creative Common, elles sont
@@ -64,7 +76,7 @@ livrées en démonstration de Chord V.
 Pour finir, je ne pouvais pas développer un logiciel qui ne fonctionne 
 pas sous Linux et qui ne soit pas Open Source.
 
-J'ai développé ChordV en C++ avec la librairie Qt5. Il est donc
+J'ai développé ChordV en C++ avec la librairie Qt6. Il est donc
 portable sour MacOsx, Windows ou sur tablette
 Android ou Apple, mais je n'ai pas le temps de fabriquer l'installeur
 pour ces environnements.
