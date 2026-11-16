@@ -137,7 +137,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect (ui->actionExport_to_formated_format,SIGNAL(triggered()),this,SLOT(ShowWholeSongInExportedFormat()));
     connect (ui->actionBuild_a_markdown_File,SIGNAL(triggered()),this,SLOT(ConvertInMarkDown()));
     connect (ui->actionBuild_JazzLab_files,SIGNAL(triggered()),this,SLOT(ConvertInJazzFiles()));
-    connect (ui->actionBuild_MMA_files,SIGNAL(triggered()),this,SLOT(ConvertInMMAFiles()));
+    //connect (ui->actionBuild_MMA_files,SIGNAL(triggered()),this,SLOT(ConvertInMMAFiles()));
+    connect(ui->actionBuild_MMA_files, SIGNAL(triggered()),this,SLOT(ConvertInMMAFiles()));
     ///
     connect(ui->stackedWidget,SIGNAL(currentChanged(int)),this,SLOT(ShowStacked(int)));
     connect(qApp,SIGNAL(aboutToQuit()),this,SLOT(AskSaveOnQuit()));
@@ -847,7 +848,6 @@ void MainWindow::ShowStacked( int i )
     ui->statusBar->makeStackedList();
     ui->statusBar->setActiveStacked(i);
     SetMode(i);
-
 }
 
 void MainWindow::Documentation()
@@ -1000,7 +1000,7 @@ void MainWindow::SetMode ( int mode)
 {
     ui->statusBar->setActiveStacked(mode);
     ui->labelMode->setText(ui->statusBar->getLabelactivestacked()->text());
-    ui->labelMode->setStyleSheet(QString("color:%1").arg(m_listcolor.at(mode).name()));
+    if (mode != 6 )ui->labelMode->setStyleSheet(QString("color:%1").arg(m_listcolor.at(mode).name()));
 }
 
 void MainWindow::CheckAllChordUsedAreDefined()
@@ -1555,6 +1555,18 @@ MainWindow::getMmaMixLevels(const QString &groove)
  void MainWindow::ConvertInMMAFiles()
     {
         QSettings s;
+        if (QMenu *menu = ui->actionBuild_MMA_files->parent()
+                     ? qobject_cast<QMenu *>(ui->actionBuild_MMA_files->parent())
+                     : nullptr)
+                  menu->hide();
+        int menuindex=ui->stackedWidget->currentIndex();
+        ui->stackedWidget->setCurrentIndex(6);
+        
+        ui->stackedWidget->show();
+
+        QApplication::processEvents();        
+       
+
 
         QStringList lines =
             ui->textEditCho3File->document()->toPlainText().split('\n');
@@ -2040,6 +2052,6 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
             if (dontask.isChecked()) s.setValue("ShowMMADirectory",false);
         }
     }
-    
+     ui->stackedWidget->setCurrentIndex(menuindex);
     }
 

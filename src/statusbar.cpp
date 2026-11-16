@@ -45,9 +45,13 @@ void StatusBar::setModified(bool modified)
 void StatusBar::makeStackedList()
 {
     mListStacked.clear();
-    mListStacked<<QCoreApplication::translate("StatusBar","Editor")<<QCoreApplication::translate("StatusBar","Global definitions")
-                 <<QCoreApplication::translate("StatusBar","Text and chord Mode")<<QCoreApplication::translate("StatusBar","Chord Mode")
-                 <<QCoreApplication::translate("StatusBar","Text mode")<<QCoreApplication::translate("StatusBar","Memory Mode");
+    mListStacked<<QCoreApplication::translate("StatusBar","Editor")               // 0
+                <<QCoreApplication::translate("StatusBar","Global definitions")   // 1
+                <<QCoreApplication::translate("StatusBar","Text and chord Mode")  // 2
+                <<QCoreApplication::translate("StatusBar","Chord Mode")           // 3 
+                <<QCoreApplication::translate("StatusBar","Text mode")            // 4
+                <<QCoreApplication::translate("StatusBar","Memory Mode")          // 5
+                <<QCoreApplication::translate("StatusBar","Working");             // 6
 }
 
 QString StatusBar::getStackedLabel(int i)
