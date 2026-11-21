@@ -817,6 +817,13 @@
                </property>
               </spacer>
              </item>
+             <item>
+              <widget class="QPushButton" name="pushButtonGenerateEndOfGroove">
+               <property name="text">
+                <string>Generate EndOfGroove File</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>

@@ -12,6 +12,8 @@
 #include <QFileInfoList>
 #include <QFileInfo>
 #include <qregularexpression.h>
+#include <QDirIterator>
+#include <QMessageBox>
 
 DialogConfiguration::DialogConfiguration(QWidget *parent) :
     QDialog(parent),
@@ -29,21 +31,24 @@ DialogConfiguration::DialogConfiguration(QWidget *parent) :
     ui->lineEditGrooveDirectory->setText(s.value("GrooveDirectory","/usr/share/mma/lib").toString());
     connect(ui->pushButtonClose,SIGNAL(clicked(bool)),this,SLOT(close()));
     connect(ui->pushButtonSave,SIGNAL(clicked(bool)),this,SLOT(Save()));
+
     
     connect(ui->toolButtonPDFReaderName,SIGNAL(clicked(bool)),this,SLOT(SetPDFReader()));
     //connect(ui->checkBoxInternalPDFReader,SIGNAL(stateChanged(int)),this,SLOT(InternalPDFStatus(int)));
     connect(ui->pushButtonSaveFormat,SIGNAL(clicked(bool)),this,SLOT(SaveFormat()));
     connect(ui->pushButtonSaveDefaultFormat,SIGNAL(clicked(bool)),this,SLOT(SaveDefaultFormat()));
     connect(ui->pushButtonLoadFormat,SIGNAL(clicked(bool)),this,SLOT(LoadFormat()));
-    connect(ui->toolButtonDestinationDirectoryMarkDown,SIGNAL(clicked(bool)),this,SLOT(setDestinationDirectoryMarkDown()));
+    connect(ui->toolButtonDestinationDirectoryMarkDown,SIGNAL(clicked(bool)),this,SLOT(setDirectoryMarkDown()));
     connect(ui->toolButtonDirectiyWithMusicFilesMArkDown,SIGNAL(clicked(bool)),this,SLOT(setDirectoryWithMusicMarkDown()));
     connect(ui->JazzLabToolButton,SIGNAL(clicked(bool)),this,SLOT(setDirectoryJjazzLib()));
     connect(ui->toolButtonMMexportDirectory,SIGNAL(clicked(bool)),this,SLOT(setDirectoryMMA()));
     connect (ui->toolButtonMMAGrooveDirectory,SIGNAL(clicked(bool)),this,SLOT(SetDirectoryGrooveMMA()));
     connect (ui->checkBoxGetJjazzLabShowDir,SIGNAL(clicked(bool)),this,SLOT(setJjazzLabShowDir()));
     connect (ui->checkBoxMMAExportShowDir,SIGNAL(clicked(bool)),this,SLOT(setMMAShowDir()));
+    connect (ui->pushButtonGenerateEndOfGroove,SIGNAL(clicked(bool)),this,SLOT(GenerateEndOfGroove()));
     connect (ui->checkBoxMarkDownExportShowDir,SIGNAL(clicked(bool)),this,SLOT(setDirectoryMarkDown()));
     ui->checkBoxInternalPDFReader->setDisabled(true);
+    
     Connect();
     InitSettings();
     ui->tabWidget->setCurrentIndex(0);
@@ -126,12 +131,21 @@ void DialogConfiguration::SetDirectoryGrooveMMA()
         s.setValue("GrooveDirectory", dir);
     }
 }
-
+                          
+void DialogConfiguration::setDirectoryMarkDown()
+{
+QSettings s;
+    QString dir= QFileDialog::getExistingDirectory(this,
+                                                    tr("Choose the directory where markdown"
+                                                       "files are stored"),
+                                                    s.value("DestinationDirectoryMarkDown",QDir::tempPath()).toString());
+    ui->lineEditDestinationDirectoryMarkDown->setText(dir);
+}
 
 QString DialogConfiguration::getDirectoryMarkDown()
 {
    QSettings s;
-   return s.value("DestinationDirectoryMarkdown",QDir::tempPath()).toString();
+   return s.value("DestinationDirectoryMarkDown",QDir::tempPath()).toString();
 }
 
 
@@ -375,6 +389,117 @@ void DialogConfiguration::InternalPDFStatus(int status)
   ui->lineEditPDFReaderName->setEnabled(status!=Qt::Checked);
   ui->toolButtonPDFReaderName->setEnabled(status!=Qt::Checked);
   ui->labelPDFReaderName->setEnabled(status!=Qt::Checked);
+}
+
+
+
+
+
+
+void DialogConfiguration::GenerateEndOfGroove()
+{
+
+    
+    QDir root(ui->lineEditGrooveDirectory->text());
+
+    if (!root.exists())
+        return;
+
+    QStringList entries;
+
+    QDirIterator it(
+        root.absolutePath(),
+        QStringList() << "*.mma",
+        QDir::Files,
+        QDirIterator::Subdirectories
+    );
+
+    const QRegularExpression defGrooveRx(
+        R"(^\s*DefGroove\s+([^\s]+))",
+        QRegularExpression::CaseInsensitiveOption
+    );
+
+    const QRegularExpression endingNameRx(
+        R"((End[0-9]*|End[A-Z]|Ending[A-Z0-9]*|Outro[A-Z0-9]*)$)",
+        QRegularExpression::CaseInsensitiveOption
+    );
+
+    while (it.hasNext())
+    {
+        const QString fileName = it.next();
+
+        QFile file(fileName);
+
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+            continue;
+
+        QTextStream stream(&file);
+
+        QString sectionEnding;
+        QString suffixEnding;
+
+        bool inEndingSection = false;
+
+        while (!stream.atEnd())
+        {
+            const QString line = stream.readLine().trimmed();
+
+            // Repérage des sections de fin
+            if (line.startsWith("///"))
+            {
+                const QString heading = line.mid(3).trimmed();
+
+                inEndingSection =
+                    heading.startsWith("Ending", Qt::CaseInsensitive) ||
+                    heading.startsWith("Outro", Qt::CaseInsensitive);
+            }
+
+            // Recherche des définitions de grooves
+            const QRegularExpressionMatch match =
+                defGrooveRx.match(line);
+
+            if (!match.hasMatch())
+                continue;
+
+            const QString grooveName = match.captured(1);
+
+            // Priorité aux grooves déclarés dans une section Ending/Outro
+            if (inEndingSection && sectionEnding.isEmpty())
+                sectionEnding = grooveName;
+
+            // Recherche par suffixe si aucune section n'est identifiée
+            if (suffixEnding.isEmpty() &&
+                endingNameRx.match(grooveName).hasMatch())
+            {
+                suffixEnding = grooveName;
+            }
+        }
+
+        file.close();
+
+        // Une seule fin par fichier
+        const QString ending =
+            !sectionEnding.isEmpty() ? sectionEnding : suffixEnding;
+
+        if (ending.isEmpty())
+            continue;
+
+        // Chemin relatif sans extension
+        const QString relativePath = root.relativeFilePath(fileName);
+        const QFileInfo info(relativePath);
+
+        QString grooveFile = info.completeBaseName();
+
+        if (info.path() != ".")
+            grooveFile = info.path() + "/" + grooveFile;
+
+        entries.append(grooveFile + ":" + ending);
+    }
+
+    // Enregistrement dans QSettings
+    QSettings settings;
+    settings.setValue("MMA/EndOfGroove", entries);
+    settings.sync();
 }
 
 

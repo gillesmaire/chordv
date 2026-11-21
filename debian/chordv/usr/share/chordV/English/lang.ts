@@ -551,9 +551,9 @@ p, li { white-space: pre-wrap; }
         <location filename="../../src/dialogconfiguration.ui" line="175"/>
         <location filename="../../src/dialogconfiguration.ui" line="182"/>
         <location filename="../../src/dialogconfiguration.ui" line="766"/>
-        <location filename="../../src/dialogconfiguration.ui" line="844"/>
-        <location filename="../../src/dialogconfiguration.ui" line="865"/>
-        <location filename="../../src/dialogconfiguration.ui" line="945"/>
+        <location filename="../../src/dialogconfiguration.ui" line="851"/>
+        <location filename="../../src/dialogconfiguration.ui" line="872"/>
+        <location filename="../../src/dialogconfiguration.ui" line="952"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -793,109 +793,100 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="777"/>
-        <source>Show location directory after generation</source>
+        <location filename="../../src/dialogconfiguration.ui" line="784"/>
+        <source>Add click at begining of songs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="817"/>
+        <location filename="../../src/dialogconfiguration.ui" line="824"/>
         <source>Markdown export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="825"/>
+        <location filename="../../src/dialogconfiguration.ui" line="832"/>
         <source>Split in separate files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="834"/>
+        <location filename="../../src/dialogconfiguration.ui" line="841"/>
         <source>Destination directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="855"/>
+        <location filename="../../src/dialogconfiguration.ui" line="862"/>
         <source>Directory layout/partials/sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="874"/>
-        <source>Show message with informations after generation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/dialogconfiguration.ui" line="897"/>
+        <location filename="../../src/dialogconfiguration.ui" line="904"/>
         <source>JJazLab Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="935"/>
+        <location filename="../../src/dialogconfiguration.ui" line="942"/>
         <source>Directory to export JJazzLab files :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="954"/>
+        <location filename="../../src/dialogconfiguration.ui" line="777"/>
+        <location filename="../../src/dialogconfiguration.ui" line="881"/>
+        <location filename="../../src/dialogconfiguration.ui" line="961"/>
         <source>Show message with location of files after generation </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="992"/>
+        <location filename="../../src/dialogconfiguration.ui" line="999"/>
         <source>Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="1001"/>
+        <location filename="../../src/dialogconfiguration.ui" line="1008"/>
         <source>Open last file on start </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="1045"/>
+        <location filename="../../src/dialogconfiguration.ui" line="1052"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="1052"/>
+        <location filename="../../src/dialogconfiguration.ui" line="1059"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="54"/>
-        <source>Choose the directory where Markdownfiles must be generated</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="78"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="73"/>
         <source>Choose the directory where JJazzLibfiles are stored</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="88"/>
-        <location filename="../../src/dialogconfiguration.cpp" line="107"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="92"/>
         <source>Choose the directory where MMA files are stored</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="124"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="129"/>
         <source>Choose the directory where musicfiles are stored</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="177"/>
         <location filename="../../src/dialogconfiguration.cpp" line="195"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="213"/>
         <source>Format Export Chord (*.fec)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="178"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="196"/>
         <source>Choose file to get format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="197"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="215"/>
         <source>Choose file to save format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="213"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="231"/>
         <source>Choose PDF Reader program</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2192,7 +2183,7 @@ grid</source>
     </message>
     <message>
         <location filename="../../src/formeditor.ui" line="463"/>
-        <source>Insert a key (Ctrl Maj K)</source>
+        <source>Insert the armature (Ctrl Maj K)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2206,70 +2197,85 @@ grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.ui" line="490"/>
+        <location filename="../../src/formeditor.ui" line="476"/>
+        <source>Insert a Style  Tango, Swing... (Ctrl Maj S)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/formeditor.ui" line="479"/>
+        <source>Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/formeditor.ui" line="482"/>
+        <source>Ctrl+Shift+S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/formeditor.ui" line="503"/>
         <source>Miscellaneous</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.ui" line="493"/>
+        <location filename="../../src/formeditor.ui" line="506"/>
         <source>Other information in comment style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.ui" line="499"/>
+        <location filename="../../src/formeditor.ui" line="512"/>
         <source>Insert a regular comment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.ui" line="502"/>
+        <location filename="../../src/formeditor.ui" line="515"/>
         <source>Comment
 Regular</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.ui" line="510"/>
+        <location filename="../../src/formeditor.ui" line="523"/>
         <source>Insert a comment in italic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.ui" line="513"/>
+        <location filename="../../src/formeditor.ui" line="526"/>
         <source>Comment
 Italic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.ui" line="521"/>
+        <location filename="../../src/formeditor.ui" line="534"/>
         <source>Insert a comment in a box</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.ui" line="524"/>
+        <location filename="../../src/formeditor.ui" line="537"/>
         <source>Comment
 Box</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="81"/>
+        <location filename="../../src/formeditor.cpp" line="82"/>
         <source>Songs list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="349"/>
+        <location filename="../../src/formeditor.cpp" line="355"/>
         <source>Enter columns number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="349"/>
+        <location filename="../../src/formeditor.cpp" line="355"/>
         <source>Column number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="438"/>
+        <location filename="../../src/formeditor.cpp" line="444"/>
         <source>Enter tempo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="438"/>
+        <location filename="../../src/formeditor.cpp" line="444"/>
         <source>Beats per minute</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2571,529 +2577,529 @@ Box</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="32"/>
+        <location filename="../../src/mainwindow.ui" line="29"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="75"/>
+        <location filename="../../src/mainwindow.ui" line="72"/>
         <source>Project name :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="93"/>
+        <location filename="../../src/mainwindow.ui" line="90"/>
         <source>Project directory :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="117"/>
+        <location filename="../../src/mainwindow.ui" line="114"/>
         <source>Creator name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="124"/>
+        <location filename="../../src/mainwindow.ui" line="121"/>
         <source>Chord Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="131"/>
+        <location filename="../../src/mainwindow.ui" line="128"/>
         <source>Chord Minor notation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="157"/>
+        <location filename="../../src/mainwindow.ui" line="154"/>
         <source>Watermark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="292"/>
+        <location filename="../../src/mainwindow.ui" line="280"/>
         <location filename="../../src/mainwindow.cpp" line="973"/>
         <source>&lt; ESCAPE &gt;  to abort monitoring window
 &lt; PAUSE&gt; to pause unpause</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="313"/>
-        <location filename="../../src/mainwindow.ui" line="319"/>
+        <location filename="../../src/mainwindow.ui" line="298"/>
+        <location filename="../../src/mainwindow.ui" line="304"/>
         <source>F10</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="316"/>
+        <location filename="../../src/mainwindow.ui" line="301"/>
         <source>Launch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="371"/>
+        <location filename="../../src/mainwindow.ui" line="356"/>
         <source>Preferences &amp;hints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="379"/>
+        <location filename="../../src/mainwindow.ui" line="364"/>
         <source>&amp;Build PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="388"/>
+        <location filename="../../src/mainwindow.ui" line="373"/>
         <source>&amp;Launch PDF Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="397"/>
+        <location filename="../../src/mainwindow.ui" line="382"/>
         <source>B&amp;uild and Launch PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="405"/>
+        <location filename="../../src/mainwindow.ui" line="390"/>
         <source>C&amp;onversion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="414"/>
+        <location filename="../../src/mainwindow.ui" line="399"/>
         <source>Check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="448"/>
+        <location filename="../../src/mainwindow.ui" line="433"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="457"/>
+        <location filename="../../src/mainwindow.ui" line="442"/>
         <source>&amp;Edition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="492"/>
+        <location filename="../../src/mainwindow.ui" line="477"/>
         <source>&amp;New Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="497"/>
+        <location filename="../../src/mainwindow.ui" line="482"/>
         <source>&amp;Open Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="502"/>
+        <location filename="../../src/mainwindow.ui" line="487"/>
         <source>&amp;Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="507"/>
+        <location filename="../../src/mainwindow.ui" line="492"/>
         <source>&amp;Save Current as Defaut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="515"/>
+        <location filename="../../src/mainwindow.ui" line="500"/>
         <source>Ctrl+S</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="525"/>
+        <location filename="../../src/mainwindow.ui" line="510"/>
         <source>&amp;Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="528"/>
+        <location filename="../../src/mainwindow.ui" line="513"/>
         <source>F1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="533"/>
+        <location filename="../../src/mainwindow.ui" line="518"/>
         <source>&amp;About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="538"/>
+        <location filename="../../src/mainwindow.ui" line="523"/>
         <source>&amp;Last Projects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="546"/>
+        <location filename="../../src/mainwindow.ui" line="531"/>
         <source>&amp;Produce PDF files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="347"/>
+        <location filename="../../src/mainwindow.ui" line="332"/>
         <source>&amp;File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="367"/>
+        <location filename="../../src/mainwindow.ui" line="352"/>
         <source>&amp;Too&amp;ls</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="421"/>
+        <location filename="../../src/mainwindow.ui" line="406"/>
         <source>So&amp;rt the book</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="472"/>
+        <location filename="../../src/mainwindow.ui" line="457"/>
         <source>&amp;Window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="512"/>
+        <location filename="../../src/mainwindow.ui" line="497"/>
         <source>&amp;Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="520"/>
+        <location filename="../../src/mainwindow.ui" line="505"/>
         <source>Save &amp;As</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="551"/>
+        <location filename="../../src/mainwindow.ui" line="536"/>
         <source>&amp;Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="554"/>
+        <location filename="../../src/mainwindow.ui" line="539"/>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="559"/>
+        <location filename="../../src/mainwindow.ui" line="544"/>
         <source>&amp;Import cho3 File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="564"/>
+        <location filename="../../src/mainwindow.ui" line="549"/>
         <source>&amp;Chord definition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="567"/>
+        <location filename="../../src/mainwindow.ui" line="552"/>
         <source>F3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="572"/>
+        <location filename="../../src/mainwindow.ui" line="557"/>
         <source>&amp;System Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="577"/>
+        <location filename="../../src/mainwindow.ui" line="562"/>
         <source>&amp;Find</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="580"/>
+        <location filename="../../src/mainwindow.ui" line="565"/>
         <source>Ctrl+F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="585"/>
+        <location filename="../../src/mainwindow.ui" line="570"/>
         <source>&amp;Replace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="588"/>
+        <location filename="../../src/mainwindow.ui" line="573"/>
         <source>Ctrl+R</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="596"/>
+        <location filename="../../src/mainwindow.ui" line="581"/>
         <source>&amp;Global definitions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="604"/>
+        <location filename="../../src/mainwindow.ui" line="589"/>
         <source>&amp;Text only mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="612"/>
+        <location filename="../../src/mainwindow.ui" line="597"/>
         <source>&amp;Lyrics and chord mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="620"/>
+        <location filename="../../src/mainwindow.ui" line="605"/>
         <source>&amp;Chord mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="628"/>
+        <location filename="../../src/mainwindow.ui" line="613"/>
         <source>&amp;Memory mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="631"/>
-        <location filename="../../src/mainwindow.ui" line="687"/>
+        <location filename="../../src/mainwindow.ui" line="616"/>
+        <location filename="../../src/mainwindow.ui" line="672"/>
         <source>F8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="639"/>
+        <location filename="../../src/mainwindow.ui" line="624"/>
         <source>&amp;Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="642"/>
+        <location filename="../../src/mainwindow.ui" line="627"/>
         <source>F2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="647"/>
+        <location filename="../../src/mainwindow.ui" line="632"/>
         <source>1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="652"/>
+        <location filename="../../src/mainwindow.ui" line="637"/>
         <source>&amp;Build All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="655"/>
+        <location filename="../../src/mainwindow.ui" line="640"/>
         <source>F9</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="660"/>
-        <location filename="../../src/mainwindow.ui" line="692"/>
-        <location filename="../../src/mainwindow.ui" line="739"/>
+        <location filename="../../src/mainwindow.ui" line="645"/>
+        <location filename="../../src/mainwindow.ui" line="677"/>
+        <location filename="../../src/mainwindow.ui" line="724"/>
         <source>&amp;Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="663"/>
+        <location filename="../../src/mainwindow.ui" line="648"/>
         <source>F5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="668"/>
-        <location filename="../../src/mainwindow.ui" line="700"/>
-        <location filename="../../src/mainwindow.ui" line="747"/>
+        <location filename="../../src/mainwindow.ui" line="653"/>
+        <location filename="../../src/mainwindow.ui" line="685"/>
+        <location filename="../../src/mainwindow.ui" line="732"/>
         <source>&amp;Lyrics</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="671"/>
+        <location filename="../../src/mainwindow.ui" line="656"/>
         <source>F6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="676"/>
-        <location filename="../../src/mainwindow.ui" line="708"/>
-        <location filename="../../src/mainwindow.ui" line="763"/>
+        <location filename="../../src/mainwindow.ui" line="661"/>
+        <location filename="../../src/mainwindow.ui" line="693"/>
+        <location filename="../../src/mainwindow.ui" line="748"/>
         <source>&amp;Chord</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="679"/>
+        <location filename="../../src/mainwindow.ui" line="664"/>
         <source>F7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="684"/>
-        <location filename="../../src/mainwindow.ui" line="716"/>
-        <location filename="../../src/mainwindow.ui" line="755"/>
+        <location filename="../../src/mainwindow.ui" line="669"/>
+        <location filename="../../src/mainwindow.ui" line="701"/>
+        <location filename="../../src/mainwindow.ui" line="740"/>
         <source>&amp;Memory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="695"/>
+        <location filename="../../src/mainwindow.ui" line="680"/>
         <source>Ctrl+F5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="703"/>
+        <location filename="../../src/mainwindow.ui" line="688"/>
         <source>Ctrl+F6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="711"/>
+        <location filename="../../src/mainwindow.ui" line="696"/>
         <source>Ctrl+F7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="719"/>
+        <location filename="../../src/mainwindow.ui" line="704"/>
         <source>Ctrl+F8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="724"/>
+        <location filename="../../src/mainwindow.ui" line="709"/>
         <source>&amp;Reset Preferences as Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="729"/>
+        <location filename="../../src/mainwindow.ui" line="714"/>
         <source>Last &amp;built</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="734"/>
+        <location filename="../../src/mainwindow.ui" line="719"/>
         <source>&amp;Export to cho3 file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="802"/>
+        <location filename="../../src/mainwindow.ui" line="787"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="856"/>
+        <location filename="../../src/mainwindow.ui" line="841"/>
         <source>&amp;Suppress chords on selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="871"/>
+        <location filename="../../src/mainwindow.ui" line="856"/>
         <source>New Project with sample</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="876"/>
+        <location filename="../../src/mainwindow.ui" line="861"/>
         <source>Export the document to formated format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="881"/>
+        <location filename="../../src/mainwindow.ui" line="866"/>
         <source>Export the selected song to formated format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="886"/>
+        <location filename="../../src/mainwindow.ui" line="871"/>
         <source>Spelling check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="889"/>
+        <location filename="../../src/mainwindow.ui" line="874"/>
         <source>Ctrl+G</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="894"/>
+        <location filename="../../src/mainwindow.ui" line="879"/>
         <source>Build a markdown File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="899"/>
+        <location filename="../../src/mainwindow.ui" line="884"/>
         <source>Build JazzLab files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="904"/>
+        <location filename="../../src/mainwindow.ui" line="889"/>
         <source>Build MMA files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="742"/>
+        <location filename="../../src/mainwindow.ui" line="727"/>
         <source>Shift+F6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="750"/>
+        <location filename="../../src/mainwindow.ui" line="735"/>
         <source>Shift+F7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="758"/>
+        <location filename="../../src/mainwindow.ui" line="743"/>
         <source>Shift+F9</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="766"/>
+        <location filename="../../src/mainwindow.ui" line="751"/>
         <source>Shift+F8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="771"/>
+        <location filename="../../src/mainwindow.ui" line="756"/>
         <source>&amp;Zoom +</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="774"/>
+        <location filename="../../src/mainwindow.ui" line="759"/>
         <source>Ctrl++</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="779"/>
+        <location filename="../../src/mainwindow.ui" line="764"/>
         <source>Z&amp;oom - </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="782"/>
+        <location filename="../../src/mainwindow.ui" line="767"/>
         <source>Ctrl+-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="787"/>
+        <location filename="../../src/mainwindow.ui" line="772"/>
         <source>&amp;Force configuration files to current project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="792"/>
+        <location filename="../../src/mainwindow.ui" line="777"/>
         <source>&amp;Chords with chord on line above to chordpro format</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="797"/>
+        <location filename="../../src/mainwindow.ui" line="782"/>
         <source>Change  the chords &amp;Language of the current song file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="807"/>
+        <location filename="../../src/mainwindow.ui" line="792"/>
         <source>&amp;Transpose chords</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="812"/>
+        <location filename="../../src/mainwindow.ui" line="797"/>
         <source>&amp;Load demo file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="817"/>
+        <location filename="../../src/mainwindow.ui" line="802"/>
         <source>&amp;Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="820"/>
+        <location filename="../../src/mainwindow.ui" line="805"/>
         <source>Ctrl+C</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="825"/>
+        <location filename="../../src/mainwindow.ui" line="810"/>
         <source>C&amp;ut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="828"/>
+        <location filename="../../src/mainwindow.ui" line="813"/>
         <source>Ctrl+X</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="833"/>
+        <location filename="../../src/mainwindow.ui" line="818"/>
         <source>&amp;Paste</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="836"/>
+        <location filename="../../src/mainwindow.ui" line="821"/>
         <source>Ctrl+P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="841"/>
+        <location filename="../../src/mainwindow.ui" line="826"/>
         <source>All chord used are defined</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="846"/>
+        <location filename="../../src/mainwindow.ui" line="831"/>
         <source>DataBase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="851"/>
+        <location filename="../../src/mainwindow.ui" line="836"/>
         <source>Replace space chord space by [Chord]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="861"/>
+        <location filename="../../src/mainwindow.ui" line="846"/>
         <source>By song name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="866"/>
+        <location filename="../../src/mainwindow.ui" line="851"/>
         <source>By Author and song name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3213,12 +3219,24 @@ Box</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1421"/>
+        <location filename="../../src/mainwindow.cpp" line="1240"/>
+        <source>Your MarkDon import files are located in %1 directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="1435"/>
         <source>Your JjazzLab import files are located in %1 directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1424"/>
+        <location filename="../../src/mainwindow.cpp" line="1730"/>
+        <source>Your MMA import files are located in %1 directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="1243"/>
+        <location filename="../../src/mainwindow.cpp" line="1438"/>
+        <location filename="../../src/mainwindow.cpp" line="1733"/>
         <source>Don&apos;t ask</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3287,42 +3305,42 @@ Box</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processor.cpp" line="564"/>
+        <location filename="../../src/processor.cpp" line="581"/>
         <source>Chorus :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processor.cpp" line="1212"/>
+        <location filename="../../src/processor.cpp" line="1229"/>
         <source>Go to last page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processor.cpp" line="1227"/>
+        <location filename="../../src/processor.cpp" line="1244"/>
         <source>Go to next page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processor.cpp" line="1245"/>
+        <location filename="../../src/processor.cpp" line="1262"/>
         <source>Go to table of content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processor.cpp" line="1617"/>
+        <location filename="../../src/processor.cpp" line="1634"/>
         <source>Lyricist: %1 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processor.cpp" line="1618"/>
+        <location filename="../../src/processor.cpp" line="1635"/>
         <source>Composer: %1 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processor.cpp" line="1619"/>
+        <location filename="../../src/processor.cpp" line="1636"/>
         <source>Artist: %1 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processor.cpp" line="1620"/>
+        <location filename="../../src/processor.cpp" line="1637"/>
         <source>(%1) </source>
         <translation type="unfinished"></translation>
     </message>
@@ -3330,48 +3348,58 @@ Box</source>
 <context>
     <name>ProcessorChord</name>
     <message>
-        <location filename="../../src/processorchord.cpp" line="95"/>
+        <location filename="../../src/processorchord.cpp" line="101"/>
         <source>End of solo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processorchord.cpp" line="70"/>
+        <location filename="../../src/processorchord.cpp" line="69"/>
         <source>Chorus :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processorchord.cpp" line="75"/>
+        <location filename="../../src/processorchord.cpp" line="74"/>
         <source>CHORUS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processorchord.cpp" line="78"/>
-        <location filename="../../src/processorchord.cpp" line="185"/>
+        <location filename="../../src/processorchord.cpp" line="77"/>
+        <location filename="../../src/processorchord.cpp" line="191"/>
         <source>Solo:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processorchord.cpp" line="83"/>
+        <location filename="../../src/processorchord.cpp" line="82"/>
         <source>SOLO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processorchord.cpp" line="95"/>
+        <location filename="../../src/processorchord.cpp" line="85"/>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/processorchord.cpp" line="90"/>
+        <source>STYLE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/processorchord.cpp" line="101"/>
         <source>End of chorus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processorchord.cpp" line="180"/>
+        <location filename="../../src/processorchord.cpp" line="186"/>
         <source>Chorus:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processorchord.cpp" line="206"/>
+        <location filename="../../src/processorchord.cpp" line="212"/>
         <source>  Time : %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processorchord.cpp" line="209"/>
+        <location filename="../../src/processorchord.cpp" line="215"/>
         <source>Tempo : %1  </source>
         <translation type="unfinished"></translation>
     </message>
@@ -3394,164 +3422,174 @@ Box</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../src/formeditor.cpp" line="269"/>
+        <location filename="../../src/formeditor.cpp" line="270"/>
         <source>Enter version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="269"/>
+        <location filename="../../src/formeditor.cpp" line="270"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="276"/>
+        <location filename="../../src/formeditor.cpp" line="277"/>
         <source>Enter title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="276"/>
+        <location filename="../../src/formeditor.cpp" line="277"/>
         <source>Title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="281"/>
+        <location filename="../../src/formeditor.cpp" line="282"/>
         <source>Enter sub title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="281"/>
+        <location filename="../../src/formeditor.cpp" line="282"/>
         <source>Sub Title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="286"/>
+        <location filename="../../src/formeditor.cpp" line="287"/>
         <source>Enter album</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="286"/>
+        <location filename="../../src/formeditor.cpp" line="287"/>
         <source>Album</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="291"/>
+        <location filename="../../src/formeditor.cpp" line="292"/>
         <source>Enter artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="291"/>
+        <location filename="../../src/formeditor.cpp" line="292"/>
         <source>Artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="296"/>
+        <location filename="../../src/formeditor.cpp" line="297"/>
         <source>Enter composer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="296"/>
+        <location filename="../../src/formeditor.cpp" line="297"/>
         <source>Composer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="301"/>
+        <location filename="../../src/formeditor.cpp" line="302"/>
         <source>Enter lyricist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="301"/>
+        <location filename="../../src/formeditor.cpp" line="302"/>
         <source>Lyricist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="305"/>
+        <location filename="../../src/formeditor.cpp" line="306"/>
         <source>Enter arranger</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="305"/>
+        <location filename="../../src/formeditor.cpp" line="306"/>
         <source>Arranger</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="312"/>
+        <location filename="../../src/formeditor.cpp" line="313"/>
         <source>Enter copyright</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="312"/>
+        <location filename="../../src/formeditor.cpp" line="313"/>
         <source>Copyright</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="317"/>
+        <location filename="../../src/formeditor.cpp" line="318"/>
         <source>Enter year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="317"/>
+        <location filename="../../src/formeditor.cpp" line="318"/>
         <source>Year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="322"/>
+        <location filename="../../src/formeditor.cpp" line="323"/>
         <source>Enter key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="322"/>
+        <location filename="../../src/formeditor.cpp" line="323"/>
         <source>Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="327"/>
+        <location filename="../../src/formeditor.cpp" line="328"/>
         <source>Enter duration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="327"/>
+        <location filename="../../src/formeditor.cpp" line="328"/>
         <source>Duration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="332"/>
-        <location filename="../../src/formeditor.cpp" line="337"/>
-        <location filename="../../src/formeditor.cpp" line="342"/>
+        <location filename="../../src/formeditor.cpp" line="333"/>
+        <location filename="../../src/formeditor.cpp" line="343"/>
+        <location filename="../../src/formeditor.cpp" line="348"/>
         <source>Enter comment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="332"/>
+        <location filename="../../src/formeditor.cpp" line="333"/>
         <source>Comment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="337"/>
+        <location filename="../../src/formeditor.cpp" line="338"/>
+        <source>Enter Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/formeditor.cpp" line="338"/>
+        <source>Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/formeditor.cpp" line="343"/>
         <source>Comment italic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="342"/>
+        <location filename="../../src/formeditor.cpp" line="348"/>
         <source>Comment box</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="379"/>
+        <location filename="../../src/formeditor.cpp" line="385"/>
         <source>Enter cover title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="379"/>
+        <location filename="../../src/formeditor.cpp" line="385"/>
         <source>Cover title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="455"/>
+        <location filename="../../src/formeditor.cpp" line="461"/>
         <source>Enter  cover subtitle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/formeditor.cpp" line="455"/>
+        <location filename="../../src/formeditor.cpp" line="461"/>
         <source>Cover Subtitle</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3561,8 +3599,8 @@ Box</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/processor.cpp" line="960"/>
-        <location filename="../../src/processor.cpp" line="1062"/>
+        <location filename="../../src/processor.cpp" line="977"/>
+        <location filename="../../src/processor.cpp" line="1079"/>
         <source>Table of content</source>
         <translation type="unfinished"></translation>
     </message>

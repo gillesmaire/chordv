@@ -16,6 +16,9 @@
     DEFINES+=OSNAME=0
     }
     SOURCES += src/main.cpp\
+    src/JazzLabConvertion.cpp \
+    src/MMAConvertion.cpp \
+    src/MarkDownConvertion.cpp \
     src/dialogshowexported.cpp \
     src/formstatusbutton.cpp \
             src/mainwindow.cpp \

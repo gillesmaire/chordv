@@ -17,4 +17,7 @@ qrc_resources.cpp
 *.pdf
 *.qm
 .qtc_clangd/
+debian/chordv/usr/
+debian/.debhelper/
+
 

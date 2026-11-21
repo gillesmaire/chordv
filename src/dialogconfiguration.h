@@ -25,7 +25,6 @@ public:
     static QString getDirectoryJjazzLib();
     static QString getDirectoryMMA();
     static QString getDirectoryGrooveMMA();
-    
     static QString getDirectoryMarkDown();
 private slots:
     void Save();
@@ -36,10 +35,11 @@ private slots:
     void LoadFormat();
     void SaveFormat();
     void SaveDefaultFormat();
-
+    void setDirectoryMarkDown();
     void setDirectoryWithMusicMarkDown();
     void setMarkDownShowDir();
     bool getMarkDownShowDir();
+    
     
     void setDirectoryJjazzLib();
     bool getJjazzLabShowDir();
@@ -51,6 +51,8 @@ private slots:
     void setMMAShowDir();
 
     void SetDirectoryGrooveMMA();
+
+    void GenerateEndOfGroove();
 
 private:
     Ui::DialogConfiguration *ui;
