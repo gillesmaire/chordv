@@ -30,7 +30,8 @@
 #include <mainwindow.h>
 #include <QTemporaryFile>
 #include <QSettings>
-#include <functional>
+#include <QRegularExpression>
+#include <algorithm>
 #include "ui_mainwindow.h"
 #include <QDir>
 #include <QDirIterator>
@@ -145,63 +146,91 @@ QMap<QString, QStringList> MainWindow::getMmaMixLevels(const QString &groove)
     {
         QSettings s;
 
-        // Remet les anciennes sous-sections MMA/casio, MMA/stdlib, etc.
-        // sous forme de clés avec des antislashs dans la section [MMA].
-        s.beginGroup("MMA");
-        const QStringList mmaGroups = s.childGroups();
+        // Reconstruit [MMA] à partir des grooves de fin de la bibliothèque.
+        const QString libPath = "/usr/share/mma/lib";
+        QStringList grooveFiles;
 
-        QMap<QString, QVariant> flattenedValues;
-        std::function<void(const QString &, const QString &)> flattenGroup;
-        flattenGroup = [&](const QString &group, const QString &prefix)
+        QDirIterator it(libPath,
+                        QStringList() << "*.mma",
+                        QDir::Files,
+                        QDirIterator::Subdirectories);
+
+        while (it.hasNext())
+            grooveFiles << it.next();
+
+        // stdlib est prioritaire, comme dans la recherche des grooves de MMA.
+        std::sort(grooveFiles.begin(), grooveFiles.end(),
+                  [&libPath](const QString &a, const QString &b)
         {
-            s.beginGroup(group);
+            const QString ra = QDir(libPath).relativeFilePath(a);
+            const QString rb = QDir(libPath).relativeFilePath(b);
+            const bool aStdlib = ra.startsWith("stdlib/");
+            const bool bStdlib = rb.startsWith("stdlib/");
 
-            for (const QString &key : s.childKeys())
-                flattenedValues.insert(prefix + "\\" + key, s.value(key));
+            if (aStdlib != bStdlib)
+                return aStdlib;
 
-            const QStringList childGroups = s.childGroups();
-            for (const QString &child : childGroups)
-                flattenGroup(child, prefix + "\\" + child);
+            return ra < rb;
+        });
 
-            s.endGroup();
-        };
+        static const QRegularExpression defGrooveRx(
+            R"(^\s*DefGroove\s+([^\s/]+))",
+            QRegularExpression::CaseInsensitiveOption);
 
-        for (const QString &group : mmaGroups)
-            flattenGroup(group, group);
+        // Ces suffixes identifient les grooves de fin : End, Ending,
+        // End1/End2, EndingA... et FillA... (sans faux positif au milieu).
+        static const QRegularExpression endNameRx(
+            R"((?:END(?:ING)?[A-Z0-9]*|FILL[A-Z0-9]*)$)",
+            QRegularExpression::CaseInsensitiveOption);
 
-        s.endGroup();
+        QMap<QString, QString> endGrooves;
 
-        for (auto it = flattenedValues.cbegin(); it != flattenedValues.cend(); ++it)
-            s.setValue("MMA/" + it.key(), it.value());
-
-        for (const QString &group : mmaGroups)
-            s.remove("MMA/" + group);
-
-        // Migration de l'ancienne liste EndOfGroove vers une clé par groove.
-        const QString oldEndGrooves = s.value("MMA/EndOfGroove").toString();
-        if (!oldEndGrooves.isEmpty())
+        for (const QString &grooveFileName : grooveFiles)
         {
-            const QStringList entries = oldEndGrooves.split(',', Qt::SkipEmptyParts);
+            QFile grooveFile(grooveFileName);
 
-            for (const QString &entry : entries)
+            if (!grooveFile.open(QIODevice::ReadOnly | QIODevice::Text))
+                continue;
+
+            QTextStream in(&grooveFile);
+            QString relativePath =
+                QDir(libPath).relativeFilePath(grooveFileName);
+            relativePath.chop(4);
+            relativePath.replace(QDir::separator(), '/');
+
+            while (!in.atEnd())
             {
-                const QString item = entry.trimmed();
-                const int separator = item.lastIndexOf(':');
+                const QString line = in.readLine().trimmed();
+                const auto match = defGrooveRx.match(line);
 
-                if (separator <= 0 || separator == item.size() - 1)
+                if (!match.hasMatch())
                     continue;
 
-                QString grooveKey = item.left(separator).trimmed();
-                const QString endGroove = item.mid(separator + 1).trimmed();
+                const QString grooveName = match.captured(1);
 
-                if (!grooveKey.isEmpty() && !endGroove.isEmpty())
+                if (endNameRx.match(grooveName).hasMatch()
+                    && !endGrooves.contains(grooveName))
                 {
-                    grooveKey.replace("/", "\\");
-                    s.setValue("MMA/" + grooveKey, endGroove);
+                    endGrooves.insert(relativePath,grooveName);
                 }
             }
+        }
 
-            s.remove("MMA/EndOfGroove");
+        // QSettings écrit alors une seule rubrique [MMA], avec une clé
+        // par groove de fin : NomDuGrooveDeFin=chemin/du/fichier/source.
+        if (!endGrooves.isEmpty())
+        {
+            s.remove("MMA");
+            s.beginGroup("MMA");
+
+            for (auto it = endGrooves.cbegin(); it != endGrooves.cend(); ++it)
+                s.setValue(it.key(), it.value());
+
+            s.endGroup();
+        }
+        else
+        {
+            qWarning() << "No MMA ending grooves found in" << libPath;
         }
 
         s.sync();
