@@ -26,6 +26,17 @@
 // Source: %GITLOCATION%
 //
 
+#include <QString>
+#include <mainwindow.h>
+#include <QTemporaryFile>
+#include <QSettings>
+#include <functional>
+#include "ui_mainwindow.h"
+#include <QDir>
+#include <QDirIterator>
+#include <QMessageBox>
+#include "dialogconfiguration.h"
+
 QMap<QString, QStringList> MainWindow::getMmaMixLevels(const QString &groove)
 {
     QMap<QString, QStringList> result;
@@ -133,6 +144,68 @@ QMap<QString, QStringList> MainWindow::getMmaMixLevels(const QString &groove)
  void MainWindow::ConvertInMMAFiles()
     {
         QSettings s;
+
+        // Remet les anciennes sous-sections MMA/casio, MMA/stdlib, etc.
+        // sous forme de clés avec des antislashs dans la section [MMA].
+        s.beginGroup("MMA");
+        const QStringList mmaGroups = s.childGroups();
+
+        QMap<QString, QVariant> flattenedValues;
+        std::function<void(const QString &, const QString &)> flattenGroup;
+        flattenGroup = [&](const QString &group, const QString &prefix)
+        {
+            s.beginGroup(group);
+
+            for (const QString &key : s.childKeys())
+                flattenedValues.insert(prefix + "\\" + key, s.value(key));
+
+            const QStringList childGroups = s.childGroups();
+            for (const QString &child : childGroups)
+                flattenGroup(child, prefix + "\\" + child);
+
+            s.endGroup();
+        };
+
+        for (const QString &group : mmaGroups)
+            flattenGroup(group, group);
+
+        s.endGroup();
+
+        for (auto it = flattenedValues.cbegin(); it != flattenedValues.cend(); ++it)
+            s.setValue("MMA/" + it.key(), it.value());
+
+        for (const QString &group : mmaGroups)
+            s.remove("MMA/" + group);
+
+        // Migration de l'ancienne liste EndOfGroove vers une clé par groove.
+        const QString oldEndGrooves = s.value("MMA/EndOfGroove").toString();
+        if (!oldEndGrooves.isEmpty())
+        {
+            const QStringList entries = oldEndGrooves.split(',', Qt::SkipEmptyParts);
+
+            for (const QString &entry : entries)
+            {
+                const QString item = entry.trimmed();
+                const int separator = item.lastIndexOf(':');
+
+                if (separator <= 0 || separator == item.size() - 1)
+                    continue;
+
+                QString grooveKey = item.left(separator).trimmed();
+                const QString endGroove = item.mid(separator + 1).trimmed();
+
+                if (!grooveKey.isEmpty() && !endGroove.isEmpty())
+                {
+                    grooveKey.replace("/", "\\");
+                    s.setValue("MMA/" + grooveKey, endGroove);
+                }
+            }
+
+            s.remove("MMA/EndOfGroove");
+        }
+
+        s.sync();
+
         if (QMenu *menu = ui->actionBuild_MMA_files->parent()
                      ? qobject_cast<QMenu *>(ui->actionBuild_MMA_files->parent())
                      : nullptr)
@@ -346,10 +419,10 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
         {
             QString FileName;
             QString result;
+            QString grov;
             int counter = 1;
             
             QRegularExpression re("\\[(.*?)\\]");
-
             for (const QString &line : verse)
             {
                 QRegularExpressionMatchIterator it = re.globalMatch(line);
@@ -450,7 +523,8 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
 
         auto flushSong = [&]()
         {
-
+    
+            QString grov = groove.isEmpty() ? Defaultgroove : groove;
             flushCurrentVerse();
 
             if (fullSong.isEmpty())
@@ -469,7 +543,7 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
                     clickbegin=false;
                     }
                     
-             QString grov=groove.isEmpty()?Defaultgroove:groove;
+             grov=groove.isEmpty()?Defaultgroove:groove;
              out <<"Groove " << grov <<"\n\n";
              writeGrooveVoices(grov);
  
@@ -483,38 +557,27 @@ auto convertVerseToMMA = [&](const QStringList &verse) -> QString
             out << fullSong;
             out << "RepeatEnd " << blockCount << "\n\n";
 
-            // Groove de fin 
-            QStringList parts;
-            qDebug() << "FILE OPEN:" << file.isOpen();
-            qDebug() << "FILE NAME:" << file.fileName();
-            qDebug() << "STREAM DEVICE:" << out.device();   
+            // Groove de fin
             if (!lastChordOfSong.isEmpty())
             {
-               QString endGroove = s.value("EndOfGroove").toString();       
+                QString endGrooveKey = grov;
+                endGrooveKey.replace(':', '/');
+
+                QString endGroove =
+                    s.value("MMA/" + endGrooveKey).toString();
+
                 if (!endGroove.isEmpty())
                 {
-                    parts = endGroove.split(':');
-
-                    if (parts.size() == 2)
-                   {
-                    out << "Groove " << parts[1] << "\n";
+                    out << "Groove " << endGroove << "\n";
                     out << "1 " << lastChordOfSong << "\n\n";
-qDebug() << "Device:" << out.device();
-qDebug() << "File open:" << file.isOpen();
-qDebug() << "File writable:" << file.isWritable();
-qDebug() << "File position:" << file.pos();
-qDebug() << "Stream status:" << out.status();
-qDebug() << "File error:" << file.errorString();
                     out.flush();
                     file.flush();
-                   }
                 }
             }
-            
-            qDebug() << "Dernier accord de la chanson :" <<lastChordOfSong;
-            if ( parts.size()>1 ) qDebug()<<parts[1];
+
             fullSong.clear();
             blockCount = 0;
+           
         };
 
         for (QString line : lines)
@@ -560,13 +623,13 @@ qDebug() << "File error:" << file.errorString();
                     QString FileName=directoryName + "/" +
                                      songname + "/" +
                                      songname + ".mma";
-                qDebug()<<FileName;
                     file.setFileName(FileName);
 
                     if (!file.open(QIODevice::WriteOnly |
                                    QIODevice::Text))
                     {
-                        qWarning() << "Cannot open file";                        return;
+                        qWarning() << "Cannot open file";    
+                        return;
                     }
 
                     out.setDevice(&file);
@@ -577,7 +640,7 @@ qDebug() << "File error:" << file.errorString();
                     out << tr("// *** IMPORTANT **** ") << "\n" ;
                     out << tr("// This file is generated automatically)")<<"\n";
                     out << tr("// If you want to modify this file rename it")<<"\n";
-                    out << tr("// On the nex generation the modifications will be lost !")<<"\n\n";
+                    out << tr("// On the next generation all your modifications will be lost !")<<"\n\n";
                     
 
                     clickbegin=true;                  
@@ -665,4 +728,3 @@ qDebug() << "File error:" << file.errorString();
     }
      ui->stackedWidget->setCurrentIndex(menuindex);
     }
-

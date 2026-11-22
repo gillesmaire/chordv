@@ -128,13 +128,14 @@ private:
     ///
     void ClearInfoFile();
     void SetMode(int mode);
-
+    void MakeEndGrooves();
     DialogChordDefinition  *mDialChordDefinition;
     QList<QString> extractBracketWords(const QString &line);
     QString MakeChordsList(const QStringList &chords);
     
     QMap<QString, QStringList> getMmaMixLevels(const QString &groove);
     bool addMmaMixLevels(const QString &fileName, const QString &groove);
+    QHash<QString, QString> mEndGrooves;
     
 public slots:
     ///

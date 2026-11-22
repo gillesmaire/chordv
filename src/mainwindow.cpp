@@ -1003,6 +1003,8 @@ void MainWindow::SetMode ( int mode)
     if (mode != 6 )ui->labelMode->setStyleSheet(QString("color:%1").arg(m_listcolor.at(mode).name()));
 }
 
+
+
 void MainWindow::CheckAllChordUsedAreDefined()
 {
       ui->statusBar->getCheckWin()->show();

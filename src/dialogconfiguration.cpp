@@ -405,7 +405,7 @@ void DialogConfiguration::GenerateEndOfGroove()
     if (!root.exists())
         return;
 
-    QStringList entries;
+    QMap<QString,QString> entries;
 
     QDirIterator it(
         root.absolutePath(),
@@ -493,12 +493,13 @@ void DialogConfiguration::GenerateEndOfGroove()
         if (info.path() != ".")
             grooveFile = info.path() + "/" + grooveFile;
 
-        entries.append(grooveFile + ":" + ending);
+       // entries.append(grooveFile + ":" + ending);
+       qDebug()<<grooveFile<<ending;
     }
 
     // Enregistrement dans QSettings
     QSettings settings;
-    settings.setValue("MMA/EndOfGroove", entries);
+  //  settings.setValue("MMA/EndOfGroove", entries);
     settings.sync();
 }
 
