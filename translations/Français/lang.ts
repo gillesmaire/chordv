@@ -101,8 +101,33 @@
     </message>
     <message>
         <location filename="../../src/dialogabout.ui" line="100"/>
+        <source>https://github.com/gillesmaire/chordv</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../src/dialogabout.ui" line="195"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt;&amp;gt; Qt6 and Qt6Creator from &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.qt-project.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.qt-project.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt;&amp;gt; developped on Debian &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.qt-project.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.ubuntu.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:600;&quot;&gt;Picture : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt; Gottfried&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:600;&quot;&gt; Developper information &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt;on &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gillesmaire.com&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.gillesmaire.com&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt;l&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:600;&quot;&gt;Song&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt; are licenced in Creative Common. Song Web Site is : &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.qt-project.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.lesjetesdelencre.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:11pt; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
         <source>https://sourceforge.net/projects/chordv/</source>
-        <translation>https://sourceforge.net/projects/chordv/</translation>
+        <translation type="vanished">https://sourceforge.net/projects/chordv/</translation>
     </message>
     <message>
         <location filename="../../src/dialogabout.ui" line="110"/>
@@ -120,12 +145,16 @@
         <translation>GPL 3</translation>
     </message>
     <message>
+        <location filename="../../src/dialogabout.ui" line="140"/>
+        <source>V3.0</source>
+        <translation></translation>
+    </message>
+    <message>
         <location filename="../../src/dialogabout.ui" line="188"/>
         <source>Credit</source>
         <translation>Outils</translation>
     </message>
     <message>
-        <location filename="../../src/dialogabout.ui" line="195"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -140,7 +169,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:600;&quot;&gt;Song&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt;&quot;&gt; are licenced in Creative Common. Song Web Site is : &lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.qt-project.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.lesjetesdelencre.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:11pt; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -198,7 +227,7 @@ Code source sur SourceForge projet ChordV
 Site : http://www.gillesmaire.com</translation>
     </message>
     <message>
-        <location filename="../../src/dialogabout.ui" line="234"/>
+        <location filename="../../src/dialogabout.ui" line="237"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>
@@ -672,10 +701,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../../src/dialogconfiguration.ui" line="147"/>
         <location filename="../../src/dialogconfiguration.ui" line="175"/>
         <location filename="../../src/dialogconfiguration.ui" line="182"/>
-        <location filename="../../src/dialogconfiguration.ui" line="766"/>
-        <location filename="../../src/dialogconfiguration.ui" line="851"/>
-        <location filename="../../src/dialogconfiguration.ui" line="872"/>
-        <location filename="../../src/dialogconfiguration.ui" line="952"/>
+        <location filename="../../src/dialogconfiguration.ui" line="764"/>
+        <location filename="../../src/dialogconfiguration.ui" line="789"/>
+        <location filename="../../src/dialogconfiguration.ui" line="902"/>
+        <location filename="../../src/dialogconfiguration.ui" line="923"/>
+        <location filename="../../src/dialogconfiguration.ui" line="1003"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -804,7 +834,27 @@ p, li { white-space: pre-wrap; }
         <translation>Fin de chorus ($end_of_chorus)</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="784"/>
+        <location filename="../../src/dialogconfiguration.ui" line="775"/>
+        <source>MMA Groove Directory</source>
+        <translation>Répertoire des Grooves de MMA</translation>
+    </message>
+    <message>
+        <location filename="../../src/dialogconfiguration.ui" line="782"/>
+        <source>/usr/share/mma/lib</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../src/dialogconfiguration.ui" line="800"/>
+        <source>Default groove</source>
+        <translation>Groove pa défaut</translation>
+    </message>
+    <message>
+        <location filename="../../src/dialogconfiguration.ui" line="823"/>
+        <source>Generate EndOfGroove File</source>
+        <translation>Générer un fichier EndOfGroove</translation>
+    </message>
+    <message>
+        <location filename="../../src/dialogconfiguration.ui" line="832"/>
         <source>Add click at begining of songs</source>
         <translation>Ajouter un clic au début des morceaux</translation>
     </message>
@@ -913,7 +963,7 @@ p, li { white-space: pre-wrap; }
         <translation>Export MMA</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="756"/>
+        <location filename="../../src/dialogconfiguration.ui" line="754"/>
         <source>MMA Export Directory</source>
         <translation>Répertoire des fichiers MMA</translation>
     </message>
@@ -922,22 +972,22 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Affiche le répertoire après chaque traduction</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="824"/>
+        <location filename="../../src/dialogconfiguration.ui" line="875"/>
         <source>Markdown export</source>
         <translation>Exportattion en Markdown</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="832"/>
+        <location filename="../../src/dialogconfiguration.ui" line="883"/>
         <source>Split in separate files</source>
         <translation>Découper en plusieurs fichiers</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="841"/>
+        <location filename="../../src/dialogconfiguration.ui" line="892"/>
         <source>Destination directory</source>
         <translation>Répertoire destination</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="862"/>
+        <location filename="../../src/dialogconfiguration.ui" line="913"/>
         <source>Directory layout/partials/sidebar</source>
         <translation>Réperoire layou/partials/sidebar</translation>
     </message>
@@ -950,19 +1000,19 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Montrer les messages  d&apos;informaions après la génération</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="904"/>
+        <location filename="../../src/dialogconfiguration.ui" line="955"/>
         <source>JJazLab Export</source>
         <translation>Export en format JJazzLab</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="942"/>
+        <location filename="../../src/dialogconfiguration.ui" line="993"/>
         <source>Directory to export JJazzLab files :</source>
         <translation>Répertoire d&apos;exportation des fichiers Jjazzlab :</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="777"/>
-        <location filename="../../src/dialogconfiguration.ui" line="881"/>
-        <location filename="../../src/dialogconfiguration.ui" line="961"/>
+        <location filename="../../src/dialogconfiguration.ui" line="839"/>
+        <location filename="../../src/dialogconfiguration.ui" line="932"/>
+        <location filename="../../src/dialogconfiguration.ui" line="1012"/>
         <source>Show message with location of files after generation </source>
         <translation>Afficher un message indiquant la localisation des fichiers après leur génération </translation>
     </message>
@@ -971,7 +1021,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Ajouter le tempo au début de la chanson</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="999"/>
+        <location filename="../../src/dialogconfiguration.ui" line="1050"/>
         <source>Editor</source>
         <translation>Éditeur</translation>
     </message>
@@ -1005,17 +1055,17 @@ p, li { white-space: pre-wrap; }
         <translation>Éditeur</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="1008"/>
+        <location filename="../../src/dialogconfiguration.ui" line="1059"/>
         <source>Open last file on start </source>
         <translation>Ouvrir le dernier fichier lu au démarrage </translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="1052"/>
+        <location filename="../../src/dialogconfiguration.ui" line="1116"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.ui" line="1059"/>
+        <location filename="../../src/dialogconfiguration.ui" line="1123"/>
         <source>Save</source>
         <translation>Sauvegarder</translation>
     </message>
@@ -1024,39 +1074,49 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Choisisssez le répertoire où les fichiers Markdown doivent être générés</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="73"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="82"/>
         <source>Choose the directory where JJazzLibfiles are stored</source>
         <translation>Choisissez le répertoire où les fichiers JazzLab seront stockés</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="92"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="101"/>
         <source>Choose the directory where MMA files are stored</source>
         <translation>Choisissez le répertoire ou les fichiers MM seront stockés</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="129"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="126"/>
+        <source>Choose the directory where MMA Grooves files are stored</source>
+        <translation>Indiqquer le répertroire où les grooves MMA sont stockés</translation>
+    </message>
+    <message>
+        <location filename="../../src/dialogconfiguration.cpp" line="139"/>
+        <source>Choose the directory where markdownfiles are stored</source>
+        <translation>Indiquer le répertoire où les fichiers markdown sont stockés</translation>
+    </message>
+    <message>
+        <location filename="../../src/dialogconfiguration.cpp" line="170"/>
         <source>Choose the directory where musicfiles are stored</source>
         <translatorcomment>Choisissez le répertoire ou les fichiers  musiques seront stockés</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="195"/>
-        <location filename="../../src/dialogconfiguration.cpp" line="213"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="236"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="254"/>
         <source>Format Export Chord (*.fec)</source>
         <translation>Format d&apos;exportation Chord (*.fec)</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="196"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="237"/>
         <source>Choose file to get format</source>
         <translation>Choisir un fichier pour récupérer le format</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="215"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="256"/>
         <source>Choose file to save format</source>
         <translation>Choisir un fichier pour sauvegarder le format</translation>
     </message>
     <message>
-        <location filename="../../src/dialogconfiguration.cpp" line="231"/>
+        <location filename="../../src/dialogconfiguration.cpp" line="272"/>
         <source>Choose PDF Reader program</source>
         <translation>Choisir un lecteur PDF</translation>
     </message>
@@ -1149,46 +1209,51 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../../src/dialognewsong.ui" line="54"/>
+        <source>Style</source>
+        <translation>Style</translation>
+    </message>
+    <message>
+        <location filename="../../src/dialognewsong.ui" line="61"/>
         <source>Column</source>
         <translation>Colonnes</translation>
     </message>
     <message>
-        <location filename="../../src/dialognewsong.ui" line="116"/>
+        <location filename="../../src/dialognewsong.ui" line="123"/>
         <source>/</source>
         <translation>/</translation>
     </message>
     <message>
-        <location filename="../../src/dialognewsong.ui" line="188"/>
+        <location filename="../../src/dialognewsong.ui" line="198"/>
         <source>Compressed</source>
         <translation>Compressé</translation>
     </message>
     <message>
-        <location filename="../../src/dialognewsong.ui" line="208"/>
+        <location filename="../../src/dialognewsong.ui" line="218"/>
         <source>Include the song</source>
         <translation>Inclure la chanson</translation>
     </message>
     <message>
-        <location filename="../../src/dialognewsong.ui" line="216"/>
+        <location filename="../../src/dialognewsong.ui" line="226"/>
         <source>Under the cursor</source>
         <translation>Sous le curseur</translation>
     </message>
     <message>
-        <location filename="../../src/dialognewsong.ui" line="221"/>
+        <location filename="../../src/dialognewsong.ui" line="231"/>
         <source>Sorted by song name</source>
         <translation>Trié par titre des chansons</translation>
     </message>
     <message>
-        <location filename="../../src/dialognewsong.ui" line="226"/>
+        <location filename="../../src/dialognewsong.ui" line="236"/>
         <source>Sorted by author and song name</source>
         <translation>Trié par auteur et nom des chansons</translation>
     </message>
     <message>
-        <location filename="../../src/dialognewsong.ui" line="251"/>
+        <location filename="../../src/dialognewsong.ui" line="261"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../../src/dialognewsong.ui" line="258"/>
+        <location filename="../../src/dialognewsong.ui" line="268"/>
         <source>Insert</source>
         <translation>Insérer</translation>
     </message>
@@ -2980,12 +3045,12 @@ en boîte</translation>
         <translation type="vanished">Fichier d&apos;entrée</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="114"/>
+        <location filename="../../src/mainwindow.ui" line="124"/>
         <source>Creator name</source>
         <translation>Nom de l&apos;auteur</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="121"/>
+        <location filename="../../src/mainwindow.ui" line="131"/>
         <source>Chord Language</source>
         <translation>Langue des accords</translation>
     </message>
@@ -3010,7 +3075,7 @@ en boîte</translation>
         <translation type="vanished">Mode aide-mémoire</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="154"/>
+        <location filename="../../src/mainwindow.ui" line="164"/>
         <source>Watermark</source>
         <translation>Texte en filigrane</translation>
     </message>
@@ -3019,12 +3084,12 @@ en boîte</translation>
         <translation type="vanished">Générer le fichier PDF</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="72"/>
+        <location filename="../../src/mainwindow.ui" line="82"/>
         <source>Project name :</source>
         <translation>Nom du projet :</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="90"/>
+        <location filename="../../src/mainwindow.ui" line="100"/>
         <source>Project directory :</source>
         <translation>Répertoire du projet :</translation>
     </message>
@@ -3121,12 +3186,12 @@ en boîte</translation>
         <translation type="vanished">Lancer l&apos;afficheur PDF</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="433"/>
+        <location filename="../../src/mainwindow.ui" line="509"/>
         <source>&amp;Help</source>
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="442"/>
+        <location filename="../../src/mainwindow.ui" line="518"/>
         <source>&amp;Edition</source>
         <translation>&amp;Édition</translation>
     </message>
@@ -3139,12 +3204,12 @@ en boîte</translation>
         <translation type="vanished">Importer un fichier cho3</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="562"/>
+        <location filename="../../src/mainwindow.ui" line="638"/>
         <source>&amp;Find</source>
         <translation>&amp;Chercher</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="570"/>
+        <location filename="../../src/mainwindow.ui" line="646"/>
         <source>&amp;Replace</source>
         <translation>&amp;Remplacer</translation>
     </message>
@@ -3161,7 +3226,7 @@ en boîte</translation>
         <translation type="vanished">Textes et accords</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="632"/>
+        <location filename="../../src/mainwindow.ui" line="708"/>
         <source>1</source>
         <translation>1</translation>
     </message>
@@ -3174,7 +3239,7 @@ en boîte</translation>
         <translation type="vanished">Tout sélectionner</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="640"/>
+        <location filename="../../src/mainwindow.ui" line="716"/>
         <source>F9</source>
         <oldsource>F4</oldsource>
         <translation>F9</translation>
@@ -3188,12 +3253,12 @@ en boîte</translation>
         <translation type="vanished">Texte</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="648"/>
+        <location filename="../../src/mainwindow.ui" line="724"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="727"/>
+        <location filename="../../src/mainwindow.ui" line="803"/>
         <source>Shift+F6</source>
         <translation>Maj+F6</translation>
     </message>
@@ -3202,17 +3267,17 @@ en boîte</translation>
         <translation type="vanished">Textes et accords</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="656"/>
+        <location filename="../../src/mainwindow.ui" line="732"/>
         <source>F6</source>
         <translation>F6</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="735"/>
+        <location filename="../../src/mainwindow.ui" line="811"/>
         <source>Shift+F7</source>
         <translation>Maj+F7</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="743"/>
+        <location filename="../../src/mainwindow.ui" line="819"/>
         <source>Shift+F9</source>
         <translation>Maj+F9</translation>
     </message>
@@ -3221,7 +3286,7 @@ en boîte</translation>
         <translation type="vanished">Accords</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="664"/>
+        <location filename="../../src/mainwindow.ui" line="740"/>
         <source>F7</source>
         <translation>F7</translation>
     </message>
@@ -3230,28 +3295,28 @@ en boîte</translation>
         <translation type="vanished">Aide-mémoire</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="616"/>
-        <location filename="../../src/mainwindow.ui" line="672"/>
+        <location filename="../../src/mainwindow.ui" line="692"/>
+        <location filename="../../src/mainwindow.ui" line="748"/>
         <source>F8</source>
         <translation>F8</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="680"/>
+        <location filename="../../src/mainwindow.ui" line="756"/>
         <source>Ctrl+F5</source>
         <translation>Ctrl+F5</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="688"/>
+        <location filename="../../src/mainwindow.ui" line="764"/>
         <source>Ctrl+F6</source>
         <translation>Ctrl+F6</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="696"/>
+        <location filename="../../src/mainwindow.ui" line="772"/>
         <source>Ctrl+F7</source>
         <translation>Ctrl+F7</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="704"/>
+        <location filename="../../src/mainwindow.ui" line="780"/>
         <source>Ctrl+F8</source>
         <translation>Ctrl+F8</translation>
     </message>
@@ -3264,7 +3329,7 @@ en boîte</translation>
         <translation type="vanished">Dernier construit</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="477"/>
+        <location filename="../../src/mainwindow.ui" line="553"/>
         <source>&amp;New Project</source>
         <translation>&amp;Nouveau projet</translation>
     </message>
@@ -3333,17 +3398,17 @@ solo</source>
 solo</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="356"/>
+        <location filename="../../src/mainwindow.ui" line="432"/>
         <source>Preferences &amp;hints</source>
         <translation>&amp;Gadgets des préférences</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="364"/>
+        <location filename="../../src/mainwindow.ui" line="440"/>
         <source>&amp;Build PDF</source>
         <translation>Construire un &amp;PDF</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="373"/>
+        <location filename="../../src/mainwindow.ui" line="449"/>
         <source>&amp;Launch PDF Viewer</source>
         <translation>&amp;Lancer l&apos;afficheur PDF</translation>
     </message>
@@ -3352,7 +3417,7 @@ solo</translation>
         <translation type="vanished">Construire et afficher le PDF</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="382"/>
+        <location filename="../../src/mainwindow.ui" line="458"/>
         <source>B&amp;uild and Launch PDF</source>
         <translation>C&amp;onstruit et affiche le PDF</translation>
     </message>
@@ -3361,7 +3426,7 @@ solo</translation>
         <translation type="vanished">Importer un autre format</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="128"/>
+        <location filename="../../src/mainwindow.ui" line="138"/>
         <source>Chord Minor notation</source>
         <translation>Notation de l&apos;accord mineur</translation>
     </message>
@@ -3390,12 +3455,12 @@ solo</translation>
         <translation type="vanished">Texte défilant</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="971"/>
+        <location filename="../../src/mainwindow.cpp" line="975"/>
         <source>&lt; ESCAPE &gt;  to abort monitoring window</source>
         <translation>&lt; ÉCHAPPEMENT &gt; pour sortir du mode aide-mémoire</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="301"/>
+        <location filename="../../src/mainwindow.ui" line="377"/>
         <source>Launch</source>
         <translation>Lancer</translation>
     </message>
@@ -3404,17 +3469,17 @@ solo</translation>
         <translation type="vanished">Conversion</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="482"/>
+        <location filename="../../src/mainwindow.ui" line="558"/>
         <source>&amp;Open Project</source>
         <translation>&amp;Ouvrir un projet</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="487"/>
+        <location filename="../../src/mainwindow.ui" line="563"/>
         <source>&amp;Quit</source>
         <translation>&amp;Quitter</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="492"/>
+        <location filename="../../src/mainwindow.ui" line="568"/>
         <source>&amp;Save Current as Defaut</source>
         <translation>&amp;Sauvegarder l&apos;état actuel comme par défaut</translation>
     </message>
@@ -3423,7 +3488,7 @@ solo</translation>
         <translation type="vanished">Sau&amp;vegarder</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="500"/>
+        <location filename="../../src/mainwindow.ui" line="576"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
@@ -3432,41 +3497,51 @@ solo</translation>
         <translation type="vanished">Sau&amp;vegarder sous</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="390"/>
+        <location filename="../../src/mainwindow.ui" line="466"/>
         <source>C&amp;onversion</source>
         <translation>C&amp;onversion</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="29"/>
+        <location filename="../../src/mainwindow.ui" line="32"/>
         <source>Mode</source>
         <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="280"/>
-        <location filename="../../src/mainwindow.cpp" line="973"/>
+        <location filename="../../src/mainwindow.ui" line="268"/>
+        <source>Desactivated</source>
+        <translation>Désactivé</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.ui" line="295"/>
+        <source>Waiting a while ...</source>
+        <translation>Attendez quelques instants ...</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.ui" line="353"/>
+        <location filename="../../src/mainwindow.cpp" line="977"/>
         <source>&lt; ESCAPE &gt;  to abort monitoring window
 &lt; PAUSE&gt; to pause unpause</source>
         <translation>&lt; ÉCHAPPEMENT &gt; pour avorter la fenêtre de monitoring
 &lt; PAUSE &gt; pour passer en pause et pour quitter la pause</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="298"/>
-        <location filename="../../src/mainwindow.ui" line="304"/>
+        <location filename="../../src/mainwindow.ui" line="374"/>
+        <location filename="../../src/mainwindow.ui" line="380"/>
         <source>F10</source>
         <translation>F10</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="332"/>
+        <location filename="../../src/mainwindow.ui" line="408"/>
         <source>&amp;File</source>
         <translation>&amp;Fichier</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="352"/>
+        <location filename="../../src/mainwindow.ui" line="428"/>
         <source>&amp;Too&amp;ls</source>
         <translation>&amp;Outils</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="399"/>
+        <location filename="../../src/mainwindow.ui" line="475"/>
         <source>Check</source>
         <translation>Analyse</translation>
     </message>
@@ -3475,17 +3550,17 @@ solo</translation>
         <translation type="vanished">Trier le recueil</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="510"/>
+        <location filename="../../src/mainwindow.ui" line="586"/>
         <source>&amp;Documentation</source>
         <translation>&amp;Documentation</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="513"/>
+        <location filename="../../src/mainwindow.ui" line="589"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="518"/>
+        <location filename="../../src/mainwindow.ui" line="594"/>
         <source>&amp;About</source>
         <translation>&amp;À propos</translation>
     </message>
@@ -3494,12 +3569,12 @@ solo</translation>
         <translation type="vanished">Dernier projet</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="523"/>
+        <location filename="../../src/mainwindow.ui" line="599"/>
         <source>&amp;Last Projects</source>
         <translation>&amp;Derniers projets</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="531"/>
+        <location filename="../../src/mainwindow.ui" line="607"/>
         <source>&amp;Produce PDF files</source>
         <translation>&amp;Produire un fichier PDF</translation>
     </message>
@@ -3508,200 +3583,200 @@ solo</translation>
         <translation type="vanished">Préfér&amp;ences</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="406"/>
+        <location filename="../../src/mainwindow.ui" line="482"/>
         <source>So&amp;rt the book</source>
         <translation>T&amp;rier le livret</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="457"/>
+        <location filename="../../src/mainwindow.ui" line="533"/>
         <source>&amp;Window</source>
         <translation>Fe&amp;nêtre</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="497"/>
+        <location filename="../../src/mainwindow.ui" line="573"/>
         <source>&amp;Save</source>
         <translation>&amp;Sauvegarder</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="505"/>
+        <location filename="../../src/mainwindow.ui" line="581"/>
         <source>Save &amp;As</source>
         <translation>Sauvegarder &amp;comme</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="536"/>
+        <location filename="../../src/mainwindow.ui" line="612"/>
         <source>&amp;Preferences</source>
         <translation>&amp;Préférences</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="539"/>
+        <location filename="../../src/mainwindow.ui" line="615"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="544"/>
+        <location filename="../../src/mainwindow.ui" line="620"/>
         <source>&amp;Import cho3 File</source>
         <translation>&amp;Importer un fichier cho3</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="581"/>
+        <location filename="../../src/mainwindow.ui" line="657"/>
         <source>&amp;Global definitions</source>
         <translation>Définitions &amp;globales</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="589"/>
+        <location filename="../../src/mainwindow.ui" line="665"/>
         <source>&amp;Text only mode</source>
         <translation>Mode &amp;texte</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="597"/>
+        <location filename="../../src/mainwindow.ui" line="673"/>
         <source>&amp;Lyrics and chord mode</source>
         <translation>Mode &amp;accords et textes</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="605"/>
+        <location filename="../../src/mainwindow.ui" line="681"/>
         <source>&amp;Chord mode</source>
         <translation>Mode a&amp;ccords</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="613"/>
+        <location filename="../../src/mainwindow.ui" line="689"/>
         <source>&amp;Memory mode</source>
         <translation>Mode aide &amp;mémoire</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="624"/>
+        <location filename="../../src/mainwindow.ui" line="700"/>
         <source>&amp;Editor</source>
         <translation>Édit&amp;eur</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="627"/>
+        <location filename="../../src/mainwindow.ui" line="703"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="637"/>
+        <location filename="../../src/mainwindow.ui" line="713"/>
         <source>&amp;Build All</source>
         <translation>&amp;Construire tout</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="645"/>
-        <location filename="../../src/mainwindow.ui" line="677"/>
-        <location filename="../../src/mainwindow.ui" line="724"/>
+        <location filename="../../src/mainwindow.ui" line="721"/>
+        <location filename="../../src/mainwindow.ui" line="753"/>
+        <location filename="../../src/mainwindow.ui" line="800"/>
         <source>&amp;Text</source>
         <translation>&amp;Texte</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="653"/>
-        <location filename="../../src/mainwindow.ui" line="685"/>
-        <location filename="../../src/mainwindow.ui" line="732"/>
+        <location filename="../../src/mainwindow.ui" line="729"/>
+        <location filename="../../src/mainwindow.ui" line="761"/>
+        <location filename="../../src/mainwindow.ui" line="808"/>
         <source>&amp;Lyrics</source>
         <translation>&amp;Paroles et accords</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="661"/>
-        <location filename="../../src/mainwindow.ui" line="693"/>
-        <location filename="../../src/mainwindow.ui" line="748"/>
+        <location filename="../../src/mainwindow.ui" line="737"/>
+        <location filename="../../src/mainwindow.ui" line="769"/>
+        <location filename="../../src/mainwindow.ui" line="824"/>
         <source>&amp;Chord</source>
         <translation>A&amp;ccords</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="669"/>
-        <location filename="../../src/mainwindow.ui" line="701"/>
-        <location filename="../../src/mainwindow.ui" line="740"/>
+        <location filename="../../src/mainwindow.ui" line="745"/>
+        <location filename="../../src/mainwindow.ui" line="777"/>
+        <location filename="../../src/mainwindow.ui" line="816"/>
         <source>&amp;Memory</source>
         <translation>Aide-&amp;mémoire</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="709"/>
+        <location filename="../../src/mainwindow.ui" line="785"/>
         <source>&amp;Reset Preferences as Origin</source>
         <translation>&amp;Réinitialiser les préférences comme à l&apos;origine</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="714"/>
+        <location filename="../../src/mainwindow.ui" line="790"/>
         <source>Last &amp;built</source>
         <translation>&amp;Dernière construciton</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="719"/>
+        <location filename="../../src/mainwindow.ui" line="795"/>
         <source>&amp;Export to cho3 file</source>
         <translation>&amp;Exporter vers le format cho3´</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="751"/>
+        <location filename="../../src/mainwindow.ui" line="827"/>
         <source>Shift+F8</source>
         <translation>MaJ+F8</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="756"/>
+        <location filename="../../src/mainwindow.ui" line="832"/>
         <source>&amp;Zoom +</source>
         <translation>&amp;Zoom +</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="759"/>
+        <location filename="../../src/mainwindow.ui" line="835"/>
         <source>Ctrl++</source>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="764"/>
+        <location filename="../../src/mainwindow.ui" line="840"/>
         <source>Z&amp;oom - </source>
         <translation>Z&amp;oom - </translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="767"/>
+        <location filename="../../src/mainwindow.ui" line="843"/>
         <source>Ctrl+-</source>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="772"/>
+        <location filename="../../src/mainwindow.ui" line="848"/>
         <source>&amp;Force configuration files to current project</source>
         <translation>&amp;Forcer les fichiers de configuration sur le projet courant</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="787"/>
+        <location filename="../../src/mainwindow.ui" line="863"/>
         <source>&amp;Close</source>
         <translation>&amp;Fermer</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="841"/>
+        <location filename="../../src/mainwindow.ui" line="917"/>
         <source>&amp;Suppress chords on selection</source>
         <translation>&amp;Supprimer les accords sur la sélection</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="856"/>
+        <location filename="../../src/mainwindow.ui" line="932"/>
         <source>New Project with sample</source>
         <translation>Nouveau projet avec example</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="861"/>
+        <location filename="../../src/mainwindow.ui" line="937"/>
         <source>Export the document to formated format</source>
         <translation>Exporter le document avec formatage</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="866"/>
+        <location filename="../../src/mainwindow.ui" line="942"/>
         <source>Export the selected song to formated format</source>
         <translation>Exporter la chanson sélectionnée avec formatage</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="871"/>
+        <location filename="../../src/mainwindow.ui" line="947"/>
         <source>Spelling check</source>
         <translation>Correcteur orthographique</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="874"/>
+        <location filename="../../src/mainwindow.ui" line="950"/>
         <source>Ctrl+G</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="879"/>
+        <location filename="../../src/mainwindow.ui" line="955"/>
         <source>Build a markdown File</source>
         <translation>Générer des fichiers Markdown</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="884"/>
+        <location filename="../../src/mainwindow.ui" line="960"/>
         <source>Build JazzLab files</source>
         <translation>Générer des fichiers jjazzlab</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="889"/>
+        <location filename="../../src/mainwindow.ui" line="965"/>
         <source>Build MMA files</source>
         <translation>Générer des fichiers MMA</translation>
     </message>
@@ -3710,17 +3785,17 @@ solo</translation>
         <translation type="vanished">Fer&amp;mer</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="826"/>
+        <location filename="../../src/mainwindow.ui" line="902"/>
         <source>All chord used are defined</source>
         <translation>Les accords utilisés sont définis dans la base de données</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="831"/>
+        <location filename="../../src/mainwindow.ui" line="907"/>
         <source>DataBase</source>
         <translation>Base de données</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="836"/>
+        <location filename="../../src/mainwindow.ui" line="912"/>
         <source>Replace space chord space by [Chord]</source>
         <translation>Remplacer espace accord espace par [accord]</translation>
     </message>
@@ -3729,12 +3804,12 @@ solo</translation>
         <translation type="vanished">Supprimer les accords dans la sélection</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="846"/>
+        <location filename="../../src/mainwindow.ui" line="922"/>
         <source>By song name</source>
         <translation>Par nom de chanson</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="851"/>
+        <location filename="../../src/mainwindow.ui" line="927"/>
         <source>By Author and song name</source>
         <translation>Par auteur et nom de chanson</translation>
     </message>
@@ -3743,12 +3818,12 @@ solo</translation>
         <translation type="vanished">&amp;Forcer les fichiers de configuration sur le projet courant</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="777"/>
+        <location filename="../../src/mainwindow.ui" line="853"/>
         <source>&amp;Chords with chord on line above to chordpro format</source>
         <translation>Les a&amp;ccords avec la ligne d&apos;accord au dessus du texte</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="782"/>
+        <location filename="../../src/mainwindow.ui" line="858"/>
         <source>Change  the chords &amp;Language of the current song file</source>
         <translation>Changer la &amp;langue des accords du projet courant</translation>
     </message>
@@ -3757,27 +3832,27 @@ solo</translation>
         <translation type="vanished">&amp;Fermer</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="792"/>
+        <location filename="../../src/mainwindow.ui" line="868"/>
         <source>&amp;Transpose chords</source>
         <translation>&amp;Transposer les accords</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="797"/>
+        <location filename="../../src/mainwindow.ui" line="873"/>
         <source>&amp;Load demo file</source>
         <translation>Charger &amp;le fichier de démonstration</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="802"/>
+        <location filename="../../src/mainwindow.ui" line="878"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copie</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="810"/>
+        <location filename="../../src/mainwindow.ui" line="886"/>
         <source>C&amp;ut</source>
         <translation>Co&amp;uper</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="818"/>
+        <location filename="../../src/mainwindow.ui" line="894"/>
         <source>&amp;Paste</source>
         <translation>Co&amp;ller</translation>
     </message>
@@ -3786,7 +3861,7 @@ solo</translation>
         <translation type="vanished">Copier</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="805"/>
+        <location filename="../../src/mainwindow.ui" line="881"/>
         <source>Ctrl+C</source>
         <translation>Ctrl+C</translation>
     </message>
@@ -3795,7 +3870,7 @@ solo</translation>
         <translation type="vanished">Couper</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="813"/>
+        <location filename="../../src/mainwindow.ui" line="889"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
@@ -3804,7 +3879,7 @@ solo</translation>
         <translation type="vanished">Coller</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="821"/>
+        <location filename="../../src/mainwindow.ui" line="897"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
@@ -3849,42 +3924,42 @@ solo</translation>
         <translation type="vanished">&amp;Réinitialiser les options comme à l&apos;origine</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="549"/>
+        <location filename="../../src/mainwindow.ui" line="625"/>
         <source>&amp;Chord definition</source>
         <translation>Définition de l&apos;a&amp;ccord</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="552"/>
+        <location filename="../../src/mainwindow.ui" line="628"/>
         <source>F3</source>
         <translation>F3</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="557"/>
+        <location filename="../../src/mainwindow.ui" line="633"/>
         <source>&amp;System Info</source>
         <translation>Informations &amp;système</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="565"/>
+        <location filename="../../src/mainwindow.ui" line="641"/>
         <source>Ctrl+F</source>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.ui" line="573"/>
+        <location filename="../../src/mainwindow.ui" line="649"/>
         <source>Ctrl+R</source>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="77"/>
+        <location filename="../../src/mainwindow.cpp" line="81"/>
         <source>Last Projects</source>
         <translation>Derniers projets</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="163"/>
+        <location filename="../../src/mainwindow.cpp" line="168"/>
         <source>Songs list</source>
         <translation>Liste des chansons</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="171"/>
+        <location filename="../../src/mainwindow.cpp" line="176"/>
         <source>%1 does&apos;nt exit. Bye !</source>
         <translation>%1 n&apos;existe pas. Au revoir !</translation>
     </message>
@@ -3897,99 +3972,149 @@ solo</translation>
         <translation type="vanished">%1 chanson(s)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="203"/>
+        <location filename="../../src/mainwindow.cpp" line="208"/>
         <source>Buffer as changed</source>
         <translation>Le contenu édité a changé</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="203"/>
+        <location filename="../../src/mainwindow.cpp" line="208"/>
         <source>Do you want to save ? </source>
         <translation>Voulez-vous sauvegarder ? </translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="268"/>
+        <location filename="../../src/mainwindow.cpp" line="273"/>
         <source>Open text file</source>
         <translation>Ouvrir un fichier texte</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="268"/>
+        <location filename="../../src/mainwindow.cpp" line="273"/>
         <source>cho3 file(*.cho3)</source>
         <translation>Fichier cho3 (*.cho3)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="324"/>
+        <location filename="../../src/mainwindow.cpp" line="329"/>
         <source>La la song</source>
         <translation>Chanson la la</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="356"/>
+        <location filename="../../src/mainwindow.cpp" line="361"/>
         <source>Cannot open file : %1</source>
         <translation>Ne peut ouvrir le fichier : %1</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="416"/>
+        <location filename="../../src/mainwindow.cpp" line="421"/>
         <source>Open conf file</source>
         <translation>Ouvrir un fichier conf</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="481"/>
+        <location filename="../../src/mainwindow.cpp" line="486"/>
         <source>(*.chop)</source>
         <translation>(*.chop)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="484"/>
+        <location filename="../../src/mainwindow.cpp" line="489"/>
         <source>File is not saved</source>
         <translation>Fichier non sauvegardé</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="484"/>
+        <location filename="../../src/mainwindow.cpp" line="489"/>
         <source>You have set an empty file name, the file is not saved !</source>
         <translation>Vous avez donné un nom de fichier vide,aucune sauvegarde n&apos;a pu être faite !</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="657"/>
+        <location filename="../../src/mainwindow.cpp" line="662"/>
         <source>Problem !</source>
         <translation>Problème !</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="934"/>
+        <location filename="../../src/mainwindow.cpp" line="938"/>
         <source>No title selected</source>
         <translation>Pas de titre sélectionné</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="934"/>
+        <location filename="../../src/mainwindow.cpp" line="938"/>
         <source>You must select a title</source>
         <translation>Vous devez sélectionner un titre</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1059"/>
+        <location filename="../../src/mainwindow.cpp" line="1065"/>
         <source>Selected song formated</source>
         <translation>Sélection de la chanson formatée</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1067"/>
+        <location filename="../../src/mainwindow.cpp" line="1073"/>
         <source>Whole song formated</source>
         <translation>Toutes les chanson sont formatées</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1240"/>
+        <location filename="../../src/MarkDownConvertion.cpp" line="126"/>
         <source>Your MarkDon import files are located in %1 directory</source>
         <translation>Vos fichiers d&apos;import MarkDown sont présents dans le répertoire %1</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1435"/>
+        <location filename="../../src/JazzLabConvertion.cpp" line="211"/>
         <source>Your JjazzLab import files are located in %1 directory</source>
         <translation>Les fichiers d&apos;import JjazzLab sont stockés dans le  %1</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1730"/>
+        <location filename="../../src/MMAConvertion.cpp" line="666"/>
+        <source>// Generated by ChordV
+</source>
+        <translation>// Généré par Chord V
+</translation>
+    </message>
+    <message>
+        <location filename="../../src/MMAConvertion.cpp" line="667"/>
+        <source>// SongName </source>
+        <translation>// Nom de la chanson </translation>
+    </message>
+    <message>
+        <location filename="../../src/MMAConvertion.cpp" line="668"/>
+        <source>// Title </source>
+        <translation>// Titre </translation>
+    </message>
+    <message>
+        <location filename="../../src/MMAConvertion.cpp" line="669"/>
+        <source>// *** IMPORTANT **** </source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../src/MMAConvertion.cpp" line="670"/>
+        <source>// This file is generated automatically)</source>
+        <translation>//  Ce fichier est généré automatiquement</translation>
+    </message>
+    <message>
+        <location filename="../../src/MMAConvertion.cpp" line="671"/>
+        <source>// If you want to modify this file rename it</source>
+        <translation>// Il est sonsillé de le renommer si vous le modifiez</translation>
+    </message>
+    <message>
+        <location filename="../../src/MMAConvertion.cpp" line="672"/>
+        <source>// On the next generation all your modifications will be lost !</source>
+        <translation>// À la génération suivante toutes vos modifications pourraient être perdues</translation>
+    </message>
+    <message>
+        <location filename="../../src/MMAConvertion.cpp" line="711"/>
+        <source>// if you change this groove the following lines will be recalculated
+</source>
+        <translation>// Si vous changez le Grooge les lignes suivantes seront recalculées</translation>
+    </message>
+    <message>
+        <location filename="../../src/MMAConvertion.cpp" line="712"/>
+        <source>// feel free to change the name of instruments here whithout change </source>
+        <translation>// Vous pouvez changer le nom des instruments ici</translation>
+    </message>
+    <message>
+        <location filename="../../src/MMAConvertion.cpp" line="737"/>
+        <location filename="../../src/MMAConvertion.cpp" line="749"/>
         <source>Your MMA import files are located in %1 directory</source>
         <translation>Vos fichiers au format MMA sont présents dans le répertoire %1</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="1243"/>
-        <location filename="../../src/mainwindow.cpp" line="1438"/>
-        <location filename="../../src/mainwindow.cpp" line="1733"/>
+        <location filename="../../src/MarkDownConvertion.cpp" line="129"/>
+        <location filename="../../src/JazzLabConvertion.cpp" line="214"/>
+        <location filename="../../src/MMAConvertion.cpp" line="740"/>
+        <location filename="../../src/MMAConvertion.cpp" line="752"/>
         <source>Don&apos;t ask</source>
         <translation>Ne plus afficher</translation>
     </message>
@@ -4014,7 +4139,7 @@ solo</translation>
         <translation type="vanished">Mode aide-mémoire</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="481"/>
+        <location filename="../../src/mainwindow.cpp" line="486"/>
         <source>Save project as</source>
         <translation>Sauvegarder le projet</translation>
     </message>
@@ -4023,17 +4148,17 @@ solo</translation>
         <translation type="vanished">Sauvegarder comme (*.chop)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="651"/>
+        <location filename="../../src/mainwindow.cpp" line="656"/>
         <source>Conversion done for : %1</source>
         <translation>Conversion effectuée pour : %1</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="713"/>
+        <location filename="../../src/mainwindow.cpp" line="718"/>
         <source>Cannot write file : %1</source>
         <translation>Ne peut pas écrire dans le fichier : %1</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="719"/>
+        <location filename="../../src/mainwindow.cpp" line="724"/>
         <source>%1 file exported</source>
         <translation>fichier %1 exporté</translation>
     </message>
@@ -4584,7 +4709,7 @@ solo</translation>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../../src/statusbar.cpp" line="106"/>
+        <location filename="../../src/statusbar.cpp" line="110"/>
         <source>Keep selected Song</source>
         <translation>Garder la chanson sélectionnée</translation>
     </message>
@@ -4618,7 +4743,7 @@ solo</translation>
         <translation type="vanished">Mode aide-mémoire</translation>
     </message>
     <message>
-        <location filename="../../src/statusbar.cpp" line="48"/>
+        <location filename="../../src/statusbar.cpp" line="49"/>
         <source>Global definitions</source>
         <translation>Définitions globales</translation>
     </message>
@@ -4628,27 +4753,32 @@ solo</translation>
         <translation>Éditeur</translation>
     </message>
     <message>
-        <location filename="../../src/statusbar.cpp" line="49"/>
+        <location filename="../../src/statusbar.cpp" line="50"/>
         <source>Text and chord Mode</source>
         <translation>Mode texte et accord</translation>
     </message>
     <message>
-        <location filename="../../src/statusbar.cpp" line="49"/>
+        <location filename="../../src/statusbar.cpp" line="51"/>
         <source>Chord Mode</source>
         <translation>Mode accords</translation>
     </message>
     <message>
-        <location filename="../../src/statusbar.cpp" line="50"/>
+        <location filename="../../src/statusbar.cpp" line="52"/>
         <source>Text mode</source>
         <translation>Mode texte</translation>
     </message>
     <message>
-        <location filename="../../src/statusbar.cpp" line="50"/>
+        <location filename="../../src/statusbar.cpp" line="53"/>
         <source>Memory Mode</source>
         <translation>Mode aide-mémoire</translation>
     </message>
     <message>
-        <location filename="../../src/statusbar.cpp" line="100"/>
+        <location filename="../../src/statusbar.cpp" line="54"/>
+        <source>Working</source>
+        <translation>En cours</translation>
+    </message>
+    <message>
+        <location filename="../../src/statusbar.cpp" line="104"/>
         <source>%1 song(s)</source>
         <translation>%1 chanson(s)</translation>
     </message>
